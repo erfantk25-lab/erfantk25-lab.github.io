@@ -6,6 +6,15 @@
 
 This page documents the work represented by five pull requests that I authored and that were merged into the team repository. The team repository itself is intentionally left unchanged by this portfolio update.
 
+
+## CI/CD architecture
+
+![Architecture diagram of the customer-churn MLOps pipeline](../assets/ci-cd-pipeline-architecture.svg)
+
+[Open the architecture diagram as an SVG](../assets/ci-cd-pipeline-architecture.svg).
+
+The diagram follows the team repository's GitHub Actions workflow: parallel code and data checks, model training with MLflow tracking, integrity and evaluation gates, then separate Docker/GHCR delivery and customer-scoring paths. GHCR publishing is limited to pushes to `main`; customer scoring runs on `main` for non-pull-request events.
+
 ## My merged pull requests
 
 ### 1. [Add Ruff linting to CI workflow and fix trailing newline in schema.py — PR #1](https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/1)
