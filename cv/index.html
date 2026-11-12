@@ -412,28 +412,36 @@
 
     @media print {
       :root {
-        --bg: #ffffff;
-        --surface: #f4f7fa;
-        --surface-light: #eef3f7;
-        --text: #142235;
-        --muted: #536579;
-        --accent: #087f83;
-        --border: #d8e0e8;
+        --bg: #08111f;
+        --surface: #101d2d;
+        --surface-light: #101d2d;
+        --text: #edf2f5;
+        --muted: #9ba9b8;
+        --accent: #7de9ed;
+        --border: rgba(171, 198, 218, 0.2);
       }
 
+      *,
+      *::before,
+      *::after {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+      }
+
+      html,
       body {
-        background: #ffffff !important;
-        color: #142235;
+        background: #08111f !important;
+        background-color: #08111f !important;
+        color: #edf2f5 !important;
         font-size: 10pt;
         line-height: 1.45;
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
       }
 
       .page {
         width: 100%;
         max-width: none;
         padding: 0;
+        background: #08111f !important;
       }
 
       .topbar {
@@ -452,6 +460,7 @@
 
       h1 {
         font-size: 35pt;
+        color: #edf2f5 !important;
       }
 
       .role {
@@ -462,6 +471,7 @@
       .intro {
         font-size: 10pt;
         margin-bottom: 14px;
+        color: #c3d0df !important;
       }
 
       .section {
@@ -474,14 +484,16 @@
 
       h2 {
         font-size: 15pt;
+        color: #edf2f5 !important;
       }
 
       .skill-card,
       .project,
       .experience,
       .contact-panel {
-        background: #f4f7fa !important;
-        border-color: #d8e0e8;
+        background: #101d2d !important;
+        background-color: #101d2d !important;
+        border-color: rgba(171, 198, 218, 0.2) !important;
         break-inside: avoid;
       }
 
@@ -498,12 +510,23 @@
       .experience p,
       .section-copy,
       .project ul,
-      .skill-card p {
-        color: #304357;
+      .skill-card p,
+      .contact-panel p {
+        color: #bdcbd5 !important;
       }
 
+      .brand,
+      .eyebrow,
+      .section-number,
+      .skill-card h3,
+      .project-link,
+      .tag,
       a {
-        color: #087f83;
+        color: #7de9ed !important;
+      }
+
+      .tag {
+        border-color: rgba(171, 198, 218, 0.2) !important;
       }
 
       .contact-section,
@@ -517,6 +540,7 @@
 
       footer {
         margin-top: 15px;
+        color: #9ba9b8 !important;
       }
     }
   </style>
