@@ -405,18 +405,18 @@
       }
     }
 
-    /* One consistent A4 print layout. Keep the printable width fluid. */
+    /* Full-bleed dark A4 PDF background; keep text inset from the edges. */
     @page {
       size: A4 portrait;
-      margin: 10mm;
+      margin: 0;
     }
 
     @media print {
       html,
       body {
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
+        width: 210mm !important;
+        min-width: 210mm !important;
+        max-width: 210mm !important;
         margin: 0 !important;
         padding: 0 !important;
         overflow: visible !important;
@@ -439,12 +439,14 @@
       .page {
         display: block !important;
         box-sizing: border-box !important;
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: none !important;
+        width: 210mm !important;
+        min-width: 210mm !important;
+        max-width: 210mm !important;
+        min-height: 297mm;
         margin: 0 !important;
-        padding: 0 5mm 8mm !important;
+        padding: 12mm 14mm 16mm !important;
         background: #08111f !important;
+        background-color: #08111f !important;
       }
 
       .topbar {
