@@ -418,3 +418,41 @@ footer .logo { color: var(--text); }
     white-space: nowrap;
   }
 }
+
+
+/* Technical CI/CD architecture visualisation */
+.architecture-wrap {
+  grid-column: 2;
+  min-width: 0;
+  margin: 24px 0 18px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: #08111f;
+}
+.architecture-wrap .eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font: 10px var(--mono);
+  letter-spacing: .1em;
+}
+.architecture-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(115,224,220,.12);
+  border-radius: 5px;
+}
+.architecture-wrap figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.architecture-wrap figcaption a {
+  color: var(--accent);
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .architecture-wrap { grid-column: 1; padding: 10px; }
+}
