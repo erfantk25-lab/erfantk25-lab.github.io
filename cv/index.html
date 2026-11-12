@@ -405,8 +405,8 @@
       }
     }
 
-    /* Compact one-page A4 print layout */
-    @page { size: A4 portrait; margin: 7mm; }
+    /* One-page A4 print layout */
+    @page { size: A4 portrait; margin: 6mm; }
 
     @media print {
       html, body {
@@ -416,11 +416,12 @@
         background: #08111f !important;
         color: #edf2f5 !important;
         font-size: 7pt !important;
-        line-height: 1.18 !important;
+        line-height: 1.16 !important;
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
       }
-      body { zoom: .74; width: 135.14% !important; }
+      /* Scale the complete CV as one continuous page, without section page breaks. */
+      body { zoom: .80; width: 125% !important; }
       *, *::before, *::after {
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
@@ -432,24 +433,45 @@
         margin: 0 !important;
         padding: 0 !important;
       }
-      .topbar, #contact, footer, .availability { display: none !important; }
-      .hero { padding: 0 0 2mm !important; }
-      .eyebrow { display: none !important; }
+      header, .topbar, .brand, .top-actions, footer, #contact, .availability, .eyebrow {
+        display: none !important;
+      }
+      .hero { padding: 0 0 1.5mm !important; }
       h1 { font-size: 21pt !important; line-height: 1 !important; margin: 0 0 1mm !important; }
       .role { font-size: 9pt !important; margin: 0 0 1mm !important; }
-      .intro { max-width: none !important; font-size: 7pt !important; line-height: 1.18 !important; margin: 0 0 1mm !important; }
+      .intro { max-width: none !important; font-size: 7pt !important; line-height: 1.16 !important; margin: 0 0 1mm !important; }
       .contact-line { gap: 1mm 4mm !important; font-size: 6.5pt !important; }
-      .section { padding: 1.8mm 0 !important; border-top: .3pt solid rgba(180,205,230,.2) !important; }
+      .section {
+        padding: 1.5mm 0 !important;
+        border-top: .3pt solid rgba(180,205,230,.2) !important;
+        break-before: auto !important;
+        page-break-before: auto !important;
+        break-after: auto !important;
+        page-break-after: auto !important;
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+      }
+      /* The hero already contains the profile summary, so avoid printing it twice. */
+      #profile { display: none !important; }
+      #projects { break-before: auto !important; page-break-before: auto !important; }
       .section-heading { margin: 0 0 1mm !important; gap: 2mm !important; }
       .section-number { font-size: 5.8pt !important; }
       h2 { font-size: 9pt !important; }
       .section-copy { font-size: 6.8pt !important; line-height: 1.16 !important; margin: 0 !important; }
+
       .skills-grid { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 1mm !important; }
       .skill-card { min-width: 0 !important; padding: 1.2mm !important; background: #101d2d !important; break-inside: avoid !important; }
       .skill-card h3 { font-size: 5.8pt !important; margin: 0 0 .5mm !important; }
       .skill-card p { font-size: 6.2pt !important; line-height: 1.12 !important; }
+
       .project-list { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 1.2mm !important; }
-      .project { min-width: 0 !important; padding: 1.5mm !important; background: #101d2d !important; break-inside: avoid !important; page-break-inside: avoid !important; }
+      .project {
+        min-width: 0 !important;
+        padding: 1.3mm !important;
+        background: #101d2d !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
       .project-top, .experience-top { gap: 1mm !important; margin: 0 0 .6mm !important; }
       .project h3, .experience h3 { font-size: 7pt !important; }
       .meta { font-size: 5.4pt !important; white-space: normal !important; }
@@ -459,18 +481,19 @@
       .tags { gap: .6mm !important; margin-top: .6mm !important; }
       .tag { font-size: 5pt !important; padding: .2mm .7mm !important; }
       .project-link { font-size: 5.2pt !important; overflow-wrap: anywhere !important; }
-      /* Keep education and work history together in the same compact row. */
+
       #education, #experience {
         display: inline-block !important;
         vertical-align: top !important;
         width: 49.4% !important;
-        padding: 1.5mm 0 !important;
+        padding: 1.3mm 0 !important;
         break-inside: avoid !important;
+        page-break-inside: avoid !important;
       }
       #education { margin-right: 1% !important; }
       #experience { margin: 0 !important; }
       #education .experience-list, #experience .experience-list { display: block !important; }
-      .experience { min-width: 0 !important; padding: 1.3mm !important; background: #101d2d !important; break-inside: avoid !important; }
+      .experience { min-width: 0 !important; padding: 1.2mm !important; background: #101d2d !important; break-inside: avoid !important; }
       #experience .experience + .experience { margin-top: 1mm !important; }
       a, .section-number, .skill-card h3, .project-link, .tag { color: #7de9ed !important; }
     }
