@@ -405,57 +405,28 @@
       }
     }
 
+    /* One consistent A4 print layout. Keep the printable width fluid. */
     @page {
       size: A4 portrait;
-      margin: 0;
+      margin: 10mm;
     }
 
     @media print {
-      html, body {
-        width: 210mm !important;
-        min-width: 210mm !important;
-        max-width: 210mm !important;
+      html,
+      body {
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         overflow: visible !important;
-      }
-
-      .page {
-        box-sizing: border-box !important;
-        width: 210mm !important;
-        max-width: 210mm !important;
-        min-width: 210mm !important;
-        margin: 0 !important;
-        padding: 12mm 14mm 16mm !important;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 8px !important;
-      }
-
-      .skill-card, .project, .experience, .contact-panel {
-        min-width: 0 !important;
-        overflow-wrap: anywhere;
-      }
-
-      .contact-line {
-        flex-wrap: wrap !important;
-        gap: 6px 14px !important;
-      }
-
-      img, svg {
-        max-width: 100% !important;
-      }
-
-      :root {
-        --bg: #08111f;
-        --surface: #101d2d;
-        --surface-light: #101d2d;
-        --text: #edf2f5;
-        --muted: #9ba9b8;
-        --accent: #7de9ed;
-        --border: rgba(171, 198, 218, 0.2);
+        background: #08111f !important;
+        background-color: #08111f !important;
+        color: #edf2f5 !important;
+        font-size: 9.5pt;
+        line-height: 1.45;
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
       }
 
       *,
@@ -465,27 +436,19 @@
         -webkit-print-color-adjust: exact !important;
       }
 
-      html,
-      body {
-        background: #08111f !important;
-        background-color: #08111f !important;
-        color: #edf2f5 !important;
-        font-size: 10pt;
-        line-height: 1.45;
-      }
-
       .page {
+        display: block !important;
         box-sizing: border-box !important;
-        width: 210mm !important;
-        max-width: 210mm !important;
-        min-width: 210mm !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
         margin: 0 !important;
-        padding: 12mm 14mm 16mm !important;
+        padding: 0 5mm 8mm !important;
         background: #08111f !important;
       }
 
       .topbar {
-        padding-bottom: 12px;
+        padding-bottom: 10px;
       }
 
       .top-actions,
@@ -495,64 +458,93 @@
       }
 
       .hero {
-        padding: 28px 0 24px;
+        padding: 24px 0 20px;
       }
 
       h1 {
-        font-size: 35pt;
+        font-size: 32pt;
         color: #edf2f5 !important;
       }
 
       .role {
-        font-size: 15pt;
-        margin-bottom: 12px;
+        font-size: 14pt;
+        margin-bottom: 10px;
       }
 
       .intro {
-        font-size: 10pt;
-        margin-bottom: 14px;
+        max-width: none;
+        font-size: 9.5pt;
+        line-height: 1.5;
+        margin-bottom: 10px;
         color: #c3d0df !important;
       }
 
+      .contact-line {
+        flex-wrap: wrap !important;
+        gap: 6px 12px !important;
+        font-size: 9pt;
+      }
+
       .section {
-        padding: 18px 0;
+        padding: 15px 0;
       }
 
       .section-heading {
-        margin-bottom: 13px;
+        margin-bottom: 11px;
+        break-after: avoid;
+        page-break-after: avoid;
       }
 
       h2 {
-        font-size: 15pt;
+        font-size: 14.5pt;
         color: #edf2f5 !important;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
       }
 
       .skill-card,
       .project,
       .experience,
       .contact-panel {
+        min-width: 0 !important;
         background: #101d2d !important;
         background-color: #101d2d !important;
         border-color: rgba(171, 198, 218, 0.2) !important;
-        break-inside: avoid;
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+        overflow-wrap: anywhere;
       }
 
       .skill-card {
-        padding: 11px 13px;
+        padding: 9px 11px;
       }
 
       .project,
       .experience {
-        padding: 13px 15px;
+        padding: 11px 13px;
       }
 
+      .project h3,
+      .experience h3 {
+        font-size: 14pt;
+      }
+
+      .skill-card p,
       .project p,
       .experience p,
-      .section-copy,
       .project ul,
-      .skill-card p,
+      .section-copy,
       .contact-panel p {
+        font-size: 9pt;
         color: #bdcbd5 !important;
+      }
+
+      .project ul {
+        margin-top: 6px;
+        margin-bottom: 9px;
       }
 
       .brand,
@@ -569,58 +561,28 @@
         border-color: rgba(171, 198, 218, 0.2) !important;
       }
 
+      .project-link {
+        font-size: 8.5pt;
+      }
+
+      .contact-panel {
+        padding: 16px;
+      }
+
       .contact-section,
       footer {
-        break-inside: avoid;
-      }
-
-      .contact-button {
-        display: none;
-      }
-
-      footer {
-        margin-top: 12px;
-        color: #9ba9b8 !important;
-      }
-
-      /* Prevent awkward splits while allowing the CV to flow over A4 pages. */
-      .project, .experience, .skill-card, .contact-panel {
         break-inside: avoid-page;
         page-break-inside: avoid;
       }
 
-      .section-heading {
-        break-after: avoid;
-        page-break-after: avoid;
-      }
-    }
-
-
-    /* Final print-width override: use the browser's A4 printable area. */
-    @page {
-      size: A4 portrait;
-      margin: 12mm;
-    }
-
-    @media print {
-      html,
-      body {
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: visible !important;
+      .contact-button {
+        display: none !important;
       }
 
-      .page {
-        display: block !important;
-        box-sizing: border-box !important;
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
+      footer {
+        margin-top: 10px;
+        padding-top: 12px;
+        color: #9ba9b8 !important;
       }
     }
 
