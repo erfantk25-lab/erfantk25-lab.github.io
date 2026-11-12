@@ -405,104 +405,81 @@
       }
     }
 
-    /* One-page A4 print layout */
-    @page { size: A4 portrait; margin: 6mm; }
+    /* Readable A4 PDF layout */
+    @page { size: A4 portrait; margin: 9mm; }
 
     @media print {
       html, body {
         margin: 0 !important;
         padding: 0 !important;
-        width: 100% !important;
-        background: #08111f !important;
-        color: #edf2f5 !important;
-        font-size: 7pt !important;
-        line-height: 1.16 !important;
+        width: auto !important;
+        background: #07111f !important;
+        color: #edf4fc !important;
+        font-size: 8pt !important;
+        line-height: 1.28 !important;
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
       }
-      /* Scale the complete CV as one continuous page, without section page breaks. */
-      body { zoom: .80; width: 125% !important; }
       *, *::before, *::after {
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
       }
       .page {
-        display: block !important;
         width: 100% !important;
         max-width: none !important;
         margin: 0 !important;
         padding: 0 !important;
       }
-      header, .topbar, .brand, .top-actions, footer, #contact, .eyebrow {
-        display: none !important;
-      }
-      .hero { padding: 0 0 1.5mm !important; }
-      .availability { display: inline-flex !important; margin-top: 1mm !important; padding: 1mm 2mm !important; font-size: 6pt !important; }
-      h1 { font-size: 21pt !important; line-height: 1 !important; margin: 0 0 1mm !important; }
-      .role { font-size: 9pt !important; margin: 0 0 1mm !important; }
-      .intro { max-width: none !important; font-size: 7pt !important; line-height: 1.16 !important; margin: 0 0 1mm !important; }
-      .contact-line { gap: 1mm 4mm !important; font-size: 6.5pt !important; }
+      .topbar, footer, #contact { display: none !important; }
+      .hero { padding: 0 0 3mm !important; }
+      h1 { font-size: 25pt !important; line-height: 1.02 !important; margin: 0 0 1.5mm !important; }
+      .role { font-size: 11pt !important; margin: 0 0 2mm !important; }
+      .intro { max-width: none !important; font-size: 8pt !important; line-height: 1.3 !important; margin: 0 0 2mm !important; }
+      .contact-line { gap: 1mm 5mm !important; font-size: 7.2pt !important; }
+      .availability { display: inline-flex !important; margin-top: 2mm !important; padding: 1mm 2mm !important; font-size: 7pt !important; }
       .section {
-        padding: 1.5mm 0 !important;
-        border-top: .3pt solid rgba(180,205,230,.2) !important;
-        break-before: auto !important;
-        page-break-before: auto !important;
-        break-after: auto !important;
-        page-break-after: auto !important;
+        padding: 3mm 0 !important;
+        border-top: .4pt solid rgba(180,205,230,.28) !important;
         break-inside: auto !important;
         page-break-inside: auto !important;
       }
-      /* The hero already contains the profile summary, so avoid printing it twice. */
       #profile { display: none !important; }
-      #projects { break-before: auto !important; page-break-before: auto !important; }
-      .section-heading { margin: 0 0 1mm !important; gap: 2mm !important; }
-      .section-number { font-size: 5.8pt !important; }
-      h2 { font-size: 9pt !important; }
-      .section-copy { font-size: 6.8pt !important; line-height: 1.16 !important; margin: 0 !important; }
-
-      .skills-grid { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 1mm !important; }
-      .skill-card { min-width: 0 !important; padding: 1.2mm !important; background: #101d2d !important; break-inside: avoid !important; }
-      .skill-card h3 { font-size: 5.8pt !important; margin: 0 0 .5mm !important; }
-      .skill-card p { font-size: 6.2pt !important; line-height: 1.12 !important; }
-
-      /* Inline project cards instead of a print grid: Chromium may move a whole grid to page 2. */
-      .project-list { display: block !important; font-size: 0 !important; }
+      .section-heading { margin: 0 0 2mm !important; gap: 2mm !important; }
+      .section-number { font-size: 6.5pt !important; }
+      h2 { font-size: 12pt !important; }
+      .section-copy { font-size: 8pt !important; line-height: 1.3 !important; }
+      .skills-grid { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 2mm !important; }
+      .skill-card { padding: 2mm !important; background: #0d1a2b !important; break-inside: avoid !important; }
+      .skill-card h3 { font-size: 7pt !important; margin: 0 0 1mm !important; }
+      .skill-card p { font-size: 7.5pt !important; line-height: 1.25 !important; }
+      .project-list { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 2mm !important; }
       .project {
-        display: inline-block !important;
-        vertical-align: top !important;
-        width: 49.3% !important;
-        margin: 0 .35% 1.2mm 0 !important;
+        display: block !important;
+        width: auto !important;
+        margin: 0 !important;
         min-width: 0 !important;
-        padding: 1.3mm !important;
-        background: #101d2d !important;
+        padding: 2.5mm !important;
+        background: #0d1a2b !important;
         break-inside: avoid !important;
         page-break-inside: avoid !important;
-        font-size: 7pt !important;
       }
-      .project-top, .experience-top { gap: 1mm !important; margin: 0 0 .6mm !important; }
-      .project h3, .experience h3 { font-size: 7pt !important; }
-      .meta { font-size: 5.4pt !important; white-space: normal !important; }
-      .project p, .experience p { font-size: 6.2pt !important; line-height: 1.14 !important; margin: 0 0 .6mm !important; }
-      .project ul { font-size: 6pt !important; line-height: 1.12 !important; margin: .4mm 0 .6mm !important; padding-left: 3mm !important; }
-      .project li { margin: 0 !important; }
-      .tags { gap: .6mm !important; margin-top: .6mm !important; }
-      .tag { font-size: 5pt !important; padding: .2mm .7mm !important; }
-      .project-link { font-size: 5.2pt !important; overflow-wrap: anywhere !important; }
-
+      .project-top, .experience-top { gap: 2mm !important; margin: 0 0 1mm !important; }
+      .project h3, .experience h3 { font-size: 9pt !important; }
+      .meta { font-size: 6pt !important; white-space: normal !important; }
+      .project p, .experience p { font-size: 7.5pt !important; line-height: 1.25 !important; margin: 0 0 1.5mm !important; }
+      .project ul { font-size: 7.2pt !important; line-height: 1.22 !important; margin: 1mm 0 1.5mm !important; padding-left: 4mm !important; }
+      .project li { margin: .5mm 0 !important; }
+      .tags { gap: 1mm !important; margin-top: 1.5mm !important; }
+      .tag { font-size: 6pt !important; padding: .5mm 1mm !important; }
+      .project-link { font-size: 6.5pt !important; overflow-wrap: anywhere !important; }
       #education, #experience {
-        display: inline-block !important;
-        vertical-align: top !important;
-        width: 49.4% !important;
-        padding: 1.3mm 0 !important;
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
       }
-      #education { margin-right: 1% !important; }
-      #experience { margin: 0 !important; }
-      #education .experience-list, #experience .experience-list { display: block !important; }
-      .experience { min-width: 0 !important; padding: 1.2mm !important; background: #101d2d !important; break-inside: avoid !important; }
-      #experience .experience + .experience { margin-top: 1mm !important; }
-      a, .section-number, .skill-card h3, .project-link, .tag { color: #7de9ed !important; }
+      .experience-list { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 2mm !important; }
+      .experience { padding: 2.5mm !important; background: #0d1a2b !important; break-inside: avoid !important; }
+      a, .section-number, .skill-card h3, .project-link, .tag { color: #73e0dc !important; }
     }
 
   </style>
@@ -557,27 +534,27 @@
       <div class="skills-grid">
         <article class="skill-card">
           <h3>Programming & Data</h3>
-          <p>Python, SQL, Pandas, datavalidering, Pandera</p>
+          <p>Python, SQL, Pandas, data validation, Pandera</p>
         </article>
 
         <article class="skill-card">
           <h3>Machine Learning</h3>
-          <p>scikit-learn, TensorFlow, PyTorch, MLflow, modellversionering</p>
+          <p>scikit-learn, TensorFlow, PyTorch, MLflow, model versioning</p>
         </article>
 
         <article class="skill-card">
           <h3>MLOps & DevOps</h3>
-          <p>Docker, Kubernetes, CI/CD, Git, GitHub Actions, automatiserade tester</p>
+          <p>Docker, Kubernetes, CI/CD, Git, GitHub Actions, automated testing</p>
         </article>
 
         <article class="skill-card">
           <h3>Backend & Systems</h3>
-          <p>FastAPI, Linux, REST API, containerbaserad utveckling</p>
+          <p>FastAPI, Linux, REST APIs, container-based development</p>
         </article>
 
         <article class="skill-card">
           <h3>Monitoring & Quality</h3>
-          <p>Data drift detection, smoke tests, modellmetadata och lineage</p>
+          <p>Data drift detection, smoke testing, model metadata and lineage</p>
         </article>
 
         <article class="skill-card">
@@ -694,7 +671,7 @@
           </div>
 
           <p>
-            An IoT environmental monitoring project using Raspberry Pi Pico W, Python and MQTT. The project covers sensor data collection, storage and visualisation in Grafana.
+            An IoT environmental monitoring project using Raspberry Pi Pico W, Python and MQTT. The project covers sensor data collection, storage and visualisation in Grafana.lection, storage and visualisation in Grafana.
           </p>
 
           <div class="tags">
@@ -707,7 +684,7 @@
           <a class="project-link"
              href="https://github.com/erfantk25-lab/Edge-computing-project-"
              target="_blank" rel="noopener noreferrer">
-            github.com/erfantk25-lab/Edge-computing-project ↗
+            github.com/erfantk25-lab/Edge-computing-project- ↗
           </a>
         </article>
 
