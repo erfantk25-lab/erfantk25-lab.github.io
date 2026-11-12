@@ -405,26 +405,26 @@
       }
     }
 
-    /* Full-bleed dark A4 PDF background; keep text inset from the edges. */
+    /* A4 print layout: real page margins, compact two-page flow. */
     @page {
       size: A4 portrait;
-      margin: 0;
+      margin: 9mm 11mm 8mm;
     }
 
     @media print {
       html,
       body {
-        width: 210mm !important;
-        min-width: 210mm !important;
-        max-width: 210mm !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
         margin: 0 !important;
         padding: 0 !important;
         overflow: visible !important;
         background: #08111f !important;
         background-color: #08111f !important;
         color: #edf2f5 !important;
-        font-size: 9.5pt;
-        line-height: 1.45;
+        font-size: 8.5pt;
+        line-height: 1.35;
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
       }
@@ -439,18 +439,17 @@
       .page {
         display: block !important;
         box-sizing: border-box !important;
-        width: 210mm !important;
-        min-width: 210mm !important;
-        max-width: 210mm !important;
-        min-height: 297mm;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        min-height: 0 !important;
         margin: 0 !important;
-        padding: 12mm 14mm 16mm !important;
-        background: #08111f !important;
-        background-color: #08111f !important;
+        padding: 0 !important;
+        background: transparent !important;
       }
 
       .topbar {
-        padding-bottom: 10px;
+        padding-bottom: 7px;
       }
 
       .top-actions,
@@ -460,51 +459,68 @@
       }
 
       .hero {
-        padding: 24px 0 20px;
+        padding: 16px 0 12px;
+      }
+
+      .eyebrow {
+        margin-bottom: 8px;
+        font-size: 8pt;
       }
 
       h1 {
-        font-size: 32pt;
+        font-size: 29pt;
+        line-height: 1;
+        margin-bottom: 7px;
         color: #edf2f5 !important;
       }
 
       .role {
-        font-size: 14pt;
-        margin-bottom: 10px;
+        font-size: 12pt;
+        margin-bottom: 8px;
       }
 
       .intro {
         max-width: none;
-        font-size: 9.5pt;
-        line-height: 1.5;
-        margin-bottom: 10px;
+        font-size: 8.4pt;
+        line-height: 1.38;
+        margin-bottom: 8px;
         color: #c3d0df !important;
       }
 
       .contact-line {
         flex-wrap: wrap !important;
-        gap: 6px 12px !important;
-        font-size: 9pt;
+        gap: 4px 10px !important;
+        font-size: 7.8pt;
       }
 
       .section {
-        padding: 15px 0;
+        padding: 9px 0;
       }
 
       .section-heading {
-        margin-bottom: 11px;
+        margin-bottom: 7px;
         break-after: avoid;
         page-break-after: avoid;
       }
 
+      .section-number {
+        font-size: 7.5pt;
+      }
+
       h2 {
-        font-size: 14.5pt;
+        font-size: 12.8pt;
         color: #edf2f5 !important;
+      }
+
+      .section-copy {
+        font-size: 8.2pt;
+        line-height: 1.35;
+        margin-bottom: 0;
       }
 
       .skills-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 8px !important;
+        gap: 6px !important;
       }
 
       .skill-card,
@@ -521,32 +537,77 @@
       }
 
       .skill-card {
-        padding: 9px 11px;
+        padding: 6px 8px;
+      }
+
+      .skill-card h3 {
+        font-size: 7.5pt;
+        margin-bottom: 4px;
+      }
+
+      .skill-card p {
+        font-size: 7.7pt;
+        line-height: 1.32;
+        color: #bdcbd5 !important;
+      }
+
+      #projects {
+        break-before: page;
+        page-break-before: always;
+      }
+
+      .project-list {
+        gap: 6px;
       }
 
       .project,
       .experience {
-        padding: 11px 13px;
+        padding: 8px 10px;
+      }
+
+      .project-top,
+      .experience-top {
+        margin-bottom: 4px;
+        gap: 10px;
       }
 
       .project h3,
       .experience h3 {
-        font-size: 14pt;
+        font-size: 11.5pt;
       }
 
-      .skill-card p,
+      .meta {
+        font-size: 6.8pt;
+      }
+
       .project p,
-      .experience p,
-      .project ul,
-      .section-copy,
-      .contact-panel p {
-        font-size: 9pt;
+      .experience p {
+        font-size: 8pt;
+        line-height: 1.3;
+        margin-bottom: 5px;
         color: #bdcbd5 !important;
       }
 
       .project ul {
-        margin-top: 6px;
-        margin-bottom: 9px;
+        font-size: 7.8pt;
+        line-height: 1.25;
+        margin: 4px 0 6px;
+        padding-left: 16px;
+        color: #bdcbd5 !important;
+      }
+
+      .project li {
+        margin: 1px 0;
+      }
+
+      .tags {
+        gap: 4px;
+        margin-top: 5px;
+      }
+
+      .tag {
+        padding: 2px 5px;
+        font-size: 6.2pt;
       }
 
       .brand,
@@ -564,27 +625,34 @@
       }
 
       .project-link {
-        font-size: 8.5pt;
+        font-size: 7pt;
+        line-height: 1.2;
       }
 
-      .contact-panel {
-        padding: 16px;
+      .experience-list {
+        gap: 6px;
       }
 
-      .contact-section,
+      .experience p {
+        margin-bottom: 0;
+      }
+
+      /* Contact details already appear in the header. */
+      #contact {
+        display: none !important;
+      }
+
       footer {
+        margin-top: 6px;
+        padding-top: 7px;
+        color: #9ba9b8 !important;
+        font-size: 7pt;
         break-inside: avoid-page;
         page-break-inside: avoid;
       }
 
       .contact-button {
         display: none !important;
-      }
-
-      footer {
-        margin-top: 10px;
-        padding-top: 12px;
-        color: #9ba9b8 !important;
       }
     }
 
