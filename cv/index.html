@@ -407,24 +407,26 @@
 
     @page {
       size: A4 portrait;
-      margin: 10mm;
+      margin: 0;
     }
 
     @media print {
       html, body {
-        width: 190mm !important;
-        min-width: 0 !important;
+        width: 210mm !important;
+        min-width: 210mm !important;
+        max-width: 210mm !important;
         margin: 0 !important;
         padding: 0 !important;
         overflow: visible !important;
       }
 
       .page {
-        width: 100% !important;
-        max-width: none !important;
-        min-width: 0 !important;
+        box-sizing: border-box !important;
+        width: 210mm !important;
+        max-width: 210mm !important;
+        min-width: 210mm !important;
         margin: 0 !important;
-        padding: 0 !important;
+        padding: 12mm 14mm 16mm !important;
       }
 
       .skills-grid {
@@ -473,9 +475,12 @@
       }
 
       .page {
-        width: 100%;
-        max-width: none;
-        padding: 0;
+        box-sizing: border-box !important;
+        width: 210mm !important;
+        max-width: 210mm !important;
+        min-width: 210mm !important;
+        margin: 0 !important;
+        padding: 12mm 14mm 16mm !important;
         background: #08111f !important;
       }
 
