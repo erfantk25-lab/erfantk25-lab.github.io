@@ -405,255 +405,104 @@
       }
     }
 
-    /* A4 print layout: real page margins, compact two-page flow. */
+    /* Compact single-page A4 CV */
     @page {
       size: A4 portrait;
-      margin: 9mm 11mm 8mm;
+      margin: 7mm 8mm 7mm;
     }
 
     @media print {
-      html,
-      body {
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: none !important;
+      html, body {
         margin: 0 !important;
         padding: 0 !important;
-        overflow: visible !important;
+        width: auto !important;
         background: #08111f !important;
-        background-color: #08111f !important;
         color: #edf2f5 !important;
-        font-size: 8.5pt;
-        line-height: 1.35;
+        font-size: 7pt !important;
+        line-height: 1.2 !important;
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
       }
 
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
       }
 
       .page {
-        display: block !important;
-        box-sizing: border-box !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-areas:
+          "hero hero"
+          "profile profile"
+          "skills skills"
+          "projects projects"
+          "experience education" !important;
+        column-gap: 5mm !important;
+        row-gap: 0 !important;
         width: 100% !important;
-        min-width: 0 !important;
         max-width: none !important;
-        min-height: 0 !important;
         margin: 0 !important;
         padding: 0 !important;
-        background: transparent !important;
       }
 
-      .topbar {
-        padding-bottom: 7px;
-      }
+      .hero { grid-area: hero; padding: 0 0 2mm !important; }
+      #profile { grid-area: profile; }
+      #skills { grid-area: skills; }
+      #projects { grid-area: projects; }
+      #experience { grid-area: experience; }
+      #education { grid-area: education; }
+      #contact, footer, .availability, .topbar { display: none !important; }
 
-      .top-actions,
-      .print-button,
-      .availability {
-        display: none !important;
-      }
-
-      .hero {
-        padding: 16px 0 12px;
-      }
-
-      .eyebrow {
-        margin-bottom: 8px;
-        font-size: 8pt;
-      }
-
-      h1 {
-        font-size: 29pt;
-        line-height: 1;
-        margin-bottom: 7px;
-        color: #edf2f5 !important;
-      }
-
-      .role {
-        font-size: 12pt;
-        margin-bottom: 8px;
-      }
-
-      .intro {
-        max-width: none;
-        font-size: 8.4pt;
-        line-height: 1.38;
-        margin-bottom: 8px;
-        color: #c3d0df !important;
-      }
-
-      .contact-line {
-        flex-wrap: wrap !important;
-        gap: 4px 10px !important;
-        font-size: 7.8pt;
-      }
-
-      .section {
-        padding: 9px 0;
-      }
-
-      .section-heading {
-        margin-bottom: 7px;
-        break-after: avoid;
-        page-break-after: avoid;
-      }
-
-      .section-number {
-        font-size: 7.5pt;
-      }
-
-      h2 {
-        font-size: 12.8pt;
-        color: #edf2f5 !important;
-      }
-
-      .section-copy {
-        font-size: 8.2pt;
-        line-height: 1.35;
-        margin-bottom: 0;
-      }
+      .eyebrow { display: none !important; }
+      h1 { font-size: 22pt !important; line-height: 1 !important; margin: 0 0 1mm !important; }
+      .role { font-size: 9pt !important; margin: 0 0 1.5mm !important; }
+      .intro { font-size: 7pt !important; line-height: 1.2 !important; margin: 0 0 1.5mm !important; max-width: none !important; }
+      .contact-line { gap: 1mm 4mm !important; font-size: 6.5pt !important; }
+      .section { padding: 2mm 0 !important; min-width: 0 !important; }
+      .section-heading { margin: 0 0 1.5mm !important; gap: 2mm !important; }
+      .section-number { font-size: 6pt !important; }
+      h2 { font-size: 9pt !important; }
+      .section-copy { font-size: 6.7pt !important; line-height: 1.2 !important; margin: 0 !important; }
 
       .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 6px !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1.5mm !important;
       }
-
-      .skill-card,
-      .project,
-      .experience,
-      .contact-panel {
+      .skill-card {
+        padding: 1.5mm !important;
         min-width: 0 !important;
         background: #101d2d !important;
-        background-color: #101d2d !important;
-        border-color: rgba(171, 198, 218, 0.2) !important;
-        break-inside: avoid-page;
-        page-break-inside: avoid;
-        overflow-wrap: anywhere;
+        border-color: rgba(171,198,218,.2) !important;
+        break-inside: avoid !important;
       }
-
-      .skill-card {
-        padding: 6px 8px;
-      }
-
-      .skill-card h3 {
-        font-size: 7.5pt;
-        margin-bottom: 4px;
-      }
-
-      .skill-card p {
-        font-size: 7.7pt;
-        line-height: 1.32;
-        color: #bdcbd5 !important;
-      }
-
-      #projects {
-        break-before: page;
-        page-break-before: always;
-      }
+      .skill-card h3 { font-size: 6pt !important; margin: 0 0 .7mm !important; }
+      .skill-card p { font-size: 6pt !important; line-height: 1.15 !important; }
 
       .project-list {
-        gap: 6px;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.5mm 2mm !important;
       }
-
-      .project,
-      .experience {
-        padding: 8px 10px;
+      .project, .experience {
+        padding: 1.7mm !important;
+        min-width: 0 !important;
+        background: #101d2d !important;
+        border-color: rgba(171,198,218,.2) !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
       }
-
-      .project-top,
-      .experience-top {
-        margin-bottom: 4px;
-        gap: 10px;
-      }
-
-      .project h3,
-      .experience h3 {
-        font-size: 11.5pt;
-      }
-
-      .meta {
-        font-size: 6.8pt;
-      }
-
-      .project p,
-      .experience p {
-        font-size: 8pt;
-        line-height: 1.3;
-        margin-bottom: 5px;
-        color: #bdcbd5 !important;
-      }
-
-      .project ul {
-        font-size: 7.8pt;
-        line-height: 1.25;
-        margin: 4px 0 6px;
-        padding-left: 16px;
-        color: #bdcbd5 !important;
-      }
-
-      .project li {
-        margin: 1px 0;
-      }
-
-      .tags {
-        gap: 4px;
-        margin-top: 5px;
-      }
-
-      .tag {
-        padding: 2px 5px;
-        font-size: 6.2pt;
-      }
-
-      .brand,
-      .eyebrow,
-      .section-number,
-      .skill-card h3,
-      .project-link,
-      .tag,
-      a {
-        color: #7de9ed !important;
-      }
-
-      .tag {
-        border-color: rgba(171, 198, 218, 0.2) !important;
-      }
-
-      .project-link {
-        font-size: 7pt;
-        line-height: 1.2;
-      }
-
-      .experience-list {
-        gap: 6px;
-      }
-
-      .experience p {
-        margin-bottom: 0;
-      }
-
-      /* Contact details already appear in the header. */
-      #contact {
-        display: none !important;
-      }
-
-      footer {
-        margin-top: 6px;
-        padding-top: 7px;
-        color: #9ba9b8 !important;
-        font-size: 7pt;
-        break-inside: avoid-page;
-        page-break-inside: avoid;
-      }
-
-      .contact-button {
-        display: none !important;
-      }
+      .project-top, .experience-top { gap: 1mm !important; margin: 0 0 .7mm !important; }
+      .project h3, .experience h3 { font-size: 7pt !important; }
+      .meta { font-size: 5.3pt !important; white-space: normal !important; }
+      .project p, .experience p { font-size: 6pt !important; line-height: 1.15 !important; margin: 0 0 .8mm !important; }
+      .project ul { font-size: 5.8pt !important; line-height: 1.13 !important; margin: .5mm 0 1mm !important; padding-left: 3mm !important; }
+      .project li { margin: 0 !important; }
+      .tags { gap: .7mm !important; margin-top: .7mm !important; }
+      .tag { font-size: 4.8pt !important; padding: .3mm .8mm !important; }
+      .project-link { font-size: 5pt !important; overflow-wrap: anywhere !important; }
+      .experience-list { gap: 1.5mm !important; }
+      .brand, .eyebrow, .section-number, .skill-card h3, .project-link, .tag, a { color: #7de9ed !important; }
     }
 
   </style>
@@ -871,6 +720,21 @@
       </div>
     </section>
 
+
+    <section class="section" id="education">
+      <div class="section-heading">
+        <span class="section-number">05 /</span>
+        <h2>Utbildning</h2>
+      </div>
+      <div class="experience">
+        <div class="experience-top">
+          <h3>MLOps Engineer · Nackademin</h3>
+          <span class="meta">Pågående</span>
+        </div>
+        <p>Yrkeshögskoleutbildning med fokus på machine learning, Python, MLOps, CI/CD och driftsättning av ML-lösningar.</p>
+      </div>
+    </section>
+
     <section class="section" id="experience">
       <div class="section-heading">
         <span class="section-number">04 /</span>
@@ -908,7 +772,7 @@
 
     <section class="section contact-section" id="contact">
       <div class="section-heading">
-        <span class="section-number">05 /</span>
+        <span class="section-number">06 /</span>
         <h2>Kontakt</h2>
       </div>
 
