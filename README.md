@@ -23,7 +23,7 @@ My experience is primarily academic and project-based. The portfolio distinguish
 
 [Team repository](https://github.com/LeoLindqvist123/ci-cd-pipeline)
 
-My portfolio documents five approved and merged pull requests covering statistical data-drift checks, delivery verification, multi-stage Docker builds, layer caching, smoke tests, GHCR publishing, model metadata/lineage, and Ruff in CI. Reported improvements of approximately 39% smaller Docker images and 30% faster measured builds are team-level results.
+I authored five merged pull requests in this team repository: [#1 Ruff in CI](https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/1), [#20 model versioning and lineage](https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/20), [#36 Docker packaging, smoke tests and GHCR publishing](https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/36), [#38 multi-stage Docker optimisation and Buildx caching](https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/38), and [#39 statistical data-drift detection and delivery verification](https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/39). See the [detailed contribution summary](projects/ci-cd-pipeline-contributions.md). The reported improvements of approximately 39% smaller Docker images and 30% faster measured builds are team-level results, not individual performance claims.
 
 ### ML serving with FastAPI and Docker
 
