@@ -431,6 +431,7 @@
         padding: 0 !important;
       }
       .topbar, footer, #contact { display: none !important; }
+      .availability { display: inline-flex !important; margin-top: 2mm !important; padding: 1mm 2mm !important; font-size: 7pt !important; }
       .hero { padding: 0 0 3mm !important; }
       h1 { font-size: 25pt !important; line-height: 1.02 !important; margin: 0 0 1.5mm !important; }
       .role { font-size: 11pt !important; margin: 0 0 2mm !important; }
@@ -487,8 +488,13 @@
 
 <body>
   <main class="page">
-
-    
+    <header class="topbar">
+      <div class="brand">ERFAN TAHMASEBI / CV</div>
+      <nav class="top-actions" aria-label="CV actions">
+        <a href="../">Swedish CV ↗</a>
+        <button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button>
+      </nav>
+    </header>
 
     <section class="hero" aria-labelledby="name">
 <h1 id="name">Erfan Tahmasebi</h1>
@@ -539,12 +545,12 @@
 
         <article class="skill-card">
           <h3>Machine Learning</h3>
-          <p>scikit-learn, TensorFlow, PyTorch, MLflow, model versioning</p>
+          <p>scikit-learn, MLflow, model versioning</p>
         </article>
 
         <article class="skill-card">
           <h3>MLOps & DevOps</h3>
-          <p>Docker, Kubernetes, CI/CD, Git, GitHub Actions, automated testing</p>
+          <p>Docker, CI/CD, Git, GitHub Actions, automated testing</p>
         </article>
 
         <article class="skill-card">
@@ -559,7 +565,7 @@
 
         <article class="skill-card">
           <h3>Cloud & Edge</h3>
-          <p>Azure, AWS, Raspberry Pi Pico W, MQTT, Grafana</p>
+          <p>Raspberry Pi Pico W, MQTT, Grafana</p>
         </article>
       </div>
     </section>
@@ -597,6 +603,15 @@
             <span class="tag">CI/CD</span>
           </div>
 
+
+          <p>Selected merged pull requests (my individual contributions):</p>
+          <ul>
+            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/1" target="_blank" rel="noopener noreferrer">PR #1 – Ruff and code quality in CI ↗</a></li>
+            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/20" target="_blank" rel="noopener noreferrer">PR #20 – Model versioning and lineage ↗</a></li>
+            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/36" target="_blank" rel="noopener noreferrer">PR #36 – Docker, smoke tests and GHCR ↗</a></li>
+            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/38" target="_blank" rel="noopener noreferrer">PR #38 – Multi-stage Docker builds and layer caching ↗</a></li>
+            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/39" target="_blank" rel="noopener noreferrer">PR #39 – Statistical data-drift checks ↗</a></li>
+          </ul>
           <a class="project-link"
              href="https://github.com/LeoLindqvist123/ci-cd-pipeline"
              target="_blank" rel="noopener noreferrer">
@@ -671,7 +686,7 @@
           </div>
 
           <p>
-            An IoT environmental monitoring project using Raspberry Pi Pico W, Python and MQTT. The project covers sensor data collection, storage and visualisation in Grafana.lection, storage and visualisation in Grafana.
+            An IoT environmental monitoring project using Raspberry Pi Pico W, Python and MQTT. The project covers sensor-data collection, storage and visualisation in Grafana.
           </p>
 
           <div class="tags">
