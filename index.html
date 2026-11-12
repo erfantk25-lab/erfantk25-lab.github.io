@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --bg:#0A1422;
@@ -22,243 +23,557 @@
   --blue:#4C83D8;
   --max:1160px;
 }
+
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
 body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:Inter,sans-serif;line-height:1.7;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,sans-serif;
+  line-height:1.7;
   overflow-x:hidden;
 }
+
 body:before{
-  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background-image:linear-gradient(rgba(160,190,220,.025) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(160,190,220,.025) 1px,transparent 1px);
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(160,190,220,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(160,190,220,.025) 1px,transparent 1px);
   background-size:55px 55px;
   mask-image:linear-gradient(to bottom,black,transparent 85%);
 }
+
 a{color:inherit;text-decoration:none}
 button,a{-webkit-tap-highlight-color:transparent}
 .container{width:min(var(--max),calc(100% - 48px));margin:auto}
 .mono{font-family:"DM Mono",monospace}
 .accent{color:var(--teal)}
 .muted{color:var(--muted)}
+
 .topbar{
-  position:sticky;top:0;z-index:20;
+  position:sticky;
+  top:0;
+  z-index:20;
   background:rgba(10,20,34,.86);
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
+
 .nav{
-  height:76px;display:flex;align-items:center;
+  height:76px;
+  display:flex;
+  align-items:center;
   justify-content:space-between;
 }
+
 .brand{display:flex;align-items:center;gap:12px}
+
 .brandmark{
-  width:38px;height:38px;border:1px solid rgba(98,212,199,.55);
-  display:grid;place-items:center;border-radius:10px;
-  color:var(--teal);font:700 15px "Space Grotesk";
+  width:38px;
+  height:38px;
+  border:1px solid rgba(98,212,199,.55);
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  color:var(--teal);
+  font:700 15px "Space Grotesk";
   background:rgba(98,212,199,.07);
 }
-.brandname{font:600 14px "Space Grotesk";letter-spacing:.02em}
+
+.brandname{
+  font:600 14px "Space Grotesk";
+  letter-spacing:.02em;
+}
+
 .navlinks{display:flex;gap:28px;align-items:center}
-.navlinks a{font-size:12px;color:var(--muted);transition:.2s}
+
+.navlinks a{
+  font-size:12px;
+  color:var(--muted);
+  transition:.2s;
+}
+
 .navlinks a:hover{color:var(--teal)}
+
 .nav-cta{
   border:1px solid rgba(98,212,199,.5);
-  color:var(--teal)!important;padding:9px 14px;border-radius:6px;
+  color:var(--teal)!important;
+  padding:9px 14px;
+  border-radius:6px;
 }
+
 .hero{
-  position:relative;padding:110px 0 100px;
+  position:relative;
+  padding:110px 0 100px;
   overflow:hidden;
 }
+
 .hero:after{
-  content:"";position:absolute;width:620px;height:620px;
-  right:-180px;top:-180px;border-radius:50%;
+  content:"";
+  position:absolute;
+  width:620px;
+  height:620px;
+  right:-180px;
+  top:-180px;
+  border-radius:50%;
   background:radial-gradient(circle,rgba(15,118,110,.23),transparent 68%);
   pointer-events:none;
 }
+
 .hero-grid{
-  display:grid;grid-template-columns:1.35fr .65fr;
-  align-items:center;gap:55px;position:relative;z-index:1;
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  align-items:center;
+  gap:55px;
+  position:relative;
+  z-index:1;
 }
+
 .eyebrow{
-  color:var(--teal);font:500 11px "DM Mono",monospace;
-  letter-spacing:2px;text-transform:uppercase;
-  display:flex;align-items:center;gap:10px;
+  color:var(--teal);
+  font:500 11px "DM Mono",monospace;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
-.eyebrow:before{content:"";width:24px;height:1px;background:var(--teal)}
+
+.eyebrow:before{
+  content:"";
+  width:24px;
+  height:1px;
+  background:var(--teal);
+}
+
 h1{
   font:700 clamp(48px,6.5vw,78px)/1.04 "Space Grotesk";
-  letter-spacing:-4px;margin:25px 0;
+  letter-spacing:-4px;
+  margin:25px 0;
 }
+
 h1 .gradient{
   background:linear-gradient(100deg,#F2F7FA 5%,#62D4C7 85%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
-.hero-copy{max-width:650px;color:#B5C4D1;font-size:16px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+.hero-copy{
+  max-width:650px;
+  color:#B5C4D1;
+  font-size:16px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  padding:13px 19px;border-radius:7px;font-size:12px;font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 19px;
+  border-radius:7px;
+  font-size:12px;
+  font-weight:700;
   transition:transform .2s,border-color .2s,background .2s;
 }
+
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:var(--teal);color:#071A24}
 .btn-outline{border:1px solid var(--line);color:#E5EDF4}
 .btn-outline:hover{border-color:var(--teal)}
+
 .availability{
-  display:flex;align-items:center;gap:10px;margin-top:28px;
-  color:var(--muted);font-size:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:28px;
+  color:var(--muted);
+  font-size:12px;
 }
+
 .pulse{
-  width:8px;height:8px;border-radius:50%;background:var(--teal);
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--teal);
   box-shadow:0 0 0 5px rgba(98,212,199,.1);
 }
+
 .profile-card{
-  position:relative;background:linear-gradient(145deg,#172D42,#0D1B2B);
-  border:1px solid var(--line);border-radius:16px;
-  padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.22);
+  position:relative;
+  background:linear-gradient(145deg,#172D42,#0D1B2B);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:26px;
+  box-shadow:0 25px 80px rgba(0,0,0,.22);
 }
+
 .profile-card:before{
-  content:"";position:absolute;inset:-1px;border-radius:16px;
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:16px;
   background:linear-gradient(135deg,rgba(98,212,199,.23),transparent 42%);
   pointer-events:none;
 }
-.card-top{display:flex;justify-content:space-between;align-items:center}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
 .card-label{font:11px "DM Mono";color:var(--muted)}
 .card-status{font:10px "DM Mono";color:var(--teal)}
+
 .terminal{
-  margin-top:25px;padding:18px;background:#091421;
-  border:1px solid var(--line);border-radius:9px;
-  font:11px/2 "DM Mono",monospace;color:#A9BAC9;
+  margin-top:25px;
+  padding:18px;
+  background:#091421;
+  border:1px solid var(--line);
+  border-radius:9px;
+  font:11px/2 "DM Mono",monospace;
+  color:#A9BAC9;
 }
+
 .terminal .green{color:var(--teal)}
 .terminal .blue{color:#85AEEF}
 .terminal .dim{color:#5E748A}
+
 .profile-bottom{
-  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-top:18px;
 }
+
 .mini-stat{
-  padding:14px;background:rgba(255,255,255,.025);
-  border:1px solid var(--line);border-radius:8px;
+  padding:14px;
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--line);
+  border-radius:8px;
 }
-.mini-stat strong{display:block;font:600 20px "Space Grotesk"}
+
+.mini-stat strong{
+  display:block;
+  font:600 20px "Space Grotesk";
+}
+
 .mini-stat span{font-size:10px;color:var(--muted)}
-.section{padding:95px 0;border-top:1px solid var(--line)}
+
+.section{
+  padding:95px 0;
+  border-top:1px solid var(--line);
+}
+
 .section-head{max-width:680px;margin-bottom:38px}
-.section-number{font:11px "DM Mono";color:var(--teal);letter-spacing:2px}
+
+.section-number{
+  font:11px "DM Mono";
+  color:var(--teal);
+  letter-spacing:2px;
+}
+
 h2{
   font:600 clamp(32px,4vw,45px)/1.15 "Space Grotesk";
-  letter-spacing:-1.7px;margin:13px 0;
+  letter-spacing:-1.7px;
+  margin:13px 0;
 }
-.section-desc{font-size:14px;color:var(--muted);max-width:620px}
-.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px}
-.about-copy p{color:#B3C2D0;font-size:14px;margin:0 0 17px}
+
+.section-desc{
+  font-size:14px;
+  color:var(--muted);
+  max-width:620px;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:50px;
+}
+
+.about-copy p{
+  color:#B3C2D0;
+  font-size:14px;
+  margin:0 0 17px;
+}
+
 .details{
-  padding:25px;background:var(--surface);
-  border:1px solid var(--line);border-radius:12px;
+  padding:25px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:12px;
 }
-.detail{padding:13px 0;border-bottom:1px solid var(--line)}
+
+.detail{
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+}
+
 .detail:last-child{border:0}
-.detail span{display:block;font:10px "DM Mono";color:var(--teal);text-transform:uppercase;letter-spacing:1px}
-.detail strong{display:block;font-size:12px;font-weight:600;margin-top:4px}
-.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+
+.detail span{
+  display:block;
+  font:10px "DM Mono";
+  color:var(--teal);
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.detail strong{
+  display:block;
+  font-size:12px;
+  font-weight:600;
+  margin-top:4px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+
 .project{
   background:linear-gradient(145deg,rgba(20,40,59,.94),rgba(13,27,43,.94));
-  border:1px solid var(--line);border-radius:12px;
-  padding:25px;min-height:290px;display:flex;flex-direction:column;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:25px;
+  min-height:290px;
+  display:flex;
+  flex-direction:column;
   transition:transform .25s,border-color .25s,box-shadow .25s;
 }
+
 .project:hover{
-  transform:translateY(-4px);border-color:rgba(98,212,199,.45);
+  transform:translateY(-4px);
+  border-color:rgba(98,212,199,.45);
   box-shadow:0 18px 45px rgba(0,0,0,.17);
 }
-.project-head{display:flex;justify-content:space-between;align-items:center}
-.project-index{font:10px "DM Mono";color:var(--teal);letter-spacing:1px}
+
+.project-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.project-index{
+  font:10px "DM Mono";
+  color:var(--teal);
+  letter-spacing:1px;
+}
+
 .project-icon{
-  width:34px;height:34px;border:1px solid var(--line);
-  display:grid;place-items:center;border-radius:8px;color:var(--teal);
+  width:34px;
+  height:34px;
+  border:1px solid var(--line);
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  color:var(--teal);
   font:14px "DM Mono";
 }
-.project h3{font:600 20px "Space Grotesk";margin:18px 0 9px}
-.project p{color:var(--muted);font-size:12px;margin:0 0 18px}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;margin-bottom:19px}
+
+.project h3{
+  font:600 20px "Space Grotesk";
+  margin:18px 0 9px;
+}
+
+.project p{
+  color:var(--muted);
+  font-size:12px;
+  margin:0 0 18px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:auto;
+  margin-bottom:19px;
+}
+
 .tag{
-  font:10px "DM Mono";padding:5px 8px;
-  background:rgba(98,212,199,.07);color:#9CDCD5;
-  border:1px solid rgba(98,212,199,.13);border-radius:4px;
+  font:10px "DM Mono";
+  padding:5px 8px;
+  background:rgba(98,212,199,.07);
+  color:#9CDCD5;
+  border:1px solid rgba(98,212,199,.13);
+  border-radius:4px;
 }
+
 .project-link{
-  font-size:11px;font-weight:700;color:var(--teal);
-  display:inline-flex;gap:8px;align-items:center;
+  font-size:11px;
+  font-weight:700;
+  color:var(--teal);
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
 }
+
 .project-link:hover{color:#B2F0E8}
+
 .results{
   background:linear-gradient(120deg,#10283B,#0D1D2E);
-  border:1px solid var(--line);border-radius:15px;
-  padding:34px;display:grid;grid-template-columns:1fr 1fr 1fr;
-  gap:25px;align-items:center;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:34px;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:25px;
+  align-items:center;
 }
-.result{padding:10px 20px;border-right:1px solid var(--line)}
+
+.result{
+  padding:10px 20px;
+  border-right:1px solid var(--line);
+}
+
 .result:last-child{border:0}
+
 .result strong{
-  display:block;font:700 42px "Space Grotesk";color:var(--teal);
+  display:block;
+  font:700 42px "Space Grotesk";
+  color:var(--teal);
   letter-spacing:-2px;
 }
+
 .result span{font-size:11px;color:var(--muted)}
-.result-note{font-size:12px;color:#B5C4D1;margin-top:25px}
-.pr-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
+
+.result-note{
+  font-size:12px;
+  color:#B5C4D1;
+  margin-top:25px;
+}
+
+.pr-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:25px;
+}
+
 .pr-item{
-  padding:14px;background:var(--surface);
-  border:1px solid var(--line);border-radius:8px;
-  color:#B7C6D3;font-size:11px;
+  padding:14px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:8px;
+  color:#B7C6D3;
+  font-size:11px;
 }
-.pr-item b{color:var(--teal);font:11px "DM Mono";margin-right:7px}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+
+.pr-item b{
+  color:var(--teal);
+  font:11px "DM Mono";
+  margin-right:7px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:13px;
+}
+
 .skill{
-  background:var(--surface);border:1px solid var(--line);
-  padding:20px;border-radius:10px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:20px;
+  border-radius:10px;
 }
-.skill h3{font:600 14px "Space Grotesk";margin-bottom:9px}
+
+.skill h3{
+  font:600 14px "Space Grotesk";
+  margin-bottom:9px;
+}
+
 .skill p{font-size:11px;color:var(--muted)}
-.skill .skill-mark{color:var(--teal);font:11px "DM Mono";margin-bottom:12px}
-.note{
-  color:var(--muted);font-size:11px;margin-top:20px;
-  border-left:2px solid var(--teal);padding-left:13px;
+
+.skill .skill-mark{
+  color:var(--teal);
+  font:11px "DM Mono";
+  margin-bottom:12px;
 }
+
+.note{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:20px;
+  border-left:2px solid var(--teal);
+  padding-left:13px;
+}
+
 .placeholder{
   border:1px dashed rgba(155,175,193,.35);
-  padding:22px;border-radius:10px;color:var(--muted);
-  font-size:12px;background:rgba(255,255,255,.015);
+  padding:22px;
+  border-radius:10px;
+  color:var(--muted);
+  font-size:12px;
+  background:rgba(255,255,255,.015);
 }
+
 .contact-section{
   background:radial-gradient(ellipse at 50% 100%,rgba(15,118,110,.19),transparent 60%);
 }
+
 .contact-box{
   border:1px solid rgba(98,212,199,.23);
-  border-radius:15px;padding:48px;
+  border-radius:15px;
+  padding:48px;
   background:linear-gradient(140deg,#132B40,#0E1C2D);
   text-align:center;
 }
+
 .contact-box h2{margin:14px 0}
 .contact-box p{color:var(--muted);font-size:13px}
 .contact-box .hero-actions{justify-content:center}
-footer{padding:28px 0;border-top:1px solid var(--line)}
-.footer-inner{
-  display:flex;justify-content:space-between;gap:15px;
-  flex-wrap:wrap;color:#8094A8;font-size:10px;
+
+footer{
+  padding:28px 0;
+  border-top:1px solid var(--line);
 }
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+  color:#8094A8;
+  font-size:10px;
+}
+
 .footer-links{display:flex;gap:18px}
 .footer-links a:hover{color:var(--teal)}
+
 @media(max-width:800px){
   .hero-grid{grid-template-columns:1fr;gap:38px}
   .profile-card{max-width:520px}
   .about-grid{grid-template-columns:1fr;gap:25px}
   .skills-grid{grid-template-columns:1fr 1fr}
   .results{grid-template-columns:1fr;gap:10px}
-  .result{border-right:0;border-bottom:1px solid var(--line);padding:15px}
+  .result{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding:15px;
+  }
   .result:last-child{border:0}
 }
+
 @media(max-width:600px){
   .container{width:calc(100% - 34px)}
   .nav{height:66px}
@@ -273,12 +588,14 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
   .contact-box{padding:30px 18px}
   .footer-inner{flex-direction:column}
 }
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*:before,*:after{transition:none!important}
 }
 </style>
 </head>
+
 <body>
 
 <div class="topbar">
@@ -287,6 +604,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <span class="brandmark">ET</span>
       <span class="brandname">ERFAN TAHMASEBI<span class="accent">.</span></span>
     </a>
+
     <nav class="navlinks" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -300,17 +618,21 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
   <div class="container hero-grid">
     <div>
       <div class="eyebrow">AI Student / MLOps & ML Engineering</div>
+
       <h1>Engineering the<br>future of <span class="gradient">machine learning.</span></h1>
+
       <p class="hero-copy">
         I'm Erfan Tahmasebi — an Artificial Intelligence student
         at Nackademin focused on MLOps and ML Engineering.
         I build practical projects around model serving,
         automation, containers and reliable ML workflows.
       </p>
+
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">Explore my work ↗</a>
         <a class="btn btn-outline" href="https://www.linkedin.com/in/erfan-tahmasebi-b41276290" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
+
       <div class="availability">
         <span class="pulse"></span>
         Available for LIA internship from February 8, 2027 · Sweden
@@ -322,6 +644,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
         <span class="card-label">ENGINEERING PROFILE</span>
         <span class="card-status">● IN DEVELOPMENT</span>
       </div>
+
       <div class="terminal">
         <div><span class="dim">$</span> <span class="green">whoami</span></div>
         <div class="blue">erfan_tahmasebi</div>
@@ -334,15 +657,19 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
         <div>Building. Learning. Improving.</div>
         <div class="dim">_</div>
       </div>
+
       <div class="profile-bottom">
-        <div class="mini-stat"><strong>04</strong><span>PROJECTS</span></div>
-        <div class="mini-stat"><strong>05</strong><span>MERGED PRs</span></div>
+        <div class="mini-stat">
+          <strong>04</strong>
+          <span>PROJECTS</span>
+        </div>
       </div>
     </aside>
   </div>
 </header>
 
 <main>
+
 <section class="section" id="about">
   <div class="container">
     <div class="section-head">
@@ -350,6 +677,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <h2>Curious about systems.<br><span class="accent">Focused on engineering.</span></h2>
       <p class="section-desc">Learning to make machine learning systems practical, repeatable and reliable.</p>
     </div>
+
     <div class="about-grid">
       <div class="about-copy">
         <p>
@@ -360,17 +688,20 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           validation and model serving to containerization and
           automated CI/CD workflows.
         </p>
+
         <p>
           I enjoy understanding how different parts of a system fit
           together. Through individual and collaborative projects,
           I am developing practical experience with APIs, Docker,
           model workflows and software delivery.
         </p>
+
         <p>
           My goal is to grow into an MLOps Engineer and contribute
           to teams building maintainable and dependable ML solutions.
         </p>
       </div>
+
       <div class="details">
         <div class="detail"><span>Education</span><strong>Artificial Intelligence · Nackademin</strong></div>
         <div class="detail"><span>Specialization</span><strong>MLOps & ML Engineering</strong></div>
@@ -389,6 +720,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <h2>Built through <span class="accent">hands-on work.</span></h2>
       <p class="section-desc">A selection of educational and collaborative projects across MLOps, machine learning and edge computing.</p>
     </div>
+
     <div class="project-grid">
 
       <article class="project">
@@ -399,7 +731,12 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           with MLflow experiment and model management,
           data validation, automated tests and GitHub Actions CI/CD.
         </p>
-        <div class="tags"><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">MLflow</span><span class="tag">GitHub Actions</span></div>
+        <div class="tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">Docker</span>
+          <span class="tag">MLflow</span>
+          <span class="tag">GitHub Actions</span>
+        </div>
         <a class="project-link" href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
       </article>
 
@@ -412,7 +749,12 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           model delivery verification, Docker optimization,
           GHCR publishing, model versioning and Ruff linting.
         </p>
-        <div class="tags"><span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">GHCR</span><span class="tag">Ruff</span></div>
+        <div class="tags">
+          <span class="tag">CI/CD</span>
+          <span class="tag">Docker</span>
+          <span class="tag">GHCR</span>
+          <span class="tag">Ruff</span>
+        </div>
         <a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
       </article>
 
@@ -424,7 +766,12 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           Python, MQTT, data storage and Grafana for environmental
           monitoring.
         </p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Raspberry Pi Pico W</span><span class="tag">MQTT</span><span class="tag">Grafana</span></div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Raspberry Pi Pico W</span>
+          <span class="tag">MQTT</span>
+          <span class="tag">Grafana</span>
+        </div>
         <a class="project-link" href="https://github.com/erfantk25-lab/Edge-computing-project" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
       </article>
 
@@ -436,7 +783,11 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
           combining a FastAPI backend and model-serving layer
           with a Streamlit user interface.
         </p>
-        <div class="tags"><span class="tag">Machine Learning</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
+        <div class="tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Streamlit</span>
+        </div>
         <a class="project-link" href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
       </article>
 
@@ -451,12 +802,15 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <h2>Improvements that <span class="accent">matter.</span></h2>
       <p class="section-desc">Reported outcomes from Docker optimization contributions in the collaborative MLOps pipeline project.</p>
     </div>
+
     <div class="results">
       <div class="result"><strong>~39%</strong><span>Reported reduction in Docker image size</span></div>
       <div class="result"><strong>~30%</strong><span>Reported faster measured build time</span></div>
       <div class="result"><strong>05</strong><span>Approved and merged personal pull requests</span></div>
     </div>
+
     <p class="result-note">My individual contributions in the team project included:</p>
+
     <div class="pr-list">
       <div class="pr-item"><b>01</b> Statistical data-drift detection and model-delivery verification</div>
       <div class="pr-item"><b>02</b> Docker optimization with multi-stage builds and layer caching</div>
@@ -474,6 +828,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <h2>Tools, technologies <span class="accent">&amp; foundations.</span></h2>
       <p class="section-desc">A transparent overview of my current skills and practical project experience.</p>
     </div>
+
     <div class="skills-grid">
       <div class="skill"><div class="skill-mark">01 / DEVELOPMENT</div><h3>Programming</h3><p>Python — beginner level. Practical use in educational projects.</p></div>
       <div class="skill"><div class="skill-mark">02 / INFRASTRUCTURE</div><h3>Containers</h3><p>Docker — hands-on experience building and optimizing containers.</p></div>
@@ -482,6 +837,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
       <div class="skill"><div class="skill-mark">05 / AUTOMATION</div><h3>CI/CD</h3><p>GitHub Actions, automated tests, Ruff and container workflows.</p></div>
       <div class="skill"><div class="skill-mark">06 / DATA & CLOUD</div><h3>Cloud & data</h3><p>Cloud fundamentals, data validation, MQTT and Grafana.</p></div>
     </div>
+
     <p class="note">This overview reflects current learning and project experience, not professional certification or expert-level proficiency.</p>
   </div>
 </section>
@@ -521,6 +877,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     </div>
   </div>
 </section>
+
 </main>
 
 <footer>
@@ -533,5 +890,7 @@ footer{padding:28px 0;border-top:1px solid var(--line)}
     </div>
   </div>
 </footer>
+
 </body>
 </html>
+
