@@ -355,3 +355,47 @@ footer .logo { color: var(--text); }
     display: none;
   }
 }
+
+
+/* Final fix: the header switches to a menu before the full nav can be clipped. */
+.site-header {
+  min-width: 0;
+  box-sizing: border-box;
+}
+.site-header > .logo {
+  min-width: 0;
+  flex-shrink: 1;
+}
+.site-header > .logo span {
+  white-space: nowrap;
+}
+.site-header > nav {
+  min-width: 0;
+  flex-shrink: 0;
+}
+@media (max-width: 1200px) {
+  .site-header {
+    position: sticky;
+  }
+  .site-header > nav {
+    display: none !important;
+  }
+  .site-header > nav.open {
+    display: flex !important;
+  }
+  .site-header > .menu-button {
+    display: block !important;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 1201px) {
+  .site-header > nav {
+    display: flex !important;
+    flex-wrap: nowrap;
+    gap: clamp(12px, 1.5vw, 22px);
+  }
+  .site-header > .menu-button {
+    display: none !important;
+  }
+}
