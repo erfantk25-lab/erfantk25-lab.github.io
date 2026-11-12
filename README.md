@@ -31,11 +31,11 @@ I authored five merged pull requests in this team repository: [#1 Ruff in CI](ht
 
 Customer-churn prediction workflow documented with FastAPI, Docker, MLflow, Pandera, tests, and GitHub Actions.
 
-### Taxi prediction — full-stack ML application
+### Taxi prediction — individual full-stack ML project
 
 [Repository](https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN)
 
-FastAPI backend and Streamlit interface for a taxi prediction application, including route-related functionality and map visualisation.
+Individually developed full-stack application with a separate FastAPI backend and Streamlit frontend. Integrates OpenRouteService for route data and Folium for interactive map visualisation. The API exposes prediction and trip-data endpoints.
 
 ### Smart Grow — edge environmental monitoring
 
