@@ -594,6 +594,36 @@
         page-break-after: avoid;
       }
     }
+
+
+    /* Final print-width override: use the browser's A4 printable area. */
+    @page {
+      size: A4 portrait;
+      margin: 12mm;
+    }
+
+    @media print {
+      html,
+      body {
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+      }
+
+      .page {
+        display: block !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+
   </style>
 </head>
 
