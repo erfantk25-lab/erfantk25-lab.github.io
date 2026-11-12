@@ -406,11 +406,46 @@
     }
 
     @page {
-      size: A4;
-      margin: 14mm;
+      size: A4 portrait;
+      margin: 10mm;
     }
 
     @media print {
+      html, body {
+        width: 190mm !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+      }
+
+      .page {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+      }
+
+      .skill-card, .project, .experience, .contact-panel {
+        min-width: 0 !important;
+        overflow-wrap: anywhere;
+      }
+
+      .contact-line {
+        flex-wrap: wrap !important;
+        gap: 6px 14px !important;
+      }
+
+      img, svg {
+        max-width: 100% !important;
+      }
+
       :root {
         --bg: #08111f;
         --surface: #101d2d;
@@ -539,8 +574,19 @@
       }
 
       footer {
-        margin-top: 15px;
+        margin-top: 12px;
         color: #9ba9b8 !important;
+      }
+
+      /* Prevent awkward splits while allowing the CV to flow over A4 pages. */
+      .project, .experience, .skill-card, .contact-panel {
+        break-inside: avoid-page;
+        page-break-inside: avoid;
+      }
+
+      .section-heading {
+        break-after: avoid;
+        page-break-after: avoid;
       }
     }
   </style>
