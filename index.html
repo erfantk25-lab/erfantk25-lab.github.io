@@ -4,302 +4,534 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Erfan Tahmasebi – AI student focused on MLOps, ML Engineering and reliable machine learning workflows.">
-<title>Erfan Tahmasebi | MLOps Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0A1422">
+<meta name="description" content="Erfan Tahmasebi — Artificial Intelligence student focused on MLOps, ML Engineering, model serving and CI/CD. Seeking LIA from February 8, 2027.">
+<title>Erfan Tahmasebi — MLOps & ML Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy:#10243A;
-  --blue:#2456A6;
-  --teal:#0F766E;
-  --ice:#F4F7FA;
-  --white:#FFFFFF;
-  --muted:#AABBCB;
+  --bg:#0A1422;
+  --surface:#101F31;
+  --surface2:#14283B;
+  --line:rgba(179,205,225,.13);
+  --text:#F2F7FA;
+  --muted:#9BAFC1;
+  --teal:#62D4C7;
+  --blue:#4C83D8;
+  --max:1160px;
 }
-* {box-sizing:border-box;margin:0;padding:0}
-html {scroll-behavior:smooth}
-body {
-  font-family:Inter,sans-serif;
-  background:var(--navy);
-  color:var(--white);
-  line-height:1.7;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Inter,sans-serif;line-height:1.7;
+  overflow-x:hidden;
 }
-a {color:inherit;text-decoration:none}
-.container {width:min(1100px,90%);margin:auto}
-nav {
-  display:flex;justify-content:space-between;align-items:center;
-  padding:25px 0;
+body:before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(160,190,220,.025) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(160,190,220,.025) 1px,transparent 1px);
+  background-size:55px 55px;
+  mask-image:linear-gradient(to bottom,black,transparent 85%);
 }
-.logo {font:700 25px "Space Grotesk";color:#66D1C7}
-.navlinks {display:flex;gap:25px;color:#D2DFEA;font-size:14px}
-.navlinks a:hover {color:#66D1C7}
-.hero {
-  min-height:650px;display:flex;align-items:center;
-  background:radial-gradient(ellipse at 85% 30%,#174C5B 0%,transparent 42%);
+a{color:inherit;text-decoration:none}
+button,a{-webkit-tap-highlight-color:transparent}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+.mono{font-family:"DM Mono",monospace}
+.accent{color:var(--teal)}
+.muted{color:var(--muted)}
+.topbar{
+  position:sticky;top:0;z-index:20;
+  background:rgba(10,20,34,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
 }
-.eyebrow {
-  color:#66D1C7;text-transform:uppercase;
-  letter-spacing:3px;font-size:12px;font-weight:700;
+.nav{
+  height:76px;display:flex;align-items:center;
+  justify-content:space-between;
 }
-h1 {
-  font:700 clamp(44px,7vw,76px) "Space Grotesk";
-  line-height:1.1;margin:22px 0;
+.brand{display:flex;align-items:center;gap:12px}
+.brandmark{
+  width:38px;height:38px;border:1px solid rgba(98,212,199,.55);
+  display:grid;place-items:center;border-radius:10px;
+  color:var(--teal);font:700 15px "Space Grotesk";
+  background:rgba(98,212,199,.07);
 }
-h1 span {color:#66D1C7}
-.hero p {max-width:680px;color:#C5D3DF;font-size:18px}
-.buttons {display:flex;gap:15px;flex-wrap:wrap;margin-top:30px}
-.btn {
-  display:inline-block;padding:12px 21px;border-radius:7px;
-  font-weight:700;font-size:14px;
+.brandname{font:600 14px "Space Grotesk";letter-spacing:.02em}
+.navlinks{display:flex;gap:28px;align-items:center}
+.navlinks a{font-size:12px;color:var(--muted);transition:.2s}
+.navlinks a:hover{color:var(--teal)}
+.nav-cta{
+  border:1px solid rgba(98,212,199,.5);
+  color:var(--teal)!important;padding:9px 14px;border-radius:6px;
 }
-.primary {background:#66D1C7;color:#10243A}
-.secondary {border:1px solid #6A8198;color:white}
-.btn:hover {opacity:.85}
-.availability {margin-top:28px;color:#C5D3DF;font-size:14px}
-section {padding:85px 0}
-.light {background:var(--ice);color:var(--navy)}
-h2 {
-  font:700 clamp(30px,4vw,43px) "Space Grotesk";
-  margin:12px 0 20px;
+.hero{
+  position:relative;padding:110px 0 100px;
+  overflow:hidden;
 }
-.section-intro {color:var(--muted);max-width:680px;margin-bottom:35px}
-.light .section-intro {color:#526477}
-.about-grid {
-  display:grid;grid-template-columns:1.5fr 1fr;gap:40px;
+.hero:after{
+  content:"";position:absolute;width:620px;height:620px;
+  right:-180px;top:-180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(15,118,110,.23),transparent 68%);
+  pointer-events:none;
 }
-.about-grid p {color:#C5D3DF;margin-bottom:15px}
-.info {
-  background:#19344D;padding:25px;border-radius:12px;
+.hero-grid{
+  display:grid;grid-template-columns:1.35fr .65fr;
+  align-items:center;gap:55px;position:relative;z-index:1;
 }
-.info div {margin-bottom:18px}
-.info small {display:block;color:#66D1C7;text-transform:uppercase;font-size:11px}
-.info strong {font-size:15px}
-.projects {
-  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+.eyebrow{
+  color:var(--teal);font:500 11px "DM Mono",monospace;
+  letter-spacing:2px;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;
 }
-.project {
-  background:white;color:var(--navy);
-  padding:27px;border-radius:12px;
-  display:flex;flex-direction:column;min-height:280px;
+.eyebrow:before{content:"";width:24px;height:1px;background:var(--teal)}
+h1{
+  font:700 clamp(48px,6.5vw,78px)/1.04 "Space Grotesk";
+  letter-spacing:-4px;margin:25px 0;
 }
-.project-number {font-size:12px;color:var(--teal);font-weight:700}
-.project h3 {font:700 22px "Space Grotesk";margin:12px 0}
-.project p {color:#526477;font-size:14px;margin-bottom:20px}
-.tags {display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;margin-bottom:20px}
-.tag {background:#E8F0F5;padding:5px 9px;border-radius:5px;font-size:11px;color:#29465E}
-.project a {color:var(--blue);font-weight:700;font-size:14px}
-.metrics {display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.metric {border:1px solid #456078;padding:25px;border-radius:12px}
-.metric strong {display:block;font:700 48px "Space Grotesk";color:#66D1C7}
-.metric p {color:#D2DFEA}
-.skills {display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.skill {background:white;color:var(--navy);padding:20px;border-radius:10px}
-.skill h3 {font:700 17px "Space Grotesk";margin-bottom:7px}
-.skill p {font-size:13px;color:#526477}
-.contact {
-  background:#E8F0F5;color:var(--navy);text-align:center;
+h1 .gradient{
+  background:linear-gradient(100deg,#F2F7FA 5%,#62D4C7 85%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.contact p {color:#526477;margin-bottom:20px}
-footer {padding:25px;text-align:center;color:#AABBCB;font-size:13px}
-.placeholder {
-  border:1px dashed #8298AA;padding:20px;border-radius:10px;
-  color:#526477;background:#F8FAFC;
+.hero-copy{max-width:650px;color:#B5C4D1;font-size:16px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 19px;border-radius:7px;font-size:12px;font-weight:700;
+  transition:transform .2s,border-color .2s,background .2s;
 }
-@media(max-width:700px) {
-  .navlinks {gap:12px;font-size:12px}
-  .about-grid,.projects,.skills {grid-template-columns:1fr}
-  .hero {min-height:580px}
-  section {padding:65px 0}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--teal);color:#071A24}
+.btn-outline{border:1px solid var(--line);color:#E5EDF4}
+.btn-outline:hover{border-color:var(--teal)}
+.availability{
+  display:flex;align-items:center;gap:10px;margin-top:28px;
+  color:var(--muted);font-size:12px;
+}
+.pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--teal);
+  box-shadow:0 0 0 5px rgba(98,212,199,.1);
+}
+.profile-card{
+  position:relative;background:linear-gradient(145deg,#172D42,#0D1B2B);
+  border:1px solid var(--line);border-radius:16px;
+  padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.22);
+}
+.profile-card:before{
+  content:"";position:absolute;inset:-1px;border-radius:16px;
+  background:linear-gradient(135deg,rgba(98,212,199,.23),transparent 42%);
+  pointer-events:none;
+}
+.card-top{display:flex;justify-content:space-between;align-items:center}
+.card-label{font:11px "DM Mono";color:var(--muted)}
+.card-status{font:10px "DM Mono";color:var(--teal)}
+.terminal{
+  margin-top:25px;padding:18px;background:#091421;
+  border:1px solid var(--line);border-radius:9px;
+  font:11px/2 "DM Mono",monospace;color:#A9BAC9;
+}
+.terminal .green{color:var(--teal)}
+.terminal .blue{color:#85AEEF}
+.terminal .dim{color:#5E748A}
+.profile-bottom{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px;
+}
+.mini-stat{
+  padding:14px;background:rgba(255,255,255,.025);
+  border:1px solid var(--line);border-radius:8px;
+}
+.mini-stat strong{display:block;font:600 20px "Space Grotesk"}
+.mini-stat span{font-size:10px;color:var(--muted)}
+.section{padding:95px 0;border-top:1px solid var(--line)}
+.section-head{max-width:680px;margin-bottom:38px}
+.section-number{font:11px "DM Mono";color:var(--teal);letter-spacing:2px}
+h2{
+  font:600 clamp(32px,4vw,45px)/1.15 "Space Grotesk";
+  letter-spacing:-1.7px;margin:13px 0;
+}
+.section-desc{font-size:14px;color:var(--muted);max-width:620px}
+.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px}
+.about-copy p{color:#B3C2D0;font-size:14px;margin:0 0 17px}
+.details{
+  padding:25px;background:var(--surface);
+  border:1px solid var(--line);border-radius:12px;
+}
+.detail{padding:13px 0;border-bottom:1px solid var(--line)}
+.detail:last-child{border:0}
+.detail span{display:block;font:10px "DM Mono";color:var(--teal);text-transform:uppercase;letter-spacing:1px}
+.detail strong{display:block;font-size:12px;font-weight:600;margin-top:4px}
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.project{
+  background:linear-gradient(145deg,rgba(20,40,59,.94),rgba(13,27,43,.94));
+  border:1px solid var(--line);border-radius:12px;
+  padding:25px;min-height:290px;display:flex;flex-direction:column;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.project:hover{
+  transform:translateY(-4px);border-color:rgba(98,212,199,.45);
+  box-shadow:0 18px 45px rgba(0,0,0,.17);
+}
+.project-head{display:flex;justify-content:space-between;align-items:center}
+.project-index{font:10px "DM Mono";color:var(--teal);letter-spacing:1px}
+.project-icon{
+  width:34px;height:34px;border:1px solid var(--line);
+  display:grid;place-items:center;border-radius:8px;color:var(--teal);
+  font:14px "DM Mono";
+}
+.project h3{font:600 20px "Space Grotesk";margin:18px 0 9px}
+.project p{color:var(--muted);font-size:12px;margin:0 0 18px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;margin-bottom:19px}
+.tag{
+  font:10px "DM Mono";padding:5px 8px;
+  background:rgba(98,212,199,.07);color:#9CDCD5;
+  border:1px solid rgba(98,212,199,.13);border-radius:4px;
+}
+.project-link{
+  font-size:11px;font-weight:700;color:var(--teal);
+  display:inline-flex;gap:8px;align-items:center;
+}
+.project-link:hover{color:#B2F0E8}
+.results{
+  background:linear-gradient(120deg,#10283B,#0D1D2E);
+  border:1px solid var(--line);border-radius:15px;
+  padding:34px;display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:25px;align-items:center;
+}
+.result{padding:10px 20px;border-right:1px solid var(--line)}
+.result:last-child{border:0}
+.result strong{
+  display:block;font:700 42px "Space Grotesk";color:var(--teal);
+  letter-spacing:-2px;
+}
+.result span{font-size:11px;color:var(--muted)}
+.result-note{font-size:12px;color:#B5C4D1;margin-top:25px}
+.pr-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
+.pr-item{
+  padding:14px;background:var(--surface);
+  border:1px solid var(--line);border-radius:8px;
+  color:#B7C6D3;font-size:11px;
+}
+.pr-item b{color:var(--teal);font:11px "DM Mono";margin-right:7px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.skill{
+  background:var(--surface);border:1px solid var(--line);
+  padding:20px;border-radius:10px;
+}
+.skill h3{font:600 14px "Space Grotesk";margin-bottom:9px}
+.skill p{font-size:11px;color:var(--muted)}
+.skill .skill-mark{color:var(--teal);font:11px "DM Mono";margin-bottom:12px}
+.note{
+  color:var(--muted);font-size:11px;margin-top:20px;
+  border-left:2px solid var(--teal);padding-left:13px;
+}
+.placeholder{
+  border:1px dashed rgba(155,175,193,.35);
+  padding:22px;border-radius:10px;color:var(--muted);
+  font-size:12px;background:rgba(255,255,255,.015);
+}
+.contact-section{
+  background:radial-gradient(ellipse at 50% 100%,rgba(15,118,110,.19),transparent 60%);
+}
+.contact-box{
+  border:1px solid rgba(98,212,199,.23);
+  border-radius:15px;padding:48px;
+  background:linear-gradient(140deg,#132B40,#0E1C2D);
+  text-align:center;
+}
+.contact-box h2{margin:14px 0}
+.contact-box p{color:var(--muted);font-size:13px}
+.contact-box .hero-actions{justify-content:center}
+footer{padding:28px 0;border-top:1px solid var(--line)}
+.footer-inner{
+  display:flex;justify-content:space-between;gap:15px;
+  flex-wrap:wrap;color:#8094A8;font-size:10px;
+}
+.footer-links{display:flex;gap:18px}
+.footer-links a:hover{color:var(--teal)}
+@media(max-width:800px){
+  .hero-grid{grid-template-columns:1fr;gap:38px}
+  .profile-card{max-width:520px}
+  .about-grid{grid-template-columns:1fr;gap:25px}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .results{grid-template-columns:1fr;gap:10px}
+  .result{border-right:0;border-bottom:1px solid var(--line);padding:15px}
+  .result:last-child{border:0}
+}
+@media(max-width:600px){
+  .container{width:calc(100% - 34px)}
+  .nav{height:66px}
+  .navlinks{gap:13px}
+  .navlinks a{font-size:10px}
+  .nav-cta{display:none}
+  .brandname{font-size:12px}
+  .hero{padding:78px 0}
+  h1{letter-spacing:-2.5px}
+  .project-grid,.skills-grid,.pr-list{grid-template-columns:1fr}
+  .section{padding:70px 0}
+  .contact-box{padding:30px 18px}
+  .footer-inner{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important}
 }
 </style>
 </head>
 <body>
 
-<header class="container" id="home">
-<nav>
-  <a class="logo" href="#home">ET.</a>
-  <div class="navlinks">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+<div class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Erfan Tahmasebi home">
+      <span class="brandmark">ET</span>
+      <span class="brandname">ERFAN TAHMASEBI<span class="accent">.</span></span>
+    </a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a class="nav-cta" href="#contact">Get in touch ↗</a>
+    </nav>
   </div>
-</nav>
+</div>
 
-<div class="hero">
-<div>
-  <div class="eyebrow">Artificial Intelligence · MLOps · ML Engineering</div>
-  <h1>Building reliable<br><span>Machine Learning</span><br>workflows.</h1>
-  <p>
-    I'm Erfan Tahmasebi, an Artificial Intelligence student at
-    Nackademin focused on MLOps and ML Engineering.
-    I enjoy building practical solutions that connect machine
-    learning, software engineering and automation.
-  </p>
-  <div class="buttons">
-    <a class="btn primary" href="#projects">Explore Projects ↗</a>
-    <a class="btn secondary" href="https://www.linkedin.com/in/erfan-tahmasebi-b41276290" target="_blank" rel="noopener">LinkedIn ↗</a>
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">AI Student / MLOps & ML Engineering</div>
+      <h1>Engineering the<br>future of <span class="gradient">machine learning.</span></h1>
+      <p class="hero-copy">
+        I'm Erfan Tahmasebi — an Artificial Intelligence student
+        at Nackademin focused on MLOps and ML Engineering.
+        I build practical projects around model serving,
+        automation, containers and reliable ML workflows.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">Explore my work ↗</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/erfan-tahmasebi-b41276290" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <div class="availability">
+        <span class="pulse"></span>
+        Available for LIA internship from February 8, 2027 · Sweden
+      </div>
+    </div>
+
+    <aside class="profile-card" aria-label="Engineering profile">
+      <div class="card-top">
+        <span class="card-label">ENGINEERING PROFILE</span>
+        <span class="card-status">● IN DEVELOPMENT</span>
+      </div>
+      <div class="terminal">
+        <div><span class="dim">$</span> <span class="green">whoami</span></div>
+        <div class="blue">erfan_tahmasebi</div>
+        <div><span class="dim">$</span> focus --area</div>
+        <div class="green">MLOps / ML Engineering</div>
+        <div><span class="dim">$</span> current_stack</div>
+        <div>Python · Docker · FastAPI</div>
+        <div>MLflow · GitHub Actions</div>
+        <div><span class="dim">$</span> <span class="green">status</span></div>
+        <div>Building. Learning. Improving.</div>
+        <div class="dim">_</div>
+      </div>
+      <div class="profile-bottom">
+        <div class="mini-stat"><strong>04</strong><span>PROJECTS</span></div>
+        <div class="mini-stat"><strong>05</strong><span>MERGED PRs</span></div>
+      </div>
+    </aside>
   </div>
-  <div class="availability">● Seeking an LIA internship from February 8, 2027 · Sweden</div>
-</div>
-</div>
 </header>
 
-<section id="about">
-<div class="container">
-  <div class="eyebrow">01 / About me</div>
-  <h2>Learning by building.</h2>
-  <div class="about-grid">
-    <div>
-      <p>
-        I study Artificial Intelligence at Nackademin, with a focus
-        on Machine Learning Operations. Through educational and
-        collaborative projects, I have explored model serving,
-        API development, Docker containers, data validation and
-        automated CI/CD workflows.
-      </p>
-      <p>
-        My goal is to develop into an MLOps Engineer who can help
-        build reliable, scalable and maintainable machine learning
-        systems. I value practical learning, teamwork and continuous
-        improvement.
-      </p>
+<main>
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-number">01 / ABOUT</div>
+      <h2>Curious about systems.<br><span class="accent">Focused on engineering.</span></h2>
+      <p class="section-desc">Learning to make machine learning systems practical, repeatable and reliable.</p>
     </div>
-    <div class="info">
-      <div><small>Education</small><strong>Artificial Intelligence · Nackademin</strong></div>
-      <div><small>Specialization</small><strong>MLOps & ML Engineering</strong></div>
-      <div><small>Location</small><strong>Stockholm, Sweden</strong></div>
-      <div><small>LIA availability</small><strong>February 8, 2027</strong></div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          I study Artificial Intelligence at Nackademin, with a
+          specialization in Machine Learning Operations. My project
+          work has introduced me to the engineering practices behind
+          delivering machine learning applications — from data
+          validation and model serving to containerization and
+          automated CI/CD workflows.
+        </p>
+        <p>
+          I enjoy understanding how different parts of a system fit
+          together. Through individual and collaborative projects,
+          I am developing practical experience with APIs, Docker,
+          model workflows and software delivery.
+        </p>
+        <p>
+          My goal is to grow into an MLOps Engineer and contribute
+          to teams building maintainable and dependable ML solutions.
+        </p>
+      </div>
+      <div class="details">
+        <div class="detail"><span>Education</span><strong>Artificial Intelligence · Nackademin</strong></div>
+        <div class="detail"><span>Specialization</span><strong>MLOps & ML Engineering</strong></div>
+        <div class="detail"><span>Location</span><strong>Stockholm, Sweden</strong></div>
+        <div class="detail"><span>LIA period</span><strong>Starting February 8, 2027</strong></div>
+        <div class="detail"><span>Languages</span><strong>Swedish · English (good proficiency)</strong></div>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
-<section class="light" id="projects">
-<div class="container">
-  <div class="eyebrow">02 / Selected work</div>
-  <h2>Projects & engineering.</h2>
-  <p class="section-intro">
-    Practical projects exploring machine learning delivery,
-    automation, APIs and connected systems.
-  </p>
-  <div class="projects">
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-number">02 / SELECTED PROJECTS</div>
+      <h2>Built through <span class="accent">hands-on work.</span></h2>
+      <p class="section-desc">A selection of educational and collaborative projects across MLOps, machine learning and edge computing.</p>
+    </div>
+    <div class="project-grid">
 
-    <article class="project">
-      <div class="project-number">PROJECT 01</div>
-      <h3>ML Serving & CI/CD</h3>
-      <p>
-        A machine learning serving solution built with FastAPI,
-        Docker and MLflow, including data validation, automated
-        testing and GitHub Actions CI/CD.
-      </p>
-      <div class="tags"><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">MLflow</span><span class="tag">CI/CD</span></div>
-      <a href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving" target="_blank" rel="noopener">View GitHub repository ↗</a>
-    </article>
+      <article class="project">
+        <div class="project-head"><span class="project-index">PROJECT / 001</span><span class="project-icon">01</span></div>
+        <h3>ML Serving & CI/CD</h3>
+        <p>
+          A model-serving project using FastAPI and Docker,
+          with MLflow experiment and model management,
+          data validation, automated tests and GitHub Actions CI/CD.
+        </p>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">MLflow</span><span class="tag">GitHub Actions</span></div>
+        <a class="project-link" href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+      </article>
 
-    <article class="project">
-      <div class="project-number">PROJECT 02 · TEAM PROJECT</div>
-      <h3>End-to-End MLOps Pipeline</h3>
-      <p>
-        Collaborative customer-churn prediction pipeline.
-        My five merged PRs contributed to drift detection,
-        model verification, Docker optimization, GHCR publishing,
-        model versioning and Ruff linting.
-      </p>
-      <div class="tags"><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">GHCR</span><span class="tag">Ruff</span></div>
-      <a href="https://github.com/LeoLindqvist123/ci-cd-pipeline" target="_blank" rel="noopener">View GitHub repository ↗</a>
-    </article>
+      <article class="project">
+        <div class="project-head"><span class="project-index">PROJECT / 002 · TEAM PROJECT</span><span class="project-icon">02</span></div>
+        <h3>End-to-End MLOps Pipeline</h3>
+        <p>
+          Collaborative customer-churn prediction pipeline.
+          My five approved and merged PRs covered drift detection,
+          model delivery verification, Docker optimization,
+          GHCR publishing, model versioning and Ruff linting.
+        </p>
+        <div class="tags"><span class="tag">CI/CD</span><span class="tag">Docker</span><span class="tag">GHCR</span><span class="tag">Ruff</span></div>
+        <a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+      </article>
 
-    <article class="project">
-      <div class="project-number">PROJECT 03</div>
-      <h3>Smart Grow – Environmental Monitor</h3>
-      <p>
-        An IoT and edge-computing project using Raspberry Pi Pico W,
-        Python, MQTT, data storage and Grafana.
-      </p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">MQTT</span><span class="tag">IoT</span><span class="tag">Grafana</span></div>
-      <a href="https://github.com/erfantk25-lab/Edge-computing-project" target="_blank" rel="noopener">View GitHub repository ↗</a>
-    </article>
+      <article class="project">
+        <div class="project-head"><span class="project-index">PROJECT / 003</span><span class="project-icon">03</span></div>
+        <h3>Smart Grow — Environmental Monitor</h3>
+        <p>
+          An IoT and edge-computing project using Raspberry Pi Pico W,
+          Python, MQTT, data storage and Grafana for environmental
+          monitoring.
+        </p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Raspberry Pi Pico W</span><span class="tag">MQTT</span><span class="tag">Grafana</span></div>
+        <a class="project-link" href="https://github.com/erfantk25-lab/Edge-computing-project" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+      </article>
 
-    <article class="project">
-      <div class="project-number">PROJECT 04</div>
-      <h3>Taxi Prediction – Fullstack ML</h3>
-      <p>
-        A machine learning application for taxi fare prediction,
-        with a FastAPI backend and model-serving layer integrated
-        with a Streamlit user interface.
-      </p>
-      <div class="tags"><span class="tag">Machine Learning</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
-      <a href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN" target="_blank" rel="noopener">View GitHub repository ↗</a>
-    </article>
+      <article class="project">
+        <div class="project-head"><span class="project-index">PROJECT / 004</span><span class="project-icon">04</span></div>
+        <h3>Taxi Prediction — Fullstack ML</h3>
+        <p>
+          A machine learning application for taxi fare prediction,
+          combining a FastAPI backend and model-serving layer
+          with a Streamlit user interface.
+        </p>
+        <div class="tags"><span class="tag">Machine Learning</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
+        <a class="project-link" href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+      </article>
 
+    </div>
   </div>
-</div>
 </section>
 
-<section>
-<div class="container">
-  <div class="eyebrow">03 / Engineering results</div>
-  <h2>Measurable improvements.</h2>
-  <p class="section-intro">
-    Reported results from Docker optimization work in the
-    collaborative MLOps pipeline project.
-  </p>
-  <div class="metrics">
-    <div class="metric"><strong>~39%</strong><p>Reduction in Docker image size</p></div>
-    <div class="metric"><strong>~30%</strong><p>Faster measured build time</p></div>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-number">03 / ENGINEERING HIGHLIGHTS</div>
+      <h2>Improvements that <span class="accent">matter.</span></h2>
+      <p class="section-desc">Reported outcomes from Docker optimization contributions in the collaborative MLOps pipeline project.</p>
+    </div>
+    <div class="results">
+      <div class="result"><strong>~39%</strong><span>Reported reduction in Docker image size</span></div>
+      <div class="result"><strong>~30%</strong><span>Reported faster measured build time</span></div>
+      <div class="result"><strong>05</strong><span>Approved and merged personal pull requests</span></div>
+    </div>
+    <p class="result-note">My individual contributions in the team project included:</p>
+    <div class="pr-list">
+      <div class="pr-item"><b>01</b> Statistical data-drift detection and model-delivery verification</div>
+      <div class="pr-item"><b>02</b> Docker optimization with multi-stage builds and layer caching</div>
+      <div class="pr-item"><b>03</b> Dockerfile, container smoke tests and GHCR publishing</div>
+      <div class="pr-item"><b>04</b> Approved model versioning, metadata and lineage tests</div>
+      <div class="pr-item"><b>05</b> Ruff linting integrated into the CI workflow</div>
+    </div>
   </div>
-</div>
 </section>
 
-<section class="light" id="skills">
-<div class="container">
-  <div class="eyebrow">04 / Technical toolkit</div>
-  <h2>Tools I'm working with.</h2>
-  <p class="section-intro">
-    An honest snapshot of my current skills and project experience.
-  </p>
-  <div class="skills">
-    <div class="skill"><h3>Programming</h3><p>Python · Beginner level</p></div>
-    <div class="skill"><h3>Containers</h3><p>Docker · Hands-on project experience</p></div>
-    <div class="skill"><h3>Machine Learning</h3><p>ML fundamentals and educational projects</p></div>
-    <div class="skill"><h3>ML Engineering</h3><p>FastAPI · MLflow · Model serving</p></div>
-    <div class="skill"><h3>Automation</h3><p>GitHub Actions · CI/CD · Ruff</p></div>
-    <div class="skill"><h3>Data & Cloud</h3><p>Data validation · Cloud fundamentals · MQTT · Grafana</p></div>
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-number">04 / TECHNICAL TOOLKIT</div>
+      <h2>Tools, technologies <span class="accent">&amp; foundations.</span></h2>
+      <p class="section-desc">A transparent overview of my current skills and practical project experience.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill"><div class="skill-mark">01 / DEVELOPMENT</div><h3>Programming</h3><p>Python — beginner level. Practical use in educational projects.</p></div>
+      <div class="skill"><div class="skill-mark">02 / INFRASTRUCTURE</div><h3>Containers</h3><p>Docker — hands-on experience building and optimizing containers.</p></div>
+      <div class="skill"><div class="skill-mark">03 / MACHINE LEARNING</div><h3>ML foundations</h3><p>Machine learning fundamentals and applied educational projects.</p></div>
+      <div class="skill"><div class="skill-mark">04 / MODEL DELIVERY</div><h3>ML Engineering</h3><p>FastAPI, MLflow, model serving and API integration.</p></div>
+      <div class="skill"><div class="skill-mark">05 / AUTOMATION</div><h3>CI/CD</h3><p>GitHub Actions, automated tests, Ruff and container workflows.</p></div>
+      <div class="skill"><div class="skill-mark">06 / DATA & CLOUD</div><h3>Cloud & data</h3><p>Cloud fundamentals, data validation, MQTT and Grafana.</p></div>
+    </div>
+    <p class="note">This overview reflects current learning and project experience, not professional certification or expert-level proficiency.</p>
   </div>
-</div>
 </section>
 
-<section>
-<div class="container">
-  <div class="eyebrow">05 / Testimonials</div>
-  <h2>Recommendations.</h2>
-  <div class="placeholder">This section is reserved for genuine recommendations. Testimonials will be added with permission.</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-  <div class="eyebrow">06 / Newsletter</div>
-  <h2>Stay connected.</h2>
-  <div class="placeholder">Newsletter sign-up is not active yet. This section can be connected to a mailing-list service in the future.</div>
-</div>
-</section>
-
-<section class="contact" id="contact">
-<div class="container">
-  <div class="eyebrow">07 / Contact</div>
-  <h2>Let's build something meaningful.</h2>
-  <p>I'm looking for an LIA opportunity starting February 8, 2027.</p>
-  <div class="buttons" style="justify-content:center">
-    <a class="btn primary" href="https://www.linkedin.com/in/erfan-tahmasebi-b41276290" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
-    <a class="btn secondary" style="color:#10243A;border-color:#10243A" href="https://github.com/erfantk25-lab" target="_blank" rel="noopener">GitHub ↗</a>
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-number">05 / TESTIMONIALS</div>
+      <h2>Recommendations.</h2>
+      <p class="section-desc">Feedback and recommendations from people I've worked and studied with.</p>
+    </div>
+    <div class="placeholder">Recommendations will be added here when genuine testimonials are available and approved for publication.</div>
   </div>
-</div>
 </section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-number">06 / UPDATES</div>
+      <h2>Stay connected.</h2>
+      <p class="section-desc">A space for future project updates and learning notes.</p>
+    </div>
+    <div class="placeholder">Newsletter subscription is not active yet. Updates and a subscription option may be added in the future.</div>
+  </div>
+</section>
+
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div class="eyebrow" style="justify-content:center">07 / LET'S CONNECT</div>
+      <h2>Ready for the next <span class="accent">engineering challenge?</span></h2>
+      <p>I'm looking for an LIA internship starting February 8, 2027, with a focus on MLOps, ML Engineering or related areas.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/erfan-tahmasebi-b41276290" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+        <a class="btn btn-outline" href="https://github.com/erfantk25-lab" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
 <footer>
-  © 2026 Erfan Tahmasebi · MLOps & ML Engineering · Stockholm, Sweden
+  <div class="container footer-inner">
+    <span>© 2026 Erfan Tahmasebi · MLOps & ML Engineering</span>
+    <div class="footer-links">
+      <a href="https://github.com/erfantk25-lab" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/erfan-tahmasebi-b41276290" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
