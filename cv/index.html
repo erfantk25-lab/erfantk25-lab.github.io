@@ -464,13 +464,19 @@
       .skill-card h3 { font-size: 5.8pt !important; margin: 0 0 .5mm !important; }
       .skill-card p { font-size: 6.2pt !important; line-height: 1.12 !important; }
 
-      .project-list { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 1.2mm !important; }
+      /* Inline project cards instead of a print grid: Chromium may move a whole grid to page 2. */
+      .project-list { display: block !important; font-size: 0 !important; }
       .project {
+        display: inline-block !important;
+        vertical-align: top !important;
+        width: 49.3% !important;
+        margin: 0 .35% 1.2mm 0 !important;
         min-width: 0 !important;
         padding: 1.3mm !important;
         background: #101d2d !important;
         break-inside: avoid !important;
         page-break-inside: avoid !important;
+        font-size: 7pt !important;
       }
       .project-top, .experience-top { gap: 1mm !important; margin: 0 0 .6mm !important; }
       .project h3, .experience h3 { font-size: 7pt !important; }
