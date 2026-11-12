@@ -1,27 +1,52 @@
-Hi, I'm Erfan Tahmasebi 👋
-MLOps Engineering student at Nackademin | Interested in reliable machine-learning systems, automation, and the engineering work that takes models from experiments to usable services.
+# Erfan Tahmasebi — MLOps Engineering Portfolio
 
-I enjoy learning by building and exploring the systems around machine learning: data quality, experiment tracking, model serving, containerisation, CI/CD, and monitoring. I am currently developing my skills through coursework and hands-on projects.
-- 🎓 Studying MLOps Engineering at Nackademin
-- 💼 Looking for an LIA internship: 8 February – 21 May 2027
-- 🌐 Portfolio: erfantk25-lab.github.io
-- 📫 GitHub: @erfantk25-lab
-Selected projects
-FastAPI Docker ML Serving
-An ML-serving project focused on the path from model development to a service: FastAPI, Docker, MLflow, data validation, automated checks, and GitHub Actions.
-Taxi Prediction – Full Stack
-A full-stack machine-learning application combining a Python prediction backend with a Streamlit interface and map/routing visualisation.
-Edge Computing Project
-An edge/IoT project exploring sensor data collection, Raspberry Pi Pico W, MicroPython, MQTT messaging, data storage, and Grafana visualisation.
-Machine Learning – MLOps Coursework
-Coursework repository documenting practical machine-learning work and the foundations of an ML workflow.
-Technologies I work with
-Programming & data: Python, SQL, Pandera
-Machine learning: scikit-learn, MLflow
-Backend & serving: FastAPI
-DevOps & infrastructure: Docker, GitHub Actions, CI/CD, Kubernetes (coursework/project exposure)
-Data & edge systems: MQTT, TimescaleDB, Grafana
+Portfolio repository for [erfantk25-lab.github.io](https://erfantk25-lab.github.io/).
 
-My experience is primarily academic and project-based, and I am actively deepening it through practical work.
-What I'm looking to learn and contribute
-I am interested in an internship where I can contribute to Python-based engineering work, learn from an experienced team, and grow within MLOps, ML platform engineering, or backend/platform development. I value clear documentation, reproducible workflows, thoughtful testing, and collaboration.
+I'm an MLOps Engineering student at Nackademin (2025–2028), based in Sweden, looking for an **LIA internship from 8 February to 21 May 2027**.
+
+## Focus
+
+I am interested in the engineering that makes machine-learning systems reliable and useful beyond experimentation:
+
+- Python-based ML and backend services
+- Model serving with FastAPI
+- Containerisation with Docker
+- CI/CD and automated testing with GitHub Actions
+- Data validation, experiment tracking, and model quality
+- Edge/IoT data collection and observability
+
+My experience is primarily academic and project-based. The portfolio distinguishes project work and team results from individual contributions.
+
+## Selected projects
+
+### End-to-end MLOps & CI/CD — churn prediction
+[Team repository](https://github.com/LeoLindqvist123/ci-cd-pipeline)
+
+My portfolio documents five approved and merged pull requests covering statistical data-drift checks, delivery verification, multi-stage Docker builds, layer caching, smoke tests, GHCR publishing, model metadata/lineage, and Ruff in CI. Reported improvements of approximately 39% smaller Docker images and 30% faster measured builds are team-level results.
+
+### ML serving with FastAPI and Docker
+[Repository](https://github.com/erfantk25-lab/fastapi-docker-ml-serving)
+
+Customer-churn prediction workflow documented with FastAPI, Docker, MLflow, Pandera, tests, and GitHub Actions.
+
+### Taxi prediction — full-stack ML application
+[Repository](https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN)
+
+FastAPI backend and Streamlit interface for a taxi prediction application, including route-related functionality and map visualisation.
+
+### Smart Grow — edge environmental monitoring
+[Repository](https://github.com/erfantk25-lab/Edge-computing-project-)
+
+Sensor-based edge/IoT project documented with Raspberry Pi Pico W, MicroPython, MQTT, Python, TimescaleDB, Docker Compose, and Grafana.
+
+## Technologies
+
+**Used in coursework and projects:** Python, SQL, scikit-learn, FastAPI, Docker, GitHub Actions, MLflow, Pandera, MQTT, TimescaleDB, Streamlit, and Grafana.
+
+**Currently developing:** Kubernetes, cloud infrastructure, production monitoring, and ML platform practices.
+
+## Contact
+
+- GitHub: [@erfantk25-lab](https://github.com/erfantk25-lab)
+- Portfolio: [erfantk25-lab.github.io](https://erfantk25-lab.github.io/)
+- Email: [erfan.tahmasbikondroodi@yh.nackademin.se](mailto:erfan.tahmasbikondroodi@yh.nackademin.se)
