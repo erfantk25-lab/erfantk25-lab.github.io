@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mall för personligt brev – Erfan Tahmasebi.">
+  <meta name="theme-color" content="#07111f">
+  <title>Personligt brev – Erfan Tahmasebi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#07111f; --surface:#0d1a2b; --surface-light:#122238;
+      --text:#edf4fc; --muted:#9aadc2; --accent:#73e0dc;
+      --border:rgba(180,205,230,.15);
+      --mono:"DM Mono",monospace; --body:"DM Sans",sans-serif;
+      --heading:"Space Grotesk",sans-serif;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; background:radial-gradient(ellipse at 80% 0%,rgba(55,113,145,.15),transparent 34%),var(--bg);
+      color:var(--text); font:15px/1.65 var(--body);
+    }
+    a { color:inherit; text-decoration:none; }
+    a:hover { color:var(--accent); }
+    .page { width:min(100% - 40px,850px); margin:auto; padding:30px 0 60px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:18px; padding-bottom:18px; border-bottom:1px solid var(--border); }
+    .brand,.eyebrow,.label { font-family:var(--mono); text-transform:uppercase; letter-spacing:.07em; }
+    .brand { color:var(--accent); font-size:11px; }
+    .actions { display:flex; align-items:center; gap:12px; color:var(--muted); font-size:13px; }
+    button { cursor:pointer; border:1px solid rgba(115,224,220,.45); background:rgba(115,224,220,.08); color:var(--accent); border-radius:6px; padding:9px 14px; font:inherit; }
+    button:hover { background:rgba(115,224,220,.16); }
+    .hero { padding:45px 0 25px; }
+    .eyebrow { color:var(--accent); font-size:11px; margin:0 0 12px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font:600 clamp(36px,7vw,58px)/1.03 var(--heading); letter-spacing:-.05em; margin-bottom:10px; }
+    .subtitle { color:var(--muted); font:19px var(--heading); margin-bottom:18px; }
+    .contact { display:flex; flex-wrap:wrap; gap:8px 20px; color:var(--muted); font-size:12px; }
+    .panel { padding:24px; background:var(--surface); border:1px solid var(--border); border-radius:8px; }
+    .panel-head { display:flex; align-items:baseline; gap:12px; margin-bottom:18px; }
+    .label { color:var(--accent); font-size:10px; }
+    h2 { font:600 19px var(--heading); margin:0; }
+    .hint { color:var(--muted); font-size:12px; margin:0 0 16px; }
+    .letter { color:#d4deea; font-size:15px; line-height:1.8; }
+    .letter p { margin:0 0 17px; }
+    [contenteditable="true"] { outline:none; border-bottom:1px dashed rgba(115,224,220,.55); color:var(--text); padding:0 2px; min-width:50px; }
+    [contenteditable="true"]:focus { background:rgba(115,224,220,.08); border-radius:3px; }
+    .placeholder { color:var(--accent); }
+    .tips { margin-top:18px; padding:17px 20px; background:var(--surface-light); border:1px solid var(--border); border-radius:7px; color:var(--muted); font-size:12px; }
+    .tips strong { color:var(--accent); font-weight:500; }
+    footer { display:flex; justify-content:space-between; gap:12px; padding-top:20px; margin-top:22px; border-top:1px solid var(--border); color:var(--muted); font:10px var(--mono); }
+    @media(max-width:600px) { .page{width:calc(100% - 28px);padding-top:18px}.topbar{align-items:flex-start;flex-direction:column}.hero{padding:32px 0 20px}.panel{padding:17px}.letter{font-size:14px} }
+    @page { size:A4 portrait; margin:16mm; }
+    @media print {
+      html,body { background:#07111f !important; color:#edf4fc !important; print-color-adjust:exact !important; -webkit-print-color-adjust:exact !important; }
+      body { font-size:11pt; }
+      .page { width:100%; max-width:none; padding:0; }
+      .topbar { padding-bottom:10px; }
+      .actions,.tips,.no-print { display:none !important; }
+      .hero { padding:24px 0 18px; }
+      h1 { font-size:32pt; }
+      .panel { padding:18px; }
+      .letter { font-size:11pt; line-height:1.65; }
+      [contenteditable="true"] { border:0; background:none !important; }
+      footer { margin-top:14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar">
+      <div class="brand">ERFAN TAHMASEBI / PERSONLIGT BREV</div>
+      <div class="actions">
+        <a href="../cv/">Till CV</a>
+        <button type="button" onclick="window.print()">Spara som PDF / Skriv ut</button>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <p class="eyebrow">ANSÖKNINGSMALL / REDIGERBAR</p>
+      <h1>Personligt brev</h1>
+      <p class="subtitle">MLOps · Machine Learning · Python · CI/CD</p>
+      <div class="contact">
+        <span>Erfan Tahmasebi</span>
+        <span>070-769 49 73</span>
+        <span>erfan.tahmasebikondroodi@yh.nackademin.se</span>
+        <span>github.com/erfantk25-lab</span>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span class="label">01 /</span>
+        <h2>Din ansökan</h2>
+      </div>
+      <p class="hint no-print">Klicka på de turkosa fälten och skriv direkt i texten. Anpassa brevet för varje arbetsgivare och ta bort instruktionerna innan du skickar.</p>
+
+      <div class="letter">
+        <p><span contenteditable="true" class="placeholder">[Datum]</span></p>
+        <p>
+          <strong><span contenteditable="true" class="placeholder">[Kontaktperson / rekryterande chef]</span></strong><br>
+          <span contenteditable="true" class="placeholder">[Företag]</span>
+        </p>
+        <p><strong>Ansökan: <span contenteditable="true" class="placeholder">[Tjänst eller LIA-plats]</span></strong></p>
+
+        <p>Hej!</p>
+
+        <p>
+          Jag heter Erfan Tahmasebi och studerar till MLOps Engineer på Nackademin.
+          Jag söker <span contenteditable="true" class="placeholder">[tjänsten / LIA-platsen]</span>
+          hos er eftersom <span contenteditable="true" class="placeholder">[skriv varför du är intresserad av just företaget och rollen]</span>.
+          Jag lockas särskilt av möjligheten att <span contenteditable="true" class="placeholder">[nämn något konkret från annonsen, teamet eller företagets verksamhet]</span>.
+        </p>
+
+        <p>
+          Under min utbildning har jag arbetat praktiskt med Python, machine learning,
+          Docker, FastAPI, MLflow och CI/CD. I ett grupprojekt kring en automatiserad
+          ML-pipeline bidrog jag bland annat med driftkontroll, Docker-optimering,
+          automatiserade tester och modellversionering. Jag gjorde även fem godkända
+          och mergade pull requests i projektet. Det har gett mig erfarenhet av
+          <span contenteditable="true" class="placeholder">[välj 1–2 kompetenser som passar den aktuella rollen]</span>.
+        </p>
+
+        <p>
+          Jag trivs med att felsöka, lära mig nya verktyg och samarbeta för att
+          skapa lösningar som fungerar stabilt i praktiken. Från tidigare erfarenheter
+          inom IT-support och som fotbollstränare har jag också utvecklat min
+          kommunikationsförmåga, mitt ansvarstagande och min förmåga att arbeta med
+          olika människor. Hos er vill jag bidra med <span contenteditable="true" class="placeholder">[beskriv vad du konkret kan bidra med]</span>
+          och samtidigt fortsätta utvecklas inom <span contenteditable="true" class="placeholder">[relevant område]</span>.
+        </p>
+
+        <p>
+          Jag berättar gärna mer om mina projekt och hur jag kan bidra hos er
+          vid en intervju. Tack för att ni tar er tid att läsa min ansökan.
+        </p>
+
+        <p>Med vänliga hälsningar,<br><strong>Erfan Tahmasebi</strong></p>
+      </div>
+    </section>
+
+    <aside class="tips no-print">
+      <strong>Innan du skickar:</strong> Byt ut alla turkosa hakparenteser, nämn något specifikt om arbetsgivaren,
+      koppla dina erfarenheter till annonsen och håll brevet till ungefär en A4-sida.
+      Använd knappen ovan och välj ”Spara som PDF” när brevet är klart.
+    </aside>
+
+    <footer>
+      <span>ERFAN TAHMASEBI</span>
+      <span>PERSONLIGT BREV / MALL</span>
+    </footer>
+  </main>
+</body>
+</html>
