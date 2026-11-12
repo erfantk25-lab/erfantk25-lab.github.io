@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erfan Tahmasebi – CV (Print)</title>
+<style>
+  @page { size: A4; margin: 15mm 16mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: #17202b; background: #fff; font: 10pt/1.42 Arial, Helvetica, sans-serif; }
+  main { max-width: 180mm; margin: 0 auto; }
+  header { border-bottom: 2px solid #183b55; padding-bottom: 5mm; margin-bottom: 5mm; }
+  h1 { font-size: 25pt; line-height: 1.05; margin: 0 0 2mm; color: #102b40; }
+  .role { font-size: 12pt; font-weight: 600; margin: 0 0 3mm; color: #31536b; }
+  .contact { font-size: 9pt; overflow-wrap: anywhere; }
+  .availability { margin-top: 3mm; font-weight: 700; color: #155e63; }
+  section { margin: 0 0 5mm; break-inside: auto; }
+  h2 { font-size: 13pt; color: #102b40; border-bottom: 1px solid #9aabb8; padding-bottom: 1.5mm; margin: 0 0 2.5mm; }
+  h3 { font-size: 10.5pt; margin: 0 0 1mm; color: #183b55; }
+  p { margin: 0 0 2mm; }
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 6mm; }
+  .skill p { margin: 0; }
+  .project, .job { margin: 0 0 3.5mm; break-inside: avoid; }
+  .project-head, .job-head { display: flex; justify-content: space-between; gap: 5mm; align-items: baseline; }
+  .kind { font-size: 8pt; font-weight: 700; text-transform: uppercase; color: #476477; white-space: nowrap; }
+  ul { margin: 1mm 0 1.5mm; padding-left: 5mm; }
+  li { margin: 0 0 .8mm; }
+  a { color: #155e83; text-decoration: none; overflow-wrap: anywhere; }
+  .url { font-size: 8.5pt; }
+  @media screen {
+    body { background: #e9eef2; padding: 18px; }
+    main { background: white; padding: 18mm 16mm; box-shadow: 0 2px 18px #0002; }
+    .print { display: inline-block; margin: 0 0 12px; padding: 8px 12px; background: #183b55; color: white; border-radius: 4px; }
+  }
+  @media print { .print { display: none; } }
+</style>
+</head>
+<body>
+<main>
+<a class="print" href="#" onclick="window.print();return false;">Print / Save as PDF</a>
+<header>
+<h1>Erfan Tahmasebi</h1>
+<p class="role">MLOps Engineering Student · Python · Machine Learning · CI/CD</p>
+<p>I am studying MLOps Engineering at Nackademin and have hands-on project experience with automated ML workflows, CI/CD, Docker, model versioning, data validation and ML serving. I enjoy building solutions at the intersection of software development, machine learning and reliable operations.</p>
+<p class="contact"><a href="mailto:erfan.tahmasbikondroodi@yh.nackademin.se">erfan.tahmasbikondroodi@yh.nackademin.se</a> · 070-769 49 73 · <a href="https://github.com/erfantk25-lab">GitHub profile</a></p>
+<p class="availability">Internship (LIA): 8 February – 21 May 2027</p>
+</header>
+<section>
+<h2>Technical Skills</h2>
+<div class="skills">
+<div class="skill"><h3>Programming &amp; Data</h3><p>Python, SQL, Pandas, data validation, Pandera</p></div>
+<div class="skill"><h3>Machine Learning</h3><p>scikit-learn, TensorFlow, PyTorch, MLflow, model versioning</p></div>
+<div class="skill"><h3>MLOps &amp; DevOps</h3><p>Docker, Kubernetes, CI/CD, Git, GitHub Actions, automated testing</p></div>
+<div class="skill"><h3>Backend &amp; Systems</h3><p>FastAPI, Linux, REST APIs, container-based development</p></div>
+<div class="skill"><h3>Monitoring &amp; Quality</h3><p>Data drift detection, smoke testing, model metadata and lineage</p></div>
+<div class="skill"><h3>Cloud &amp; Edge</h3><p>Azure, AWS, Raspberry Pi Pico W, MQTT, Grafana</p></div>
+</div>
+</section>
+<section>
+<h2>Selected Projects</h2>
+<article class="project">
+<div class="project-head"><h3>CI/CD Pipeline – End-to-end MLOps</h3><span class="kind">Team Project</span></div>
+<p>An academic customer churn prediction project focused on an automated and reproducible machine learning workflow.</p>
+<ul><li>Contributed five approved and merged pull requests.</li><li>Contributed to data drift checks, Docker optimisation and testing.</li><li>Worked on model versioning, metadata and publishing to GHCR.</li><li>Contributed to team results of approximately 39% smaller Docker images and 30% faster measured build times.</li></ul>
+<p class="url"><a href="https://github.com/LeoLindqvist123/ci-cd-pipeline">github.com/LeoLindqvist123/ci-cd-pipeline</a></p>
+</article>
+<article class="project">
+<div class="project-head"><h3>ML Serving &amp; CI/CD</h3><span class="kind">Individual Academic Project</span></div>
+<p>A project to expose a machine learning model through an API and automate quality assurance and delivery.</p>
+<ul><li>Built ML serving with FastAPI and MLflow.</li><li>Worked with data validation and automated testing.</li><li>Used GitHub Actions and Docker in the delivery workflow.</li></ul>
+<p class="url"><a href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving">github.com/erfantk25-lab/fastapi-docker-ml-serving</a></p>
+</article>
+<article class="project">
+<div class="project-head"><h3>Taxi Prediction – Fullstack ML</h3><span class="kind">Individual Project</span></div>
+<p>Independently developed a full-stack application with a dedicated FastAPI backend for taxi fare predictions and a Streamlit interface. Integrated OpenRouteService for route data and Folium for interactive map visualisation.</p>
+<ul><li>Built and tested API endpoints for fare predictions and trip data retrieval.</li><li>Connected the frontend, backend and external routing service into a working application flow.</li><li>Displayed the route, distance, estimated travel time and model fare prediction in the interface.</li></ul>
+<p class="url"><a href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN">github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN</a></p>
+</article>
+<article class="project">
+<div class="project-head"><h3>Smart Grow – Environmental Monitor</h3><span class="kind">Edge Computing</span></div>
+<p>An IoT environmental monitoring project using Raspberry Pi Pico W, Python and MQTT. The project covers sensor data collection, storage and visualisation in Grafana.</p>
+<p class="url"><a href="https://github.com/erfantk25-lab/Edge-computing-project-">github.com/erfantk25-lab/Edge-computing-project-</a></p>
+</article>
+</section>
+<section>
+<h2>Education</h2>
+<article class="job"><div class="job-head"><h3>MLOps Engineer · Nackademin</h3><span class="kind">In Progress</span></div><p>Higher vocational education focused on machine learning, Python, MLOps, CI/CD and deployment of ML solutions.</p></article>
+</section>
+<section>
+<h2>Work Experience</h2>
+<article class="job"><div class="job-head"><h3>IT Support Assistant · City of Stockholm</h3><span class="kind">2024</span></div><p>Supported users with IT-related questions, troubleshooting and technical support. Worked with IT equipment and helped resolve day-to-day technical issues.</p></article>
+<article class="job"><div class="job-head"><h3>Football Coach · IFK</h3><span class="kind">2025</span></div><p>Planned and delivered training sessions. Developed communication, leadership and collaboration skills by working with players and other coaches.</p></article>
+</section>
+</main>
+</body>
+</html>
