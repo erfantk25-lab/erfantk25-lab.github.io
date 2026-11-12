@@ -1,31 +1,27 @@
-# Erfan Tahmasebi — Portfolio
+Hi, I'm Erfan Tahmasebi 👋
+MLOps Engineering student at Nackademin | Interested in reliable machine-learning systems, automation, and the engineering work that takes models from experiments to usable services.
 
-Personal portfolio for my studies and project work in **MLOps Engineering at Nackademin**.
+I enjoy learning by building and exploring the systems around machine learning: data quality, experiment tracking, model serving, containerisation, CI/CD, and monitoring. I am currently developing my skills through coursework and hands-on projects.
+- 🎓 Studying MLOps Engineering at Nackademin
+- 💼 Looking for an LIA internship: 8 February – 21 May 2027
+- 🌐 Portfolio: erfantk25-lab.github.io
+- 📫 GitHub: @erfantk25-lab
+Selected projects
+FastAPI Docker ML Serving
+An ML-serving project focused on the path from model development to a service: FastAPI, Docker, MLflow, data validation, automated checks, and GitHub Actions.
+Taxi Prediction – Full Stack
+A full-stack machine-learning application combining a Python prediction backend with a Streamlit interface and map/routing visualisation.
+Edge Computing Project
+An edge/IoT project exploring sensor data collection, Raspberry Pi Pico W, MicroPython, MQTT messaging, data storage, and Grafana visualisation.
+Machine Learning – MLOps Coursework
+Coursework repository documenting practical machine-learning work and the foundations of an ML workflow.
+Technologies I work with
+Programming & data: Python, SQL, Pandera
+Machine learning: scikit-learn, MLflow
+Backend & serving: FastAPI
+DevOps & infrastructure: Docker, GitHub Actions, CI/CD, Kubernetes (coursework/project exposure)
+Data & edge systems: MQTT, TimescaleDB, Grafana
 
-The portfolio highlights practical work around reliable machine-learning systems: data validation, model serving, CI/CD automation, containerization, and edge telemetry.
-
-## Explore
-
-- **Live portfolio:** https://erfantk25-lab.github.io/
-- **GitHub profile:** https://github.com/erfantk25-lab
-- **Featured projects:** see the Projects section on the portfolio website.
-
-## Current focus
-
-I am building practical experience with Python, FastAPI, MLflow, Docker, GitHub Actions, data quality, and deployment workflows. The listed technologies reflect a mix of coursework and project experience; they should not be read as claims of expert-level proficiency.
-
-## LIA
-
-I am looking for an LIA 1 placement from **8 February to 21 May 2027**.
-
-## Run locally
-
-This is a static website; no application server or build step is required.
-
-1. Clone this repository.
-2. Open `index.html` in a browser, or start a local static server.
-3. The GitHub Pages workflow publishes updates from `main` when Pages is configured to use GitHub Actions.
-
-## Contact
-
-Use the contact details published on the portfolio website.
+My experience is primarily academic and project-based, and I am actively deepening it through practical work.
+What I'm looking to learn and contribute
+I am interested in an internship where I can contribute to Python-based engineering work, learn from an experienced team, and grow within MLOps, ML platform engineering, or backend/platform development. I value clear documentation, reproducible workflows, thoughtful testing, and collaboration.
