@@ -35,7 +35,7 @@ a:hover { color: var(--accent); }
   background: var(--bg);
 }
 .logo { display: flex; align-items: center; gap: 10px; font: 500 12px var(--mono); letter-spacing: .08em; }
-.logo img { width: 30px; height: 30px; }
+.logo img { width: 38px; height: 38px; flex: 0 0 38px; filter: drop-shadow(0 0 10px rgba(66,217,245,.22)); }
 nav { display: flex; gap: 28px; color: var(--muted); font: 13px var(--mono); }
 nav a:hover, .text-link:hover { color: var(--accent); }
 .menu-button { display: none; }
