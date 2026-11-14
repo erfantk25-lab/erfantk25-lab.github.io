@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
+<title id="title">MLOps engineering workflow</title>
+<desc id="desc">A visual workflow connecting data quality, model training, deployment and monitoring, with a connected infrastructure network.</desc>
+<defs>
+ <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D2036"/><stop offset="1" stop-color="#102B49"/></linearGradient>
+ <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#42D9F5"/><stop offset="1" stop-color="#1769AA"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#42D9F5" stop-opacity=".24"/><stop offset="1" stop-color="#42D9F5" stop-opacity="0"/></radialGradient>
+ <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8CA3B8" stroke-opacity=".1"/></pattern>
+ <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect x="8" y="8" width="704" height="544" rx="24" fill="url(#panel)" stroke="#42D9F5" stroke-opacity=".3"/>
+<rect x="8" y="8" width="704" height="544" rx="24" fill="url(#grid)"/>
+<ellipse cx="570" cy="140" rx="220" ry="180" fill="url(#halo)"/>
+<g fill="#8CA3B8" font-family="DM Mono,monospace" font-size="13" letter-spacing="2">
+ <text x="42" y="58">MLOPS SYSTEM OVERVIEW</text><text x="678" y="58" text-anchor="end">01 — 04</text>
+</g>
+<path d="M82 190H638" stroke="url(#line)" stroke-width="2" stroke-dasharray="6 9" opacity=".8"/>
+<g>
+ <rect x="34" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#42D9F5" stroke-opacity=".75"/>
+ <rect x="202" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#42D9F5" stroke-opacity=".75"/>
+ <rect x="370" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#42D9F5" stroke-opacity=".75"/>
+ <rect x="538" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#36D399" stroke-opacity=".8"/>
+</g>
+<g fill="none" stroke="#42D9F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+ <ellipse cx="108" cy="163" rx="24" ry="9"/><path d="M84 163V205C84 219 132 219 132 205V163M84 184C84 198 132 198 132 184"/>
+ <circle cx="276" cy="185" r="27"/><circle cx="276" cy="185" r="10"/><path d="M276 148V157M276 213V222M239 185H248M304 185H313M250 159L257 166M295 204L302 211"/>
+ <rect x="408" y="157" width="72" height="54" rx="6"/><path d="M420 173L432 184L420 195M440 196H466"/>
+ <circle cx="612" cy="184" r="31"/><path d="M595 185L607 197L630 170"/>
+</g>
+<g fill="#F2F7FC" font-family="Space Grotesk,Arial,sans-serif" font-size="16" font-weight="600" text-anchor="middle">
+ <text x="108" y="244">DATA</text><text x="276" y="244">TRAIN</text><text x="444" y="244">DEPLOY</text><text x="612" y="244">MONITOR</text>
+</g>
+<g fill="#8CA3B8" font-family="DM Mono,monospace" font-size="11" text-anchor="middle">
+ <text x="108" y="291">Pandera · SQL</text><text x="276" y="291">MLflow · sklearn</text><text x="444" y="291">FastAPI · Docker</text><text x="612" y="291">Metrics · Drift</text>
+</g>
+<path d="M42 326H678" stroke="#8CA3B8" stroke-opacity=".2"/>
+<g font-family="DM Mono,monospace" font-size="12">
+ <text x="42" y="362" fill="#8CA3B8" letter-spacing="2">ENGINEERING TOOLKIT</text>
+ <g fill="#0D2036" stroke="#1769AA" stroke-width="1.2">
+  <rect x="42" y="382" width="104" height="38" rx="8"/><rect x="158" y="382" width="104" height="38" rx="8"/><rect x="274" y="382" width="104" height="38" rx="8"/><rect x="390" y="382" width="104" height="38" rx="8"/><rect x="506" y="382" width="104" height="38" rx="8"/>
+  <rect x="100" y="434" width="138" height="38" rx="8"/><rect x="250" y="434" width="138" height="38" rx="8"/><rect x="400" y="434" width="170" height="38" rx="8"/>
+ </g>
+ <g fill="#F2F7FC" text-anchor="middle"><text x="94" y="406">PYTHON</text><text x="210" y="406">MLFLOW</text><text x="326" y="406">FASTAPI</text><text x="442" y="406">DOCKER</text><text x="558" y="406">K8S</text><text x="169" y="458">GITHUB ACTIONS</text><text x="319" y="458">CI / CD</text><text x="485" y="458">DATA QUALITY</text></g>
+</g>
+<g fill="#36D399" filter="url(#glow)"><circle cx="668" cy="500" r="4"/></g>
+<text x="42" y="514" fill="#8CA3B8" font-family="DM Mono,monospace" font-size="11" letter-spacing="1">REPRODUCIBLE · AUTOMATED · OBSERVABLE</text>
+</svg>
