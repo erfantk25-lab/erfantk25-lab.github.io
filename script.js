@@ -210,7 +210,7 @@
 
   if (year) year.textContent = String(new Date().getFullYear());
 
-  let preferredLanguage = "sv";
+  let preferredLanguage = "en";
   try {
     const savedLanguage = localStorage.getItem("portfolio-language");
     if (savedLanguage === "en" || savedLanguage === "sv") preferredLanguage = savedLanguage;
