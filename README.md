@@ -1,4 +1,4 @@
-# Erfan Tahmasbi — Junior MLOps Engineer Portfolio
+# Erfan Tahmasebi — Junior MLOps Engineer Portfolio
 
 Portfolio repository for [erfantk25-lab.github.io](https://erfantk25-lab.github.io/).
 
