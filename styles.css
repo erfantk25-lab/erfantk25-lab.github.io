@@ -532,3 +532,199 @@ body {
   .site-header .logo img { width: 40px; height: 40px; flex-basis: 40px; }
   .site-header .logo { gap: 9px; font-size: 10px; }
 }
+
+
+/* Bilingual portfolio controls and refined accessibility */
+.language-toggle {
+  flex: 0 0 auto;
+  min-width: 44px;
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid rgba(66,217,245,.42);
+  border-radius: 5px;
+  background: rgba(66,217,245,.07);
+  color: var(--accent);
+  font: 11px var(--mono);
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.language-toggle:hover {
+  background: rgba(66,217,245,.16);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.language-toggle:focus-visible,
+.menu-button:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.site-header > nav a[aria-current="location"] {
+  color: var(--accent);
+}
+.site-header > nav a[aria-current="location"]::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 5px;
+  background: var(--accent);
+}
+.lab-section,
+.journey-section,
+.cv-section {
+  padding-bottom: 34px;
+}
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.lab-grid .project {
+  min-height: 235px;
+}
+.journey-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+.journey-list article {
+  display: grid;
+  grid-template-columns: minmax(180px, .38fr) 1fr;
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.journey-date {
+  color: var(--accent);
+  font: 11px/1.7 var(--mono);
+  letter-spacing: .06em;
+}
+.journey-list h3 {
+  margin: 0 0 7px;
+}
+.journey-list p {
+  max-width: 720px;
+  margin: 0;
+  color: #bdccdc;
+  font-size: 13px;
+}
+.cv-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 28px;
+  border: 1px solid rgba(66,217,245,.25);
+  border-radius: 8px;
+  background: linear-gradient(120deg, rgba(16,43,73,.9), rgba(13,32,54,.92));
+}
+.cv-panel h2 {
+  margin: 0 0 10px;
+}
+.cv-panel p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0;
+  color: #bdccdc;
+  font-size: 13px;
+}
+.cv-panel .eyebrow {
+  margin-bottom: 9px;
+}
+.cv-panel .button {
+  flex: 0 0 auto;
+}
+.contact-grid > div:first-child span {
+  color: var(--muted);
+  font-size: 12px;
+}
+@media (max-width: 1400px) {
+  .site-header {
+    width: min(1220px, calc(100% - 40px));
+    gap: 12px;
+  }
+  .site-header > nav {
+    display: none !important;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 18px 22px;
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-radius: 0 0 7px 7px;
+    background: var(--surface);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 14px 30px rgba(0,0,0,.22);
+  }
+  .site-header > nav.open {
+    display: flex !important;
+  }
+  .site-header > .language-toggle {
+    margin-left: auto;
+  }
+  .site-header > .menu-button {
+    display: block !important;
+    flex: 0 0 auto;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1401px) {
+  .site-header {
+    gap: 18px;
+  }
+  .site-header > nav {
+    display: flex !important;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: clamp(10px, 1.05vw, 17px);
+    font-size: 11px;
+  }
+  .site-header > .language-toggle {
+    margin-left: 8px;
+  }
+  .site-header > .menu-button {
+    display: none !important;
+  }
+}
+@media (max-width: 900px) {
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+  .lab-grid .project {
+    min-height: 0;
+  }
+  .cv-panel {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px;
+  }
+}
+@media (max-width: 640px) {
+  .journey-list article {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 18px 0;
+  }
+  .cv-panel {
+    padding: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
