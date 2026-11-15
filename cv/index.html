@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="CV för Erfan Tahmasebi – MLOps Engineer-studerande med erfarenhet av Python, CI/CD, Docker och ML-serving.">
-  <meta name="theme-color" content="#07111f">
+  <meta name="theme-color" content="#071426">
   <title>CV – Erfan Tahmasebi</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,12 @@
 
   <style>
     :root {
-      --bg: #07111f;
-      --surface: #0d1a2b;
-      --surface-light: #122238;
-      --text: #edf4fc;
-      --muted: #9aadc2;
-      --accent: #73e0dc;
+      --bg: #071426;
+      --surface: #0D2036;
+      --surface-light: #102B49;
+      --text: #F2F7FC;
+      --muted: #8CA3B8;
+      --accent: #42D9F5;
       --border: rgba(180, 205, 230, 0.15);
       --mono: "DM Mono", monospace;
       --body: "DM Sans", sans-serif;
@@ -84,8 +84,8 @@
     }
 
     .print-button {
-      border: 1px solid rgba(115, 224, 220, 0.45);
-      background: rgba(115, 224, 220, 0.08);
+      border: 1px solid rgba(66, 217, 245, 0.45);
+      background: rgba(66, 217, 245, 0.08);
       color: var(--accent);
       border-radius: 6px;
       padding: 9px 14px;
@@ -95,7 +95,7 @@
     }
 
     .print-button:hover {
-      background: rgba(115, 224, 220, 0.16);
+      background: rgba(66, 217, 245, 0.16);
     }
 
     .hero {
@@ -342,7 +342,7 @@
       display: inline-block;
       padding: 10px 15px;
       background: var(--accent);
-      color: #07111f;
+      color: #071426;
       border-radius: 5px;
       font-size: 13px;
       font-weight: 700;
@@ -414,7 +414,7 @@
         padding: 0 !important;
         width: 100% !important;
         background: #08111f !important;
-        color: #edf2f5 !important;
+        color: #F2F7FC !important;
         font-size: 7pt !important;
         line-height: 1.16 !important;
         print-color-adjust: exact !important;
@@ -460,7 +460,7 @@
       .section-copy { font-size: 6.8pt !important; line-height: 1.16 !important; margin: 0 !important; }
 
       .skills-grid { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)) !important; gap: 1mm !important; }
-      .skill-card { min-width: 0 !important; padding: 1.2mm !important; background: #101d2d !important; break-inside: avoid !important; }
+      .skill-card { min-width: 0 !important; padding: 1.2mm !important; background: #0D2036 !important; break-inside: avoid !important; }
       .skill-card h3 { font-size: 5.8pt !important; margin: 0 0 .5mm !important; }
       .skill-card p { font-size: 6.2pt !important; line-height: 1.12 !important; }
 
@@ -501,18 +501,144 @@
       #education .experience-list, #experience .experience-list { display: block !important; }
       .experience { min-width: 0 !important; padding: 1.2mm !important; background: #101d2d !important; break-inside: avoid !important; }
       #experience .experience + .experience { margin-top: 1mm !important; }
-      a, .section-number, .skill-card h3, .project-link, .tag { color: #7de9ed !important; }
+      a, .section-number, .skill-card h3, .project-link, .tag { color: #42D9F5 !important; }
     }
 
+  
+    /* Shared Erfan Tahmasebi portfolio identity */
+    body {
+      background:
+        radial-gradient(ellipse at 82% 10%, rgba(23,105,170,.19), transparent 34%),
+        radial-gradient(ellipse at 12% 42%, rgba(66,217,245,.055), transparent 32%),
+        var(--bg);
+    }
+    .page { max-width: 900px; }
+    .topbar {
+      border-bottom-color: rgba(66,217,245,.18);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #F2F7FC;
+      font-weight: 500;
+      letter-spacing: .11em;
+    }
+    .brand img {
+      display: block;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      border-radius: 13px;
+      filter: drop-shadow(0 0 12px rgba(66,217,245,.24));
+    }
+    .brand small {
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 400;
+    }
+    .top-actions {
+      gap: 16px;
+    }
+    .top-actions a {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+    .top-actions a:hover { color: var(--accent); }
+    .print-button {
+      border-color: rgba(66,217,245,.42);
+      background: rgba(66,217,245,.07);
+      color: var(--accent);
+      border-radius: 5px;
+      font-family: var(--mono);
+      font-size: 11px;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .print-button:hover {
+      background: rgba(66,217,245,.16);
+      transform: translateY(-1px);
+    }
+    .hero {
+      position: relative;
+      padding-top: 78px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero::before {
+      content: "MLOPS ENGINEER STUDENT  /  NACKADEMIN";
+      display: block;
+      margin-bottom: 17px;
+      color: var(--accent);
+      font: 11px var(--mono);
+      letter-spacing: .1em;
+    }
+    h1 {
+      max-width: 820px;
+      color: #F2F7FC;
+    }
+    .role { color: var(--accent); }
+    .section {
+      border-top-color: rgba(66,217,245,.17);
+    }
+    .section-number { color: var(--accent); }
+    .skill-card, .project, .experience {
+      background: linear-gradient(145deg, rgba(16,43,73,.72), rgba(13,32,54,.96));
+      border-color: rgba(180,205,230,.14);
+      border-radius: 7px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+    .skill-card:hover, .project:hover, .experience:hover {
+      transform: translateY(-2px);
+      border-color: rgba(66,217,245,.38);
+    }
+    .skill-card h3, .project-link, .tag { color: var(--accent); }
+    .tag { border-color: rgba(66,217,245,.22); background: rgba(66,217,245,.035); }
+    .contact-panel {
+      background: linear-gradient(135deg, #102B49, #0D2036 78%);
+      border-color: rgba(66,217,245,.28);
+    }
+    .contact-button {
+      background: var(--accent);
+      color: #071426;
+      border: 1px solid var(--accent);
+      border-radius: 5px;
+      font-family: var(--mono);
+      box-shadow: 0 8px 24px rgba(66,217,245,.13);
+    }
+    .contact-button:hover {
+      color: #071426;
+      background: #7BE7FA;
+      filter: none;
+      transform: translateY(-1px);
+    }
+    footer { border-top-color: rgba(66,217,245,.18); }
+    @media (max-width: 620px) {
+      .brand { gap: 9px; font-size: 10px; }
+      .brand img { width: 39px; height: 39px; flex-basis: 39px; }
+      .topbar { gap: 12px; }
+      .hero { padding-top: 54px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  
   </style>
 </head>
 
 <body>
   <main class="page">
     <header class="topbar">
-      <div class="brand">ERFAN TAHMASEBI / CV</div>
-      <nav class="top-actions" aria-label="CV actions">
-        <a href="./en/">English version ↗</a>
+      <a class="brand" href="../" aria-label="Erfan Tahmasebi portfolio">
+        <img src="../assets/brand/et-monogram-v2.svg?v=2" alt="">
+        <span>ERFAN TAHMASEBI <small>/ CV</small></span>
+      </a>
+      <nav class="top-actions" aria-label="CV-åtgärder">
+        <a href="../">Portfolio ↗</a>
+        <a href="./en/">English CV ↗</a>
         <button class="print-button" type="button" onclick="window.print()">Skriv ut / Spara som PDF</button>
       </nav>
     </header>
