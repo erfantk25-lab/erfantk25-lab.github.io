@@ -63,15 +63,11 @@
       cvEyebrow: "06 / CV", cvTitle: "En tydlig bild av min <em>bakgrund.</em>",
       cvDesc: "Ett uppdaterat CV med samma fyra projekt, samma ordning och samma tekniska identitet som på min GitHub-profil. Välj svensk eller engelsk version.",
       cvButton: "Öppna svenskt CV ↗", cvEnglishButton: "English CV ↗",
-            contactEyebrow: "07 / KONTAKT", contactTitle: "Låt oss bygga något <br><em>meningsfullt.</em>",
-      contactIntro: "Öppen för samtal, samarbeten och nya möjligheter inom AI, Machine Learning och MLOps.",
-      contactAvailability: "Tillgänglig för LIA 1", contactEmailLabel: "E-POST", contactPhoneLabel: "TELEFON",
-      contactGithubLabel: "KOD & PROJEKT", contactLinkedinLabel: "PROFESSIONELLT NÄTVERK",
-      contactLiaKicker: "NÄSTA STEG", contactLiaTitle: "Söker LIA 1",
-      contactDateLabel: "PERIOD", contactDate: "8 feb – 21 maj 2027",
-      location: "Stockholm, Sverige",
-      contactDesc: "Jag söker LIA 1 från 8 februari till 21 maj 2027 och vill gärna komma i kontakt med team inom AI, Machine Learning, Cloud och MLOps.",
-      emailButton: "Diskutera en LIA-plats", footerRole: "MLOps Engineer Student"
+            contactEyebrow: "07 / KONTAKT", contactTitle: "Kontakt <em>mig.</em>",
+      contactIntro: "Har du en fråga eller vill prata om LIA, MLOps eller ett projekt? Hör gärna av dig.",
+      contactAvailability: "Tillgänglig för LIA 1", contactPhoneLabel: "Telefon",
+      contactDate: "8 februari – 21 maj 2027", location: "Stockholm, Sverige",
+      footerRole: "MLOps Engineer Student"
     },
     en: {
       title: "Erfan Tahmasebi | MLOps Engineer Student",
@@ -134,15 +130,11 @@
       cvEyebrow: "06 / CV", cvTitle: "A clear view of my <em>background.</em>",
       cvDesc: "An updated CV with the same four projects, order and technical identity as my GitHub profile. Choose the Swedish or English version.",
       cvButton: "Open Swedish CV ↗", cvEnglishButton: "English CV ↗",
-            contactEyebrow: "07 / CONTACT", contactTitle: "Let's build something <br><em>meaningful.</em>",
-      contactIntro: "Open to conversations, collaboration and new opportunities in AI, Machine Learning and MLOps.",
-      contactAvailability: "Available for internship", contactEmailLabel: "EMAIL", contactPhoneLabel: "PHONE",
-      contactGithubLabel: "CODE & PROJECTS", contactLinkedinLabel: "PROFESSIONAL NETWORK",
-      contactLiaKicker: "NEXT STEP", contactLiaTitle: "Seeking internship",
-      contactDateLabel: "PERIOD", contactDate: "8 Feb – 21 May 2027",
-      location: "Stockholm, Sweden",
-      contactDesc: "I'm seeking my LIA 1 internship from 8 February to 21 May 2027 and would love to connect with teams working in AI, Machine Learning, Cloud and MLOps.",
-      emailButton: "Discuss an internship", footerRole: "MLOps Engineer Student"
+            contactEyebrow: "07 / CONTACT", contactTitle: "Get in <em>touch.</em>",
+      contactIntro: "Have a question or want to talk about an internship, MLOps or a project? Feel free to reach out.",
+      contactAvailability: "Available for LIA 1", contactPhoneLabel: "Phone",
+      contactDate: "8 February – 21 May 2027", location: "Stockholm, Sweden",
+      footerRole: "MLOps Engineer Student"
     }
   };
 
