@@ -522,3 +522,39 @@ footer {
 .contact-note span:first-child { color:var(--accent); }
 @media(max-width:720px) { .contact-heading { display:block; } .contact-intro { margin-top:9px!important; } }
 @media(max-width:560px) { .contact { padding:42px 0 46px!important; } .contact-methods { grid-template-columns:1fr; } .contact-link { min-height:50px; } }
+
+
+/* Final contact icon override: deliberately tiny, inline and understated. */
+#contact .contact-methods { gap: 6px 18px !important; }
+#contact .contact-link {
+  min-height: 38px !important;
+  padding: 5px 2px !important;
+  gap: 8px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(154,176,197,.12) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+#contact .contact-link:hover {
+  transform: none !important;
+  border-color: rgba(67,217,245,.28) !important;
+  background: transparent !important;
+}
+#contact .contact-link > svg {
+  display: block !important;
+  width: 12px !important;
+  height: 12px !important;
+  min-width: 12px !important;
+  max-width: 12px !important;
+  flex: 0 0 12px !important;
+  stroke-width: 1.35 !important;
+  opacity: .78 !important;
+}
+#contact .contact-link > span { font-size: 9px !important; }
+#contact .contact-link > strong { font-size: 10px !important; font-weight: 450 !important; }
+#contact .contact-link > b { font-size: 10px !important; }
+@media(max-width:560px) {
+  #contact .contact-methods { grid-template-columns: 1fr !important; }
+  #contact .contact-link { min-height: 36px !important; }
+}
