@@ -10,7 +10,7 @@
       heroTitle: "Bygger tillförlitliga ML-system — från <em>experiment till drift.</em>",
       heroLead: "Jag är Erfan Tahmasebi, MLOps Engineering-student på Nackademin i Stockholm. Jag är intresserad av systemen runt maskininlärning: datakvalitet, modellutveckling, automation och infrastruktur som gör ML-lösningar reproducerbara och möjliga att driftsätta.",
       ctaProjects: "Utforska projekt", ctaContact: "Kontakta mig", liaLabel: "SÖKER LIA 1", liaDates: "8 februari – 21 maj 2027",
-      workflowAlt: "MLOps-flöde med data, träning, driftsättning och övervakning.",
+
       aboutEyebrow: "01 / OM MIG", aboutTitle: "Maskininlärning är bara <em>början.</em>",
       aboutP1: "Jag studerar MLOps Engineering på Nackademin (2025–2028) och söker en LIA-plats där jag kan utvecklas tillsammans med ett engineeringteam. Mitt intresse ligger i systemen runt modellerna: data som går att lita på, automatiserade flöden, containerisering, CI/CD och tydlig leverans.",
       aboutP2: "Genom utbildnings- och projektarbete har jag arbetat praktiskt med bland annat FastAPI, MLflow, datavalidering, Docker och GitHub Actions. Jag tycker om att förstå hur delarna hänger ihop, dokumentera tekniska beslut och förbättra lösningar steg för steg.",
@@ -76,7 +76,7 @@
       heroTitle: "Building reliable ML systems — from <em>experiments to deployment.</em>",
       heroLead: "I'm Erfan Tahmasebi, an MLOps Engineering student at Nackademin in Stockholm. I'm interested in the systems around machine learning: data quality, model development, automation and infrastructure that make ML solutions reproducible and deployable.",
       ctaProjects: "Explore projects", ctaContact: "Contact me", liaLabel: "SEEKING LIA 1", liaDates: "8 February – 21 May 2027",
-      workflowAlt: "MLOps workflow covering data, training, deployment and monitoring.",
+
       aboutEyebrow: "01 / ABOUT", aboutTitle: "Machine learning is only the <em>beginning.</em>",
       aboutP1: "I study MLOps Engineering at Nackademin (2025–2028) and am looking for an internship placement where I can grow alongside an engineering team. My interest is in the systems around models: trustworthy data, automated workflows, containerisation, CI/CD and reliable delivery.",
       aboutP2: "Through coursework and project work, I have gained hands-on experience with technologies including FastAPI, MLflow, data validation, Docker and GitHub Actions. I enjoy understanding how the pieces fit together, documenting technical decisions and improving solutions step by step.",
