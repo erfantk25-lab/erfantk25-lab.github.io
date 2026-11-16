@@ -184,3 +184,78 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   .cv-site-footer a{color:#087f9b!important}
   a{color:#087f9b!important;text-decoration:none!important}
 }
+
+/* Compact CV download and achievement components */
+.cv-download{display:inline-flex;align-items:center;padding:8px 11px;border:1px solid rgba(67,217,245,.38);border-radius:6px;background:rgba(67,217,245,.08);color:var(--cv-cyan)!important;font:11px var(--cv-mono);white-space:nowrap}
+.cv-download:hover{background:rgba(67,217,245,.16)}
+.cv-highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:18px;border:1px solid rgba(67,217,245,.2);border-radius:8px;overflow:hidden;background:rgba(13,32,54,.58)}
+.cv-highlights>div{display:flex;flex-direction:column;gap:2px;padding:11px 13px;border-right:1px solid var(--cv-border)}
+.cv-highlights>div:nth-child(3){border-right:0}
+.cv-highlights strong{color:var(--cv-cyan);font:600 23px/1 var(--cv-heading);letter-spacing:-.04em}
+.cv-highlights span{color:#c3d2e0;font-size:10px;line-height:1.35}
+.cv-highlights>p{grid-column:1/-1;margin:0;padding:5px 12px;border-top:1px solid var(--cv-border);color:var(--cv-muted);font-size:9px}
+.cv-project-impact{padding:7px 9px;border-left:2px solid var(--cv-cyan);background:rgba(67,217,245,.06);font-size:10px!important}
+.cv-project-impact strong{color:#b9f2fc}
+@media(max-width:620px){.cv-highlights{grid-template-columns:1fr}.cv-highlights>div{border-right:0;border-bottom:1px solid var(--cv-border)}.cv-highlights>div:nth-child(3){border-bottom:0}}
+@media print{
+  @page{size:A4 portrait;margin:9mm 10mm}
+  html,body{font-size:7.5pt!important;line-height:1.28!important}
+  .cv-shell{width:auto!important;max-width:none!important;margin:0!important;padding:0!important}
+  .cv-header{padding:0 0 2mm!important}
+  .cv-brand{font-size:8pt!important}
+  .cv-brand img{width:7mm!important;height:7mm!important}
+  .cv-nav{display:none!important}
+  .cv-hero{padding:3mm 0 2.5mm!important}
+  .cv-hero-meta{margin-bottom:1.5mm!important}
+  .cv-status{padding:1mm 1.5mm!important;font-size:5.8pt!important}
+  .cv-hero h1{font-size:24pt!important}
+  .cv-role{margin:1.5mm 0!important;font-size:8.5pt!important}
+  .cv-summary{font-size:7pt!important;line-height:1.25!important}
+  .cv-contact-grid{gap:1mm!important;margin-top:2mm!important}
+  .cv-contact-grid a{padding:1.3mm!important}
+  .cv-contact-grid span{font-size:5.4pt!important}
+  .cv-contact-grid strong{font-size:5.7pt!important}
+  .cv-highlights{margin-top:2mm!important;background:#f3f8fb!important;border-color:#cbdde8!important}
+  .cv-highlights>div{padding:1.5mm 2mm!important;border-color:#d5e0e9!important}
+  .cv-highlights strong{font-size:13pt!important;color:#087f9b!important}
+  .cv-highlights span{font-size:5.8pt!important;color:#34475d!important}
+  .cv-highlights>p{padding:1mm 2mm!important;font-size:5.4pt!important;color:#63758b!important;border-color:#d5e0e9!important}
+  .cv-section{padding:2.5mm 0!important}
+  .cv-section-title{margin-bottom:1.3mm!important;gap:1.5mm!important}
+  .cv-section-title h2{font-size:11pt!important}
+  .cv-section-title p{font-size:5.7pt!important}
+  .cv-body-copy{font-size:7pt!important;line-height:1.25!important}
+  .cv-skills-grid{gap:1.4mm!important}
+  .cv-skill{padding:1.5mm!important}
+  .cv-skill img{display:none!important}
+  .cv-skill h3{font-size:6.1pt!important;margin-bottom:.5mm!important}
+  .cv-skill p{font-size:6pt!important;line-height:1.18!important}
+  .cv-skill-note{margin-top:1mm!important;font-size:5.5pt!important}
+  #projects{break-before:page!important}
+  .cv-project-grid{gap:1.6mm!important}
+  .cv-project{padding:1.8mm!important;break-inside:avoid!important}
+  .cv-project-banner{display:none!important}
+  .cv-project-top{margin-bottom:.6mm!important}
+  .cv-project-number{font-size:5.8pt!important}
+  .cv-project-type{font-size:5.1pt!important}
+  .cv-project h3{font-size:8pt!important;line-height:1.15!important;margin-bottom:.7mm!important}
+  .cv-project p,.cv-project ul{font-size:6.1pt!important;line-height:1.18!important;margin-bottom:.7mm!important}
+  .cv-project li{margin:.2mm 0!important}
+  .cv-tags{gap:.7mm!important}
+  .cv-tags span{font-size:5.1pt!important;padding:.3mm .7mm!important}
+  .cv-project-link{font-size:5.6pt!important;margin-top:.7mm!important}
+  .cv-project-links{gap:2mm!important}
+  .cv-project-impact,.cv-team-result{padding:1mm 1.4mm!important;font-size:5.8pt!important}
+  .cv-pr-details{display:none!important}
+  .cv-bottom-grid{gap:3mm!important}
+  .cv-bottom-grid .cv-section{padding:1.8mm 0!important}
+  .cv-timeline{gap:.8mm!important}
+  .cv-timeline-card{padding:1.3mm!important}
+  .cv-entry-top h3{font-size:6.6pt!important}
+  .cv-entry-top span{font-size:5.8pt!important}
+  .cv-timeline-card p{font-size:5.8pt!important;line-height:1.2!important;margin-top:.5mm!important}
+  .cv-footer-cta{padding:1.8mm!important;margin:1.5mm 0!important}
+  .cv-footer-cta h2{font-size:9pt!important;margin:1mm 0!important}
+  .cv-footer-cta p,.cv-footer-cta>a{font-size:5.8pt!important}
+  .cv-site-footer{margin-top:1.5mm!important;padding-top:1mm!important;font-size:5.5pt!important}
+}
