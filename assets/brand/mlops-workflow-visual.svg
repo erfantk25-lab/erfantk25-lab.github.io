@@ -1,47 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
-<title id="title">MLOps engineering workflow</title>
-<desc id="desc">A visual workflow connecting data quality, model training, deployment and monitoring, with a connected infrastructure network.</desc>
+<title id="title">MLOps engineering workflow</title><desc id="desc">A four-stage MLOps workflow with crisp, brand-inspired technology symbols in the same cyan, blue and violet visual language as the GitHub profile.</desc>
 <defs>
  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0D2036"/><stop offset="1" stop-color="#102B49"/></linearGradient>
- <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#42D9F5"/><stop offset="1" stop-color="#1769AA"/></linearGradient>
- <radialGradient id="halo"><stop stop-color="#42D9F5" stop-opacity=".24"/><stop offset="1" stop-color="#42D9F5" stop-opacity="0"/></radialGradient>
+ <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#43D9F5"/><stop offset=".52" stop-color="#647BFF"/><stop offset="1" stop-color="#B36BFF"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#647BFF" stop-opacity=".22"/><stop offset="1" stop-color="#647BFF" stop-opacity="0"/></radialGradient>
  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8CA3B8" stroke-opacity=".1"/></pattern>
  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<rect x="8" y="8" width="704" height="544" rx="24" fill="url(#panel)" stroke="#42D9F5" stroke-opacity=".3"/>
-<rect x="8" y="8" width="704" height="544" rx="24" fill="url(#grid)"/>
-<ellipse cx="570" cy="140" rx="220" ry="180" fill="url(#halo)"/>
-<g fill="#8CA3B8" font-family="DM Mono,monospace" font-size="13" letter-spacing="2">
- <text x="42" y="58">MLOPS SYSTEM OVERVIEW</text><text x="678" y="58" text-anchor="end">01 — 04</text>
+<rect x="8" y="8" width="704" height="544" rx="24" fill="url(#panel)" stroke="url(#brand)" stroke-opacity=".48"/>
+<rect x="8" y="8" width="704" height="544" rx="24" fill="url(#grid)"/><ellipse cx="570" cy="140" rx="220" ry="180" fill="url(#halo)"/>
+<g fill="#AFC2D5" font-family="DM Mono,monospace" font-size="13" letter-spacing="2"><text x="42" y="58">MLOPS SYSTEM OVERVIEW</text><text x="678" y="58" text-anchor="end">01 — 04</text></g>
+<path d="M82 190H638" stroke="url(#brand)" stroke-width="2.5" stroke-dasharray="6 9" opacity=".9"/>
+<g fill="#071426" stroke="url(#brand)" stroke-width="1.5">
+ <rect x="34" y="118" width="148" height="150" rx="16"/><rect x="202" y="118" width="148" height="150" rx="16"/><rect x="370" y="118" width="148" height="150" rx="16"/><rect x="538" y="118" width="148" height="150" rx="16"/>
 </g>
-<path d="M82 190H638" stroke="url(#line)" stroke-width="2" stroke-dasharray="6 9" opacity=".8"/>
-<g>
- <rect x="34" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#42D9F5" stroke-opacity=".75"/>
- <rect x="202" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#42D9F5" stroke-opacity=".75"/>
- <rect x="370" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#42D9F5" stroke-opacity=".75"/>
- <rect x="538" y="118" width="148" height="150" rx="16" fill="#071426" stroke="#36D399" stroke-opacity=".8"/>
+<!-- DATA / Pandera-style validation mark -->
+<g transform="translate(108 183)" fill="none" stroke="#43D9F5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-23 -19H23V18Q0 31 -23 18Z"/><path d="M-23 -5Q0 8 23 -5" opacity=".75"/><path d="M-10 4L-2 12L13 -5" stroke="#B36BFF" stroke-width="4.5"/>
 </g>
-<g fill="none" stroke="#42D9F5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
- <ellipse cx="108" cy="163" rx="24" ry="9"/><path d="M84 163V205C84 219 132 219 132 205V163M84 184C84 198 132 198 132 184"/>
- <circle cx="276" cy="185" r="27"/><circle cx="276" cy="185" r="10"/><path d="M276 148V157M276 213V222M239 185H248M304 185H313M250 159L257 166M295 204L302 211"/>
- <rect x="408" y="157" width="72" height="54" rx="6"/><path d="M420 173L432 184L420 195M440 196H466"/>
- <circle cx="612" cy="184" r="31"/><path d="M595 185L607 197L630 170"/>
+<!-- TRAIN / MLflow-style connected model nodes -->
+<g fill="none" stroke="#647BFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M276 151L254 185L276 216L299 185Z"/><path d="M276 151V185M254 185H299M276 185V216"/>
+</g><g fill="#B36BFF" stroke="#071426" stroke-width="2"><circle cx="276" cy="151" r="7"/><circle cx="254" cy="185" r="7"/><circle cx="299" cy="185" r="7"/><circle cx="276" cy="216" r="7"/></g><circle cx="276" cy="185" r="7" fill="#43D9F5"/>
+<!-- DEPLOY / container and API symbol -->
+<g transform="translate(444 184)" fill="none" stroke="#43D9F5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M-31 -15L0 -32L31 -15V17L0 34L-31 17Z"/><path d="M-31 -15L0 3L31 -15M0 3V34"/><path d="M-10 -5L-2 3L-10 11M5 12H16" stroke="#B36BFF"/>
 </g>
-<g fill="#F2F7FC" font-family="Space Grotesk,Arial,sans-serif" font-size="16" font-weight="600" text-anchor="middle">
- <text x="108" y="244">DATA</text><text x="276" y="244">TRAIN</text><text x="444" y="244">DEPLOY</text><text x="612" y="244">MONITOR</text>
+<!-- MONITOR / Grafana-like pulse dashboard -->
+<g transform="translate(612 184)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <rect x="-34" y="-29" width="68" height="58" rx="9" stroke="#647BFF" stroke-width="3.5"/>
+ <path d="M-23 14L-10 1L1 9L19 -13L26 -6" stroke="#43D9F5" stroke-width="4"/>
+ <path d="M-22 20H22" stroke="#B36BFF" stroke-width="3"/>
+ <circle cx="19" cy="-13" r="4" fill="#B36BFF" stroke="none" filter="url(#glow)"/>
 </g>
-<g fill="#8CA3B8" font-family="DM Mono,monospace" font-size="11" text-anchor="middle">
- <text x="108" y="291">Pandera · SQL</text><text x="276" y="291">MLflow · sklearn</text><text x="444" y="291">FastAPI · Docker</text><text x="612" y="291">Metrics · Drift</text>
-</g>
-<path d="M42 326H678" stroke="#8CA3B8" stroke-opacity=".2"/>
-<g font-family="DM Mono,monospace" font-size="12">
- <text x="42" y="362" fill="#8CA3B8" letter-spacing="2">ENGINEERING TOOLKIT</text>
- <g fill="#0D2036" stroke="#1769AA" stroke-width="1.2">
-  <rect x="42" y="382" width="104" height="38" rx="8"/><rect x="158" y="382" width="104" height="38" rx="8"/><rect x="274" y="382" width="104" height="38" rx="8"/><rect x="390" y="382" width="104" height="38" rx="8"/><rect x="506" y="382" width="104" height="38" rx="8"/>
-  <rect x="100" y="434" width="138" height="38" rx="8"/><rect x="250" y="434" width="138" height="38" rx="8"/><rect x="400" y="434" width="170" height="38" rx="8"/>
- </g>
+<g fill="#F2F7FC" font-family="Space Grotesk,Arial,sans-serif" font-size="16" font-weight="600" text-anchor="middle"><text x="108" y="244">DATA</text><text x="276" y="244">TRAIN</text><text x="444" y="244">DEPLOY</text><text x="612" y="244">MONITOR</text></g>
+<g fill="#AFC2D5" font-family="DM Mono,monospace" font-size="11" text-anchor="middle"><text x="108" y="291">Pandera · SQL</text><text x="276" y="291">MLflow · sklearn</text><text x="444" y="291">FastAPI · Docker</text><text x="612" y="291">Metrics · Drift</text></g>
+<path d="M42 326H678" stroke="#8CA3B8" stroke-opacity=".25"/>
+<g font-family="DM Mono,monospace" font-size="12"><text x="42" y="362" fill="#AFC2D5" letter-spacing="2">ENGINEERING TOOLKIT</text>
+ <g fill="#0D2036" stroke="url(#brand)" stroke-opacity=".65" stroke-width="1.2"><rect x="42" y="382" width="104" height="38" rx="8"/><rect x="158" y="382" width="104" height="38" rx="8"/><rect x="274" y="382" width="104" height="38" rx="8"/><rect x="390" y="382" width="104" height="38" rx="8"/><rect x="506" y="382" width="104" height="38" rx="8"/><rect x="100" y="434" width="138" height="38" rx="8"/><rect x="250" y="434" width="138" height="38" rx="8"/><rect x="400" y="434" width="170" height="38" rx="8"/></g>
  <g fill="#F2F7FC" text-anchor="middle"><text x="94" y="406">PYTHON</text><text x="210" y="406">MLFLOW</text><text x="326" y="406">FASTAPI</text><text x="442" y="406">DOCKER</text><text x="558" y="406">K8S</text><text x="169" y="458">GITHUB ACTIONS</text><text x="319" y="458">CI / CD</text><text x="485" y="458">DATA QUALITY</text></g>
 </g>
-<g fill="#36D399" filter="url(#glow)"><circle cx="668" cy="500" r="4"/></g>
-<text x="42" y="514" fill="#8CA3B8" font-family="DM Mono,monospace" font-size="11" letter-spacing="1">REPRODUCIBLE · AUTOMATED · OBSERVABLE</text>
+<g fill="#43D9F5" filter="url(#glow)"><circle cx="668" cy="500" r="4"/></g><text x="42" y="514" fill="#AFC2D5" font-family="DM Mono,monospace" font-size="11" letter-spacing="1">REPRODUCIBLE · AUTOMATED · OBSERVABLE</text>
 </svg>
