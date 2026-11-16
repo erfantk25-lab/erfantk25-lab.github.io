@@ -25,6 +25,9 @@ button{font:inherit}
 .cv-brand small{color:var(--cv-cyan);font-weight:400}
 .cv-nav{display:flex;align-items:center;gap:20px;color:var(--cv-muted);font-size:12px}
 .cv-nav a{transition:color .2s ease}
+.cv-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.cv-actions .button{white-space:nowrap}
+@media(max-width:620px){.cv-actions{width:100%}.cv-actions .button{flex:1 1 auto;text-align:center}}
 .cv-print{border:1px solid rgba(67,217,245,.38);border-radius:6px;padding:9px 13px;background:rgba(67,217,245,.07);color:var(--cv-cyan);font:11px var(--cv-mono);cursor:pointer}
 .cv-print:hover{background:rgba(67,217,245,.15)}
 .cv-hero{padding:58px 0 36px;border-bottom:1px solid var(--cv-border)}
