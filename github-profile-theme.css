@@ -146,3 +146,29 @@ a:focus-visible,button:focus-visible { outline:2px solid #43D9F5; outline-offset
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto !important; transition-duration:.01ms !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; }
 }
+
+
+/* Contact area: remove all panels and decorative section backgrounds. */
+#contact {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+#contact::before,
+#contact::after {
+  content: none !important;
+  display: none !important;
+}
+#contact .contact-methods,
+#contact .contact-link,
+#contact .contact-link:hover {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+#contact .contact-link {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+}
