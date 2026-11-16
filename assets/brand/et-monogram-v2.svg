@@ -1,14 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
-<title id="title">ET — Erfan Tahmasebi</title>
-<desc id="desc">Geometric ET monogram in cyan and ice white on a midnight navy rounded square.</desc>
-<defs>
- <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#42D9F5"/><stop offset="1" stop-color="#1769AA"/></linearGradient>
- <linearGradient id="e" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#B8D6E8"/></linearGradient>
- <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<rect x="4" y="4" width="112" height="112" rx="29" fill="#071426" stroke="url(#frame)" stroke-width="3"/>
-<path d="M24 30H62V42H37V53H58V65H37V78H62V90H24Z" fill="url(#e)"/>
-<path d="M67 30H98V42H88V90H75V42H67Z" fill="#42D9F5"/>
-<path d="M23 99H98" stroke="#1769AA" stroke-width="3" stroke-linecap="round"/>
-<circle cx="99" cy="20" r="5" fill="#36D399" filter="url(#glow)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">ET — Erfan Tahmasebi</title><desc id="desc">Modern ET monogram in cyan, blue and violet on a midnight navy tile.</desc>
+<defs><linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#43D9F5"/><stop offset=".55" stop-color="#647BFF"/><stop offset="1" stop-color="#B36BFF"/></linearGradient><linearGradient id="letter" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#B9D9F5"/></linearGradient><filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="5" y="5" width="118" height="118" rx="31" fill="#071426" stroke="url(#edge)" stroke-width="3"/><path d="M27 32H70V45H42V56H65V69H42V82H70V95H27Z" fill="url(#letter)"/><path d="M76 32H103V45H96V95H82V45H76Z" fill="#43D9F5"/><path d="M27 105H101" stroke="url(#edge)" stroke-width="3" stroke-linecap="round"/><circle cx="103" cy="22" r="5" fill="#B36BFF" filter="url(#glow)"/></svg>
