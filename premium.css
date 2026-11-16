@@ -443,3 +443,11 @@ footer {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* GitHub-aligned selected projects */
+.github-project-grid { align-items: stretch; }
+.github-project-grid .project { display:flex; flex-direction:column; align-items:flex-start; }
+.github-project-grid .project-tech { display:flex; flex-direction:column; gap:.65rem; margin-top:auto; padding-top:1rem; }
+.github-project-grid .project-tech img { display:block; width:min(100%, 230px); height:42px; object-fit:contain; object-position:left center; }
+.github-project-grid .project-tech span { color:var(--muted, #9fb0c8); font-size:.82rem; line-height:1.6; }
+.github-project-grid .project .text-link { margin-top:1rem; }
