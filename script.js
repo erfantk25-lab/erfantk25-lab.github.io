@@ -4,12 +4,12 @@
   const translations = {
     sv: {
       title: "Erfan Tahmasebi | MLOps Engineer Student",
-      description: "Erfan Tahmasebi — MLOps Engineering-student på Nackademin i Stockholm. Projektarbete inom ML serving, CI/CD, Docker och Kubernetes. Söker LIA 1, 8 februari–21 maj 2027.",
+      description: "Erfan Tahmasebi — MLOps Engineering-student på Nackademin i Stockholm. Projektarbete inom ML serving, CI/CD, Docker och Kubernetes. Söker LIA 1, 18 februari–21 maj 2027.",
       skip: "Hoppa till innehåll", homeAria: "Erfan Tahmasebi – startsida", navAria: "Huvudnavigering",
       navHome: "Hem", navAbout: "Om", navSkills: "Kompetens", navProjects: "Projekt", navLab: "MLOps Lab", navJourney: "Läranderesa", navCv: "CV", navContact: "Kontakt", menu: "Meny",
       heroTitle: "Bygger tillförlitliga ML-system — från <em>experiment till drift.</em>",
       heroLead: "Jag är Erfan Tahmasebi, MLOps Engineering-student på Nackademin i Stockholm. Jag är intresserad av systemen runt maskininlärning: datakvalitet, modellutveckling, automation och infrastruktur som gör ML-lösningar reproducerbara och möjliga att driftsätta.",
-      ctaProjects: "Utforska projekt", ctaContact: "Kontakta mig", liaLabel: "SÖKER LIA 1", liaDates: "8 februari – 21 maj 2027",
+      ctaProjects: "Utforska projekt", ctaContact: "Kontakta mig", liaLabel: "SÖKER LIA 1", liaDates: "18 februari – 21 maj 2027",
 
       aboutEyebrow: "01 / OM MIG", aboutTitle: "Maskininlärning är bara <em>början.</em>",
       aboutP1: "Jag studerar MLOps Engineering på Nackademin (2025–2028) och söker en LIA-plats där jag kan utvecklas tillsammans med ett engineeringteam. Mitt intresse ligger i systemen runt modellerna: data som går att lita på, automatiserade flöden, containerisering, CI/CD och tydlig leverans.",
@@ -63,20 +63,20 @@
       cvEyebrow: "06 / CV", cvTitle: "En tydlig bild av min <em>bakgrund.</em>",
       cvDesc: "Ett uppdaterat CV med samma fyra projekt, samma ordning och samma tekniska identitet som på min GitHub-profil. Välj svensk eller engelsk version.",
       cvButton: "Öppna svenskt CV ↗", cvEnglishButton: "English CV ↗",
-            contactEyebrow: "07 / KONTAKT", contactTitle: "Kontakt <em>mig.</em>",
-      contactIntro: "Har du en fråga eller vill prata om LIA, MLOps eller ett projekt? Hör gärna av dig.",
-      contactAvailability: "Tillgänglig för LIA 1", contactPhoneLabel: "Telefon",
-      contactDate: "8 februari – 21 maj 2027", location: "Stockholm, Sverige",
+            contactEyebrow: "07 / KONTAKT", contactTitle: "Låt oss <em>prata.</em>",
+      contactIntro: "Vill du diskutera en LIA-plats, ett tekniskt projekt eller möjligheter inom MLOps? Jag ser fram emot att höra från dig.",
+      contactAvailability: "Söker LIA 1", contactPhoneLabel: "Telefon",
+      contactDate: "18 februari – 21 maj 2027", location: "Stockholm, Sverige",
       footerRole: "MLOps Engineer Student"
     },
     en: {
       title: "Erfan Tahmasebi | MLOps Engineer Student",
-      description: "Erfan Tahmasebi — MLOps Engineering student at Nackademin in Stockholm. Project work in ML serving, CI/CD, Docker and Kubernetes. Seeking LIA 1, 8 February–21 May 2027.",
+      description: "Erfan Tahmasebi — MLOps Engineering student at Nackademin in Stockholm. Project work in ML serving, CI/CD, Docker and Kubernetes. Seeking LIA 1, 18 February–21 May 2027.",
       skip: "Skip to content", homeAria: "Erfan Tahmasebi – home", navAria: "Main navigation",
       navHome: "Home", navAbout: "About", navSkills: "Skills", navProjects: "Projects", navLab: "MLOps Lab", navJourney: "Learning journey", navCv: "CV", navContact: "Contact", menu: "Menu",
       heroTitle: "Building reliable ML systems — from <em>experiments to deployment.</em>",
       heroLead: "I'm Erfan Tahmasebi, an MLOps Engineering student at Nackademin in Stockholm. I'm interested in the systems around machine learning: data quality, model development, automation and infrastructure that make ML solutions reproducible and deployable.",
-      ctaProjects: "Explore projects", ctaContact: "Contact me", liaLabel: "SEEKING LIA 1", liaDates: "8 February – 21 May 2027",
+      ctaProjects: "Explore projects", ctaContact: "Contact me", liaLabel: "SEEKING LIA 1", liaDates: "18 February – 21 May 2027",
 
       aboutEyebrow: "01 / ABOUT", aboutTitle: "Machine learning is only the <em>beginning.</em>",
       aboutP1: "I study MLOps Engineering at Nackademin (2025–2028) and am looking for an internship placement where I can grow alongside an engineering team. My interest is in the systems around models: trustworthy data, automated workflows, containerisation, CI/CD and reliable delivery.",
@@ -131,9 +131,9 @@
       cvDesc: "An updated CV with the same four projects, order and technical identity as my GitHub profile. Choose the Swedish or English version.",
       cvButton: "Open Swedish CV ↗", cvEnglishButton: "English CV ↗",
             contactEyebrow: "07 / CONTACT", contactTitle: "Get in <em>touch.</em>",
-      contactIntro: "Have a question or want to talk about an internship, MLOps or a project? Feel free to reach out.",
-      contactAvailability: "Available for LIA 1", contactPhoneLabel: "Phone",
-      contactDate: "8 February – 21 May 2027", location: "Stockholm, Sweden",
+      contactIntro: "Interested in discussing an internship, an MLOps project or a technical collaboration? Send me a message — I would be glad to connect.",
+      contactAvailability: "Seeking LIA 1", contactPhoneLabel: "Phone",
+      contactDate: "18 February – 21 May 2027", location: "Stockholm, Sweden",
       footerRole: "MLOps Engineer Student"
     }
   };
