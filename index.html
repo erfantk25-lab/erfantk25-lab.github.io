@@ -13,7 +13,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>Erfan Tahmasebi | MLOps Engineering Student</title>
   <link rel="icon" href="assets/brand/favicon.svg?v=3" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="styles.css?v=14">
   <link rel="stylesheet" href="premium.css?v=3">
   <link rel="stylesheet" href="github-profile-theme.css?v=20261116-1">
 </head>
@@ -97,58 +97,38 @@
         <div><p class="eyebrow" data-i18n="projectsEyebrow">03 / UTVALDA PROJEKT</p><h2 data-i18n-html="projectsTitle">Byggt för att <em>granskas.</em></h2></div>
         <a class="text-link" href="https://github.com/erfantk25-lab" target="_blank" rel="noreferrer" data-i18n="githubProfile">Se GitHub-profil ↗</a>
       </div>
-
-      <article class="project featured">
-        <div class="project-index">01 / 06</div>
-        <div>
-          <p class="tag" data-i18n="teamProjectTag">GRUPPROJEKT · CI/CD</p>
-          <h3>End-to-end MLOps för churn prediction</h3>
-          <p data-i18n="teamProjectDesc">En utbildningsmiljö för kundbortfallsprognoser där teamet byggde ett ML-flöde med fokus på kvalitet och leverans. Mina fem mergade pull requests omfattade statistisk datadrift, leveransverifiering, multi-stage Docker-byggen, layer caching, smoke tests, GHCR-publicering, modellmetadata/lineage och Ruff i CI.</p>
-          <div class="metrics">
-            <div><strong>~39%</strong><span data-i18n="metricImage">mindre Docker-image</span></div>
-            <div><strong>~30%</strong><span data-i18n="metricBuild">snabbare uppmätt build</span></div>
-          </div>
-          <p class="note" data-i18n="teamProjectNote">Detta är rapporterade teamresultat, inte resultat som ska tillskrivas enbart mitt arbete.</p>
-          <a class="text-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline" target="_blank" rel="noreferrer" data-i18n="openTeamRepo">Öppna teamets repository ↗</a><br>
-          <a class="text-link" href="projects/ci-cd-pipeline-contributions.md" data-i18n="contributionSummary">Läs om mina fem individuella pull requests ↗</a>
-        </div>
-        <figure class="architecture-wrap">
-          <p class="eyebrow" data-i18n="architectureEyebrow">TEKNISK ARKITEKTUR / CI-CD-FLÖDE</p>
-          <img src="assets/ci-cd-pipeline-architecture.svg" alt="Arkitekturdiagram för teamets CI/CD-pipeline." data-i18n-alt="architectureAlt" loading="lazy" width="1800" height="1550">
-          <figcaption><span data-i18n="architectureCaption">Förenklad visualisering av workflowets jobb och beroenden. GHCR-publicering sker endast vid push till main; kundscoring körs separat.</span> <a href="assets/ci-cd-pipeline-architecture.svg" target="_blank" rel="noreferrer" data-i18n="openSvg">Öppna SVG i full storlek ↗</a></figcaption>
-        </figure>
-      </article>
-
-      <div class="project-grid">
-        <article class="project">
-          <div class="project-index">02 / 06</div><p class="tag">FASTAPI · DOCKER · KUBERNETES</p>
-          <h3>ML Serving & Kubernetes</h3>
-          <p data-i18n="project2Desc">FastAPI, MLflow, datavalidering och Docker. Repositoryt dokumenterar även mitt individuella Kubernetes-mini-projekt med kind, probes och rolling updates. Churn-pipelinen är grupparbete.</p>
-          <a class="text-link" href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a> · <a class="text-link" href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving/actions" target="_blank" rel="noreferrer" data-i18n="liveCi">Live CI-status ↗</a>
+      <div class="project-grid github-project-grid">
+        <article class="project featured">
+          <div class="project-index">01 / 04</div>
+          <p class="tag">FULL-STACK · RAG · LLMOPS</p>
+          <h3>Study Buddy RAG – Fullstack LLMOps Project</h3>
+          <p data-i18n="studyBuddyDesc">A collaborative full-stack RAG application built by a team of four. It turns lecture transcriptions into an interactive study assistant for course questions, quiz and flashcard generation, and PDF exports.</p>
+          <p class="project-tech"><img src="https://skillicons.dev/icons?i=python,docker,azure&theme=dark" alt="Python, Docker and Azure"><span>FastAPI · Streamlit · LanceDB · Cohere · Pydantic-AI · MLflow</span></p>
+          <a class="text-link" href="https://github.com/LAjoyan/Fullstack_LLMops_Project" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a>
         </article>
         <article class="project">
-          <div class="project-index">03 / 06</div><p class="tag">INDIVIDUELLT · PYTHON · FASTAPI</p>
-          <h3>Taxi Prediction – Fullstack ML</h3>
-          <p data-i18n="project3Desc">Jag utvecklade applikationen individuellt med separat FastAPI-backend och Streamlit-frontend. Projektet använder scikit-learn, OpenRouteService för ruttdata och Folium för interaktiv kartvisning.</p>
-          <a class="text-link" href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a> · <a class="text-link" href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN/actions" target="_blank" rel="noreferrer" data-i18n="liveCi">Live CI-status ↗</a>
+          <div class="project-index">02 / 04</div>
+          <p class="tag">CUSTOMER CHURN · MLOPS</p>
+          <h3>FastAPI Docker ML Serving</h3>
+          <p data-i18n="churnDesc">An MLOps pipeline for customer churn prediction, combining data quality checks, model training and evaluation, artifact integrity, an inference API and Docker delivery.</p>
+          <p class="project-tech"><img src="https://skillicons.dev/icons?i=python,fastapi,docker&theme=dark" alt="Python, FastAPI and Docker"><span> Pandera · MLflow · GitHub Actions</span></p>
+          <a class="text-link" href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a>
         </article>
         <article class="project">
-          <div class="project-index">04 / 06</div><p class="tag">EDGE · MQTT · GRAFANA</p>
-          <h3>Smart Grow Environmental Monitor</h3>
-          <p data-i18n="project4Desc">Grupprojekt för miljöövervakning med Raspberry Pi Pico W, MicroPython, MQTT, TimescaleDB, Docker Compose och Grafana.</p>
+          <div class="project-index">03 / 04</div>
+          <p class="tag">FULL-STACK · MACHINE LEARNING</p>
+          <h3>Taxi Prediction — Full Stack</h3>
+          <p data-i18n="taxiDesc">An individual application combining a regression model, prediction API and interactive geographic interface to estimate taxi fares from trip details.</p>
+          <p class="project-tech"><img src="https://skillicons.dev/icons?i=python,fastapi,sklearn&theme=dark" alt="Python, FastAPI and scikit-learn"><span>Streamlit · OpenRouteService · Folium</span></p>
+          <a class="text-link" href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a>
+        </article>
+        <article class="project">
+          <div class="project-index">04 / 04</div>
+          <p class="tag">EDGE COMPUTING · IOT</p>
+          <h3>Edge Computing Project</h3>
+          <p data-i18n="edgeDesc">A collaborative edge-IoT project using a Raspberry Pi Pico W to monitor environmental conditions, trigger local alerts and stream telemetry to a containerized monitoring stack.</p>
+          <p class="project-tech"><img src="https://skillicons.dev/icons?i=raspberrypi,docker,postgres,grafana&theme=dark" alt="Raspberry Pi, Docker, PostgreSQL and Grafana"><span>MicroPython · MQTT · Mosquitto · TimescaleDB</span></p>
           <a class="text-link" href="https://github.com/erfantk25-lab/Edge-computing-project-" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-index">05 / 06</div><p class="tag">MCP · INTEGRATION</p>
-          <h3>Model Context Protocol demo</h3>
-          <p data-i18n="project5Desc">Kursdemo som utforskar Model Context Protocol, verktygsanslutning och integration.</p>
-          <a class="text-link" href="https://github.com/erfantk25-lab/nackademin-mcp-demo" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a>
-        </article>
-        <article class="project">
-          <div class="project-index">06 / 06</div><p class="tag">LLM · LANGCHAIN</p>
-          <h3>LangChain demo</h3>
-          <p data-i18n="project6Desc">Kursprojekt som utforskar mönster för LLM-applikationer med LangChain.</p>
-          <a class="text-link" href="https://github.com/erfantk25-lab/nackademin-langchain-demo" target="_blank" rel="noreferrer" data-i18n="repository">Repository ↗</a>
         </article>
       </div>
     </section>
