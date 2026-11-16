@@ -1,901 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CV of Erfan Tahmasebi – MLOps Engineering student with project experience in Python, CI/CD, Docker and ML serving.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV of Erfan Tahmasebi, MLOps Engineering student at Nackademin in Stockholm. Projects in RAG, MLOps, ML serving, CI/CD and edge computing.">
   <meta name="theme-color" content="#071426">
-  <title>CV – Erfan Tahmasebi | English</title>
-
+  <meta property="og:title" content="CV – Erfan Tahmasebi">
+  <meta property="og:description" content="MLOps Engineering student with project-based experience in Python, ML serving, CI/CD and infrastructure.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://erfantk25-lab.github.io/cv/en/">
+  <meta property="og:image" content="https://erfantk25-lab.github.io/assets/brand/social-preview.svg">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://erfantk25-lab.github.io/cv/en/">
+  <link rel="icon" href="../../assets/brand/favicon.svg?v=4" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #071426;
-      --surface: #0D2036;
-      --surface-light: #102B49;
-      --text: #F2F7FC;
-      --muted: #8CA3B8;
-      --accent: #42D9F5;
-      --border: rgba(180, 205, 230, 0.15);
-      --mono: "DM Mono", monospace;
-      --body: "DM Sans", sans-serif;
-      --heading: "Space Grotesk", sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(ellipse at 80% 0%, rgba(55, 113, 145, 0.15), transparent 34%),
-        var(--bg);
-      color: var(--text);
-      font-family: var(--body);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--accent);
-    }
-
-    .page {
-      width: min(100% - 40px, 900px);
-      margin: 0 auto;
-      padding: 38px 0 70px;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--accent);
-      letter-spacing: 0.08em;
-    }
-
-    .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .print-button {
-      border: 1px solid rgba(66, 217, 245, 0.45);
-      background: rgba(66, 217, 245, 0.08);
-      color: var(--accent);
-      border-radius: 6px;
-      padding: 9px 14px;
-      font: inherit;
-      font-size: 13px;
-      cursor: pointer;
-    }
-
-    .print-button:hover {
-      background: rgba(66, 217, 245, 0.16);
-    }
-
-    .hero {
-      padding: 72px 0 48px;
-    }
-
-    .eyebrow,
-    .section-number,
-    .meta,
-    .tag {
-      font-family: var(--mono);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 12px;
-      margin: 0 0 16px;
-    }
-
-    h1, h2, h3, p {
-      margin-top: 0;
-    }
-
-    h1 {
-      font-family: var(--heading);
-      font-size: clamp(42px, 8vw, 76px);
-      letter-spacing: -0.055em;
-      line-height: 1.02;
-      margin-bottom: 14px;
-    }
-
-    .role {
-      font-family: var(--heading);
-      color: var(--muted);
-      font-size: clamp(18px, 3vw, 23px);
-      margin-bottom: 24px;
-    }
-
-    .intro {
-      max-width: 670px;
-      color: #c3d0df;
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 28px;
-    }
-
-    .contact-line {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 22px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .contact-line a {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 2px;
-    }
-
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 27px;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .availability::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .section {
-      padding: 34px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: baseline;
-      gap: 15px;
-      margin-bottom: 24px;
-    }
-
-    .section-number {
-      color: var(--accent);
-      font-size: 11px;
-    }
-
-    h2 {
-      font-family: var(--heading);
-      font-size: 21px;
-      letter-spacing: -0.025em;
-      margin: 0;
-    }
-
-    .section-copy {
-      max-width: 760px;
-      color: #bdccdc;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .skill-card {
-      padding: 17px 18px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-    }
-
-    .skill-card h3 {
-      color: var(--accent);
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 9px;
-    }
-
-    .skill-card p {
-      color: #d4deea;
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .project-list,
-    .experience-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .project,
-    .experience {
-      padding: 21px 22px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      break-inside: avoid;
-    }
-
-    .project-top,
-    .experience-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 9px;
-    }
-
-    .project h3,
-    .experience h3 {
-      font-family: var(--heading);
-      font-size: 17px;
-      margin: 0;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 10px;
-      white-space: nowrap;
-    }
-
-    .project p,
-    .experience p {
-      color: #bdccdc;
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-
-    .project ul {
-      color: #bdccdc;
-      font-size: 13px;
-      padding-left: 19px;
-      margin: 8px 0 13px;
-    }
-
-    .project li {
-      margin: 4px 0;
-    }
-
-    .project-link {
-      display: inline-block;
-      color: var(--accent);
-      font-family: var(--mono);
-      font-size: 11px;
-      overflow-wrap: anywhere;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 13px;
-    }
-
-    .tag {
-      color: #b6c8da;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 4px 7px;
-      font-size: 9px;
-    }
-
-    .experience + .experience {
-      margin-top: 0;
-    }
-
-    .experience p {
-      margin-bottom: 0;
-    }
-
-    .contact-section {
-      padding-bottom: 20px;
-    }
-
-    .contact-panel {
-      padding: 25px;
-      background: var(--surface-light);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-    }
-
-    .contact-panel p {
-      color: #bdccdc;
-      margin-bottom: 18px;
-    }
-
-    .contact-button {
-      display: inline-block;
-      padding: 10px 15px;
-      background: var(--accent);
-      color: #071426;
-      border-radius: 5px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .contact-button:hover {
-      color: #07111f;
-      filter: brightness(1.08);
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 10px;
-    }
-
-    @media (max-width: 620px) {
-      .page {
-        width: min(100% - 28px, 900px);
-        padding-top: 22px;
-      }
-
-      .topbar,
-      .project-top,
-      .experience-top,
-      footer {
-        align-items: flex-start;
-      }
-
-      .top-actions {
-        gap: 10px;
-      }
-
-      .top-actions a {
-        display: none;
-      }
-
-      .hero {
-        padding: 54px 0 36px;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project,
-      .experience,
-      .contact-panel {
-        padding: 17px;
-      }
-
-      .meta {
-        white-space: normal;
-        text-align: right;
-      }
-    }
-
-    /* Readable A4 PDF layout */
-    @page { size: A4 portrait; margin: 9mm; }
-
-    @media print {
-      html, body {
-        margin: 0 !important;
-        padding: 0 !important;
-        width: auto !important;
-        background: #07111f !important;
-        color: #edf4fc !important;
-        font-size: 8pt !important;
-        line-height: 1.28 !important;
-        print-color-adjust: exact !important;
-        -webkit-print-color-adjust: exact !important;
-      }
-      *, *::before, *::after {
-        print-color-adjust: exact !important;
-        -webkit-print-color-adjust: exact !important;
-      }
-      .page {
-        width: 100% !important;
-        max-width: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-      .topbar, footer, #contact { display: none !important; }
-      .availability { display: inline-flex !important; margin-top: 2mm !important; padding: 1mm 2mm !important; font-size: 7pt !important; }
-      .hero { padding: 0 0 3mm !important; }
-      h1 { font-size: 25pt !important; line-height: 1.02 !important; margin: 0 0 1.5mm !important; }
-      .role { font-size: 11pt !important; margin: 0 0 2mm !important; }
-      .intro { max-width: none !important; font-size: 8pt !important; line-height: 1.3 !important; margin: 0 0 2mm !important; }
-      .contact-line { gap: 1mm 5mm !important; font-size: 7.2pt !important; }
-      .availability { display: inline-flex !important; margin-top: 2mm !important; padding: 1mm 2mm !important; font-size: 7pt !important; }
-      .section {
-        padding: 3mm 0 !important;
-        border-top: .4pt solid rgba(180,205,230,.28) !important;
-        break-inside: auto !important;
-        page-break-inside: auto !important;
-      }
-      #profile { display: none !important; }
-      .section-heading { margin: 0 0 2mm !important; gap: 2mm !important; }
-      .section-number { font-size: 6.5pt !important; }
-      h2 { font-size: 12pt !important; }
-      .section-copy { font-size: 8pt !important; line-height: 1.3 !important; }
-      .skills-grid { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 2mm !important; }
-      .skill-card { padding: 2mm !important; background: #0d1a2b !important; break-inside: avoid !important; }
-      .skill-card h3 { font-size: 7pt !important; margin: 0 0 1mm !important; }
-      .skill-card p { font-size: 7.5pt !important; line-height: 1.25 !important; }
-      .project-list { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 2mm !important; }
-      .project {
-        display: block !important;
-        width: auto !important;
-        margin: 0 !important;
-        min-width: 0 !important;
-        padding: 2.5mm !important;
-        background: #0d1a2b !important;
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-      }
-      .project-top, .experience-top { gap: 2mm !important; margin: 0 0 1mm !important; }
-      .project h3, .experience h3 { font-size: 9pt !important; }
-      .meta { font-size: 6pt !important; white-space: normal !important; }
-      .project p, .experience p { font-size: 7.5pt !important; line-height: 1.25 !important; margin: 0 0 1.5mm !important; }
-      .project ul { font-size: 7.2pt !important; line-height: 1.22 !important; margin: 1mm 0 1.5mm !important; padding-left: 4mm !important; }
-      .project li { margin: .5mm 0 !important; }
-      .tags { gap: 1mm !important; margin-top: 1.5mm !important; }
-      .tag { font-size: 6pt !important; padding: .5mm 1mm !important; }
-      .project-link { font-size: 6.5pt !important; overflow-wrap: anywhere !important; }
-      #education, #experience {
-        display: block !important;
-        width: 100% !important;
-        margin: 0 !important;
-      }
-      .experience-list { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)) !important; gap: 2mm !important; }
-      .experience { padding: 2.5mm !important; background: #0d1a2b !important; break-inside: avoid !important; }
-      a, .section-number, .skill-card h3, .project-link, .tag { color: #42D9F5 !important; }
-    }
-
-  
-    /* Shared Erfan Tahmasebi portfolio identity */
-    body {
-      background:
-        radial-gradient(ellipse at 82% 10%, rgba(23,105,170,.19), transparent 34%),
-        radial-gradient(ellipse at 12% 42%, rgba(66,217,245,.055), transparent 32%),
-        var(--bg);
-    }
-    .page { max-width: 900px; }
-    .topbar {
-      border-bottom-color: rgba(66,217,245,.18);
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: #F2F7FC;
-      font-weight: 500;
-      letter-spacing: .11em;
-    }
-    .brand img {
-      display: block;
-      width: 44px;
-      height: 44px;
-      flex: 0 0 44px;
-      border-radius: 13px;
-      filter: drop-shadow(0 0 12px rgba(66,217,245,.24));
-    }
-    .brand small {
-      color: var(--accent);
-      font-size: 10px;
-      font-weight: 400;
-    }
-    .top-actions {
-      gap: 16px;
-    }
-    .top-actions a {
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 11px;
-    }
-    .top-actions a:hover { color: var(--accent); }
-    .print-button {
-      border-color: rgba(66,217,245,.42);
-      background: rgba(66,217,245,.07);
-      color: var(--accent);
-      border-radius: 5px;
-      font-family: var(--mono);
-      font-size: 11px;
-      transition: transform .2s ease, background .2s ease;
-    }
-    .print-button:hover {
-      background: rgba(66,217,245,.16);
-      transform: translateY(-1px);
-    }
-    .hero {
-      position: relative;
-      padding-top: 78px;
-      padding-bottom: 52px;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero::before {
-      content: "MLOPS ENGINEER STUDENT  /  NACKADEMIN";
-      display: block;
-      margin-bottom: 17px;
-      color: var(--accent);
-      font: 11px var(--mono);
-      letter-spacing: .1em;
-    }
-    h1 {
-      max-width: 820px;
-      color: #F2F7FC;
-    }
-    .role { color: var(--accent); }
-    .section {
-      border-top-color: rgba(66,217,245,.17);
-    }
-    .section-number { color: var(--accent); }
-    .skill-card, .project, .experience {
-      background: linear-gradient(145deg, rgba(16,43,73,.72), rgba(13,32,54,.96));
-      border-color: rgba(180,205,230,.14);
-      border-radius: 7px;
-      transition: transform .2s ease, border-color .2s ease;
-    }
-    .skill-card:hover, .project:hover, .experience:hover {
-      transform: translateY(-2px);
-      border-color: rgba(66,217,245,.38);
-    }
-    .skill-card h3, .project-link, .tag { color: var(--accent); }
-    .tag { border-color: rgba(66,217,245,.22); background: rgba(66,217,245,.035); }
-    .contact-panel {
-      background: linear-gradient(135deg, #102B49, #0D2036 78%);
-      border-color: rgba(66,217,245,.28);
-    }
-    .contact-button {
-      background: var(--accent);
-      color: #071426;
-      border: 1px solid var(--accent);
-      border-radius: 5px;
-      font-family: var(--mono);
-      box-shadow: 0 8px 24px rgba(66,217,245,.13);
-    }
-    .contact-button:hover {
-      color: #071426;
-      background: #7BE7FA;
-      filter: none;
-      transform: translateY(-1px);
-    }
-    footer { border-top-color: rgba(66,217,245,.18); }
-    @media (max-width: 620px) {
-      .brand { gap: 9px; font-size: 10px; }
-      .brand img { width: 39px; height: 39px; flex-basis: 39px; }
-      .topbar { gap: 12px; }
-      .hero { padding-top: 54px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-  
-  </style>
+  <link rel="stylesheet" href="../../cv.css?v=1">
+  <title>CV – Erfan Tahmasebi | English</title>
 </head>
-
 <body>
-  <main class="page">
-    <header class="topbar">
-      <a class="brand" href="../../" aria-label="Erfan Tahmasebi portfolio">
-        <img src="../../assets/brand/et-monogram-v2.svg?v=2" alt="">
+  <div class="cv-shell">
+    <header class="cv-header">
+      <a class="cv-brand" href="../../" aria-label="Back to portfolio">
+        <img src="../../assets/brand/et-monogram-v2.svg?v=4" alt="">
         <span>ERFAN TAHMASEBI <small>/ CV</small></span>
       </a>
-      <nav class="top-actions" aria-label="CV actions">
-        <a href="../../">Portfolio ↗</a>
-        <a href="../">Svenskt CV ↗</a>
-        <button class="print-button" type="button" onclick="window.print()">Print / Save as PDF</button>
+      <nav class="cv-nav" aria-label="CV navigation">
+        <a href="../../">Portfolio</a>
+        <a href="../">Swedish CV</a>
+        <a href="#projects">Projects</a>
+        <button class="cv-print" type="button" onclick="window.print()">Print / Save PDF</button>
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="name">
-<h1 id="name">Erfan Tahmasebi</h1>
-
-      <p class="role">MLOps Engineering Student · Python · Machine Learning · CI/CD</p>
-
-      <p class="intro">
-        I am studying MLOps Engineering at Nackademin and have hands-on project experience with automated ML workflows, CI/CD, Docker, model versioning, data validation and ML serving. I enjoy building solutions at the intersection of software development, machine learning and reliable operations.
-      </p>
-
-      <div class="contact-line">
-        <a href="mailto:erfan.tahmasbikondroodi@yh.nackademin.se">
-          erfan.tahmasbikondroodi@yh.nackademin.se
-        </a>
-        <a href="tel:+46707694973">070-769 49 73</a>
-        <a href="https://github.com/erfantk25-lab" target="_blank" rel="noopener noreferrer">
-          GitHub ↗
-        </a>
-      </div>
-
-      <div class="availability">
-        Internship (LIA): 8 February – 21 May 2027
-      </div>
-    </section>
-
-    <section class="section" id="profile">
-      <div class="section-heading">
-        <span class="section-number">01 /</span>
-        <h2>Profile</h2>
-      </div>
-
-      <p class="section-copy">
-        My focus is on building repeatable and reliable ML workflows. Through academic projects, I have worked with containerisation, automated testing, CI pipelines, model management and API-based model serving. I also have experience in technical support, troubleshooting and teamwork.
-      </p>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-heading">
-        <span class="section-number">02 /</span>
-        <h2>Technical Skills</h2>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <h3>Programming & Data</h3>
-          <p>Python, SQL, Pandas, data validation, Pandera</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Machine Learning</h3>
-          <p>scikit-learn, MLflow, model versioning</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>MLOps & DevOps</h3>
-          <p>Docker, CI/CD, Git, GitHub Actions, automated testing</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Backend & Systems</h3>
-          <p>FastAPI, Linux, REST APIs, container-based development</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Monitoring & Quality</h3>
-          <p>Data drift detection, smoke testing, model metadata and lineage</p>
-        </article>
-
-        <article class="skill-card">
-          <h3>Cloud & Edge</h3>
-          <p>Raspberry Pi Pico W, MQTT, Grafana</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <span class="section-number">03 /</span>
-        <h2>Selected Projects</h2>
-      </div>
-
-      <div class="project-list">
-
-        <article class="project">
-          <div class="project-top">
-            <h3>CI/CD Pipeline – End-to-end MLOps</h3>
-            <span class="meta">Team Project</span>
-          </div>
-
-          <p>
-            An academic customer churn prediction project focused on an automated and reproducible machine learning workflow.
-          </p>
-
-          <ul>
-            <li>Contributed five approved and merged pull requests.</li>
-            <li>Contributed to data drift checks, Docker optimisation and testing.</li>
-            <li>Worked on model versioning, metadata and publishing to GHCR.</li>
-            <li>Contributed to team results of approximately 39% smaller Docker images and 30% faster measured build times.</li>
-          </ul>
-
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Docker</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">MLflow</span>
-            <span class="tag">CI/CD</span>
-          </div>
-
-
-          <p>Selected merged pull requests (my individual contributions):</p>
-          <ul>
-            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/1" target="_blank" rel="noopener noreferrer">PR #1 – Ruff and code quality in CI ↗</a></li>
-            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/20" target="_blank" rel="noopener noreferrer">PR #20 – Model versioning and lineage ↗</a></li>
-            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/36" target="_blank" rel="noopener noreferrer">PR #36 – Docker, smoke tests and GHCR ↗</a></li>
-            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/38" target="_blank" rel="noopener noreferrer">PR #38 – Multi-stage Docker builds and layer caching ↗</a></li>
-            <li><a class="project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/39" target="_blank" rel="noopener noreferrer">PR #39 – Statistical data-drift checks ↗</a></li>
-          </ul>
-          <a class="project-link"
-             href="https://github.com/LeoLindqvist123/ci-cd-pipeline"
-             target="_blank" rel="noopener noreferrer">
-            github.com/LeoLindqvist123/ci-cd-pipeline ↗
-          </a>
-        </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>ML Serving & CI/CD</h3>
-            <span class="meta">Individual Academic Project</span>
-          </div>
-
-          <p>
-            A project to expose a machine learning model through an API and automate quality assurance and delivery.
-          </p>
-
-          <ul>
-            <li>Built ML serving with FastAPI and MLflow.</li>
-            <li>Worked with data validation and automated testing.</li>
-            <li>Used GitHub Actions and Docker in the delivery workflow.</li>
-          </ul>
-
-          <div class="tags">
-            <span class="tag">FastAPI</span>
-            <span class="tag">MLflow</span>
-            <span class="tag">Docker</span>
-            <span class="tag">CI/CD</span>
-          </div>
-
-          <a class="project-link"
-             href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving"
-             target="_blank" rel="noopener noreferrer">
-            github.com/erfantk25-lab/fastapi-docker-ml-serving ↗
-          </a>
-        </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>Taxi Prediction – Fullstack ML</h3>
-            <span class="meta">Individual Project</span>
-          </div>
-
-          <p>
-            Independently developed a full-stack application with a dedicated FastAPI backend for taxi fare predictions and a Streamlit interface. Integrated OpenRouteService for route data and Folium for interactive map visualisation.
-          </p>
-
-          <ul>
-            <li>Built and tested API endpoints for fare predictions and trip data retrieval.</li>
-            <li>Connected the frontend, backend and external routing service into a working application flow.</li>
-            <li>Displayed the route, distance, estimated travel time and model fare prediction in the interface.</li>
-          </ul>
-
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">Streamlit</span>
-          </div>
-
-          <a class="project-link"
-             href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN"
-             target="_blank" rel="noopener noreferrer">
-            github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN ↗
-          </a>
-        </article>
-
-        <article class="project">
-          <div class="project-top">
-            <h3>Smart Grow – Environmental Monitor</h3>
-            <span class="meta">Edge Computing</span>
-          </div>
-
-          <p>
-            An IoT environmental monitoring project using Raspberry Pi Pico W, Python and MQTT. The project covers sensor-data collection, storage and visualisation in Grafana.
-          </p>
-
-          <div class="tags">
-            <span class="tag">Raspberry Pi Pico W</span>
-            <span class="tag">Python</span>
-            <span class="tag">MQTT</span>
-            <span class="tag">Grafana</span>
-          </div>
-
-          <a class="project-link"
-             href="https://github.com/erfantk25-lab/Edge-computing-project-"
-             target="_blank" rel="noopener noreferrer">
-            github.com/erfantk25-lab/Edge-computing-project- ↗
-          </a>
-        </article>
-
-      </div>
-    </section>
-
-
-    <section class="section" id="education">
-      <div class="section-heading">
-        <span class="section-number">05 /</span>
-        <h2>Education</h2>
-      </div>
-      <div class="experience">
-        <div class="experience-top">
-          <h3>MLOps Engineer · Nackademin</h3>
-          <span class="meta">In Progress</span>
+    <main>
+      <section class="cv-hero" aria-labelledby="cv-name">
+        <div class="cv-hero-meta">
+          <span class="cv-kicker">MLOPS ENGINEERING · STOCKHOLM</span>
+          <span class="cv-status"><i></i> Available for LIA 1 · 8 Feb – 21 May 2027</span>
         </div>
-        <p>Higher vocational education focused on machine learning, Python, MLOps, CI/CD and deployment of ML solutions.</p>
-      </div>
-    </section>
+        <h1 id="cv-name">Erfan <em>Tahmasebi</em></h1>
+        <p class="cv-role">MLOps Engineering Student · Python · Machine Learning · CI/CD</p>
+        <p class="cv-summary">I study MLOps Engineering at Nackademin and build projects across machine learning, automation and infrastructure. My hands-on, project-based experience includes ML serving, data validation, Docker, CI/CD and API integrations, with a focus on reproducible workflows and clear technical documentation.</p>
+        <div class="cv-contact-grid">
+          <a href="mailto:erfan.tahmasbikondroodi@yh.nackademin.se"><span>EMAIL</span><strong>erfan.tahmasbikondroodi@yh.nackademin.se</strong></a>
+          <a href="tel:+46707694973"><span>PHONE</span><strong>+46 70 769 49 73</strong></a>
+          <a href="https://github.com/erfantk25-lab" target="_blank" rel="noopener noreferrer"><span>GITHUB</span><strong>github.com/erfantk25-lab ↗</strong></a>
+          <a href="https://www.linkedin.com/in/erfan-tahmasbikondroodi/" target="_blank" rel="noopener noreferrer"><span>LINKEDIN</span><strong>Erfan Tahmasebi ↗</strong></a>
+        </div>
+      </section>
 
-    <section class="section" id="experience">
-      <div class="section-heading">
-        <span class="section-number">04 /</span>
-        <h2>Work Experience</h2>
-      </div>
+      <section class="cv-section" id="profile">
+        <div class="cv-section-title"><span>01</span><h2>Profile</h2><p>What I focus on</p></div>
+        <p class="cv-body-copy">My interest is in the systems around machine learning models: trustworthy data workflows, model training and evaluation, automated testing, containerisation and deployment. I enjoy understanding how components work together, troubleshooting methodically and making technical decisions clear through documentation.</p>
+      </section>
 
-      <div class="experience-list">
+      <section class="cv-section" id="skills">
+        <div class="cv-section-title"><span>02</span><h2>Technical skills</h2><p>Tools used in coursework and projects</p></div>
+        <div class="cv-skills-grid">
+          <article class="cv-skill">
+            <img src="https://skillicons.dev/icons?i=python,postgres&theme=dark" alt="Python and PostgreSQL" loading="lazy">
+            <h3>Programming & data</h3><p>Python · SQL · Pandas · Pandera · data validation</p>
+          </article>
+          <article class="cv-skill">
+            <img src="https://skillicons.dev/icons?i=sklearn&theme=dark" alt="scikit-learn" loading="lazy">
+            <h3>Machine learning</h3><p>scikit-learn · MLflow · model training · evaluation</p>
+          </article>
+          <article class="cv-skill">
+            <img src="https://skillicons.dev/icons?i=docker,githubactions,kubernetes&theme=dark" alt="Docker, GitHub Actions and Kubernetes" loading="lazy">
+            <h3>MLOps & DevOps</h3><p>Docker · CI/CD · Git · GitHub Actions · GHCR · Kubernetes/kind in an educational project</p>
+          </article>
+          <article class="cv-skill">
+            <img src="https://skillicons.dev/icons?i=fastapi,linux&theme=dark" alt="FastAPI and Linux" loading="lazy">
+            <h3>Backend & systems</h3><p>FastAPI · REST APIs · Streamlit · Linux · container-based development</p>
+          </article>
+          <article class="cv-skill">
+            <img src="https://skillicons.dev/icons?i=grafana&theme=dark" alt="Grafana" loading="lazy">
+            <h3>Testing, quality & monitoring</h3><p>pytest · Ruff · data drift · smoke tests · model metadata and lineage · Grafana</p>
+          </article>
+          <article class="cv-skill">
+            <img src="https://skillicons.dev/icons?i=raspberrypi,postgres&theme=dark" alt="Raspberry Pi and PostgreSQL" loading="lazy">
+            <h3>Edge & messaging</h3><p>Raspberry Pi Pico W · MicroPython · MQTT · TimescaleDB · Mosquitto</p>
+          </article>
+        </div>
+        <p class="cv-skill-note">The skills above reflect technologies I have used in coursework and projects; they are not a certification of proficiency level.</p>
+      </section>
 
-        <article class="experience">
-          <div class="experience-top">
-            <h3>IT Support Assistant · City of Stockholm</h3>
-            <span class="meta">2024</span>
+      <section class="cv-section" id="projects">
+        <div class="cv-section-title"><span>03</span><h2>Selected projects</h2><p>Same project selection and order as my GitHub profile</p></div>
+        <div class="cv-project-grid">
+          <article class="cv-project">
+            <a class="cv-project-banner" href="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/study-buddy-banner.svg" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/study-buddy-banner.svg" alt="Study Buddy RAG project banner" loading="lazy">
+            </a>
+            <div class="cv-project-top"><span class="cv-project-number">01 / 04</span><span class="cv-project-type">TEAM PROJECT · FOUR-PERSON TEAM</span></div>
+            <h3>Study Buddy RAG – Fullstack LLMOps Project</h3>
+            <p>A collaborative RAG system that turns lecture transcriptions into a study assistant for course questions, quizzes, flashcards and PDF exports.</p>
+            <ul>
+              <li>Semantic retrieval using LanceDB and Cohere multilingual embeddings.</li>
+              <li>FastAPI, Streamlit and Pydantic-AI; MLflow for tracing, evaluation and prompt versioning.</li>
+              <li>Docker Compose; the project was also deployed to Azure App Service during development.</li>
+            </ul>
+            <div class="cv-tags"><span>Python</span><span>FastAPI</span><span>Streamlit</span><span>LanceDB</span><span>MLflow</span><span>Docker</span></div>
+            <a class="cv-project-link" href="https://github.com/LAjoyan/Fullstack_LLMops_Project" target="_blank" rel="noopener noreferrer">Open project repository ↗</a>
+          </article>
+
+          <article class="cv-project">
+            <a class="cv-project-banner" href="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/fastapi-ml-serving-banner.svg" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/fastapi-ml-serving-banner.svg" alt="Customer Churn MLOps project banner" loading="lazy">
+            </a>
+            <div class="cv-project-top"><span class="cv-project-number">02 / 04</span><span class="cv-project-type">CUSTOMER CHURN · MLOPS</span></div>
+            <h3>FastAPI Docker ML Serving</h3>
+            <p>An MLOps pipeline for customer churn prediction, combining data-quality checks, model training and evaluation, artifact integrity, an inference API and Docker delivery.</p>
+            <ul>
+              <li>Pandera validation, statistical data-drift checks and automated tests.</li>
+              <li>FastAPI model serving, Docker builds and GitHub Actions CI/CD.</li>
+              <li>In the related team CI/CD repository, I contributed five approved and merged pull requests covering Ruff, model lineage, Docker, smoke tests and data drift.</li>
+            </ul>
+            <p class="cv-team-result"><strong>Team results:</strong> approximately 39% smaller Docker images and 30% faster measured build times. These are team-level results, not solely my contribution.</p>
+            <div class="cv-tags"><span>Python</span><span>FastAPI</span><span>Pandera</span><span>MLflow</span><span>Docker</span><span>GitHub Actions</span></div>
+            <div class="cv-project-links">
+              <a class="cv-project-link" href="https://github.com/erfantk25-lab/fastapi-docker-ml-serving" target="_blank" rel="noopener noreferrer">Project repository ↗</a>
+              <a class="cv-project-link" href="https://github.com/LeoLindqvist123/ci-cd-pipeline" target="_blank" rel="noopener noreferrer">Team CI/CD repository ↗</a>
+            </div>
+            <details class="cv-pr-details">
+              <summary>View five individual pull requests</summary>
+              <ul>
+                <li><a href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/1" target="_blank" rel="noopener noreferrer">PR #1 – Ruff and code quality in CI</a></li>
+                <li><a href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/20" target="_blank" rel="noopener noreferrer">PR #20 – Model versioning and lineage</a></li>
+                <li><a href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/36" target="_blank" rel="noopener noreferrer">PR #36 – Docker, smoke tests and GHCR</a></li>
+                <li><a href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/38" target="_blank" rel="noopener noreferrer">PR #38 – Multi-stage builds and layer caching</a></li>
+                <li><a href="https://github.com/LeoLindqvist123/ci-cd-pipeline/pull/39" target="_blank" rel="noopener noreferrer">PR #39 – Statistical data-drift checks</a></li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="cv-project">
+            <a class="cv-project-banner" href="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/taxi-prediction-banner-v3.svg" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/taxi-prediction-banner-v3.svg" alt="Taxi Prediction project banner" loading="lazy">
+            </a>
+            <div class="cv-project-top"><span class="cv-project-number">03 / 04</span><span class="cv-project-type">INDIVIDUAL PROJECT</span></div>
+            <h3>Taxi Prediction – Fullstack ML</h3>
+            <p>An independently developed full-stack application connecting a regression model, prediction API and interactive geographic interface to estimate taxi fares.</p>
+            <ul>
+              <li>FastAPI backend and Streamlit interface for fare predictions and trip data.</li>
+              <li>OpenRouteService for route data and Folium for map visualisation.</li>
+              <li>scikit-learn model and API workflow tests.</li>
+            </ul>
+            <div class="cv-tags"><span>Python</span><span>scikit-learn</span><span>FastAPI</span><span>Streamlit</span><span>Folium</span></div>
+            <a class="cv-project-link" href="https://github.com/erfantk25-lab/taxi-prediction-fullstack-ERFAN" target="_blank" rel="noopener noreferrer">Open project repository ↗</a>
+          </article>
+
+          <article class="cv-project">
+            <a class="cv-project-banner" href="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/edge-computing-banner.svg" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/erfantk25-lab/erfantk25-lab/002006e914808b8505aab51a3841622a9e5340ce/edge-computing-banner.svg" alt="Edge Computing project banner" loading="lazy">
+            </a>
+            <div class="cv-project-top"><span class="cv-project-number">04 / 04</span><span class="cv-project-type">TEAM PROJECT · EDGE / IOT</span></div>
+            <h3>Edge Computing Project – Smart Grow</h3>
+            <p>A team environmental-monitoring project using Raspberry Pi Pico W, local alert handling and telemetry to a containerised monitoring stack.</p>
+            <ul>
+              <li>MicroPython, sensor data and local buzzer/LED alerts.</li>
+              <li>MQTT/Mosquitto messaging; a Python consumer writes to TimescaleDB.</li>
+              <li>Grafana visualisation, Discord webhooks for alerts and Wokwi as a digital twin.</li>
+            </ul>
+            <div class="cv-tags"><span>Raspberry Pi Pico W</span><span>MicroPython</span><span>MQTT</span><span>TimescaleDB</span><span>Grafana</span></div>
+            <a class="cv-project-link" href="https://github.com/erfantk25-lab/Edge-computing-project-" target="_blank" rel="noopener noreferrer">Open project repository ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <div class="cv-bottom-grid">
+        <section class="cv-section" id="education">
+          <div class="cv-section-title"><span>04</span><h2>Education</h2></div>
+          <article class="cv-timeline-card">
+            <div class="cv-entry-top"><h3>MLOps Engineering · Nackademin</h3><span>2025–2028</span></div>
+            <p>Ongoing higher vocational education focused on machine learning, Python, MLOps, automation, CI/CD and deployment of ML solutions.</p>
+          </article>
+        </section>
+        <section class="cv-section" id="experience">
+          <div class="cv-section-title"><span>05</span><h2>Work experience</h2></div>
+          <div class="cv-timeline">
+            <article class="cv-timeline-card">
+              <div class="cv-entry-top"><h3>IT Support Assistant · City of Stockholm</h3><span>2024</span></div>
+              <p>Supported users with IT questions, troubleshooting and technical support. Worked with IT equipment and helped resolve day-to-day technical issues.</p>
+            </article>
+            <article class="cv-timeline-card">
+              <div class="cv-entry-top"><h3>Football Coach · IFK</h3><span>2025</span></div>
+              <p>Planned and delivered training sessions. Developed communication, leadership and collaboration by working with players and other coaches.</p>
+            </article>
           </div>
-          <p>
-            Supported users with IT-related questions, troubleshooting and technical support. Worked with IT equipment and helped resolve day-to-day technical issues.
-          </p>
-        </article>
-
-        <article class="experience">
-          <div class="experience-top">
-            <h3>Football Coach · IFK</h3>
-            <span class="meta">2025</span>
-          </div>
-          <p>
-            Planned and delivered training sessions. Developed communication, leadership and collaboration skills by working with players and other coaches.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="section-heading">
-        <span class="section-number">06 /</span>
-        <h2>Contact</h2>
+        </section>
       </div>
 
-      <div class="contact-panel">
-        <p>
-          Interested in my profile or want to discuss an internship opportunity? Feel free to get in touch.
-        </p>
+      <section class="cv-footer-cta" id="contact">
+        <div><span class="cv-kicker">CONTACT</span><h2>Interested in discussing LIA or MLOps?</h2><p>I am looking for an LIA 1 placement from 8 February to 21 May 2027.</p></div>
+        <a href="mailto:erfan.tahmasbikondroodi@yh.nackademin.se?subject=LIA%20-%20MLOps%20Engineering">Get in touch ↗</a>
+      </section>
+    </main>
 
-        <a class="contact-button"
-           href="mailto:erfan.tahmasbikondroodi@yh.nackademin.se">
-          Contact me →
-        </a>
-      </div>
-    </section>
-
-</main>
+    <footer class="cv-site-footer">
+      <span>ERFAN TAHMASEBI · MLOPS ENGINEERING</span>
+      <a href="../../">Back to portfolio ↗</a>
+    </footer>
+  </div>
 </body>
 </html>
