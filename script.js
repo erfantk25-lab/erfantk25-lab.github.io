@@ -60,9 +60,9 @@
       journey2Desc: "Praktiskt arbete med ML-serving, Docker, CI/CD, Kubernetes i utbildningsmiljö, dataflöden och LLM-integrationer. Se projekten för verifierbara detaljer.",
       journey3Title: "LIA 1 · Söker praktikplats",
       journey3Desc: "Jag söker en LIA-plats där jag kan bidra, lära av erfarna kollegor och utvecklas inom MLOps, AI-infrastruktur och ML engineering.",
-      cvEyebrow: "06 / CV", cvTitle: "Mer om min <em>bakgrund.</em>",
-      cvDesc: "Mitt CV innehåller utbildning, projekt och tekniska färdigheter. Den publicerade versionen är på svenska och kan skrivas ut eller sparas som PDF från webbläsaren.",
-      cvButton: "Öppna svenskt CV ↗",
+      cvEyebrow: "06 / CV", cvTitle: "En tydlig bild av min <em>bakgrund.</em>",
+      cvDesc: "Ett uppdaterat CV med samma fyra projekt, samma ordning och samma tekniska identitet som på min GitHub-profil. Välj svensk eller engelsk version.",
+      cvButton: "Öppna svenskt CV ↗", cvEnglishButton: "English CV ↗",
       contactEyebrow: "07 / KONTAKT", contactTitle: "Låt oss bygga något <br><em>meningsfullt.</em>",
       location: "Stockholm, Sverige",
       contactDesc: "Jag är intresserad av att komma i kontakt med team som arbetar med AI, Machine Learning, Cloud och MLOps. Jag söker LIA 1 från 8 februari till 21 maj 2027.",
@@ -126,9 +126,9 @@
       journey2Desc: "Hands-on work with ML serving, Docker, CI/CD, Kubernetes in an educational environment, data workflows and LLM integrations. See the projects for verifiable details.",
       journey3Title: "LIA 1 · Seeking an internship",
       journey3Desc: "I am looking for an internship where I can contribute, learn from experienced colleagues and develop in MLOps, AI infrastructure and machine learning engineering.",
-      cvEyebrow: "06 / CV", cvTitle: "More about my <em>background.</em>",
-      cvDesc: "My CV covers education, projects and technical skills. The currently published version is in Swedish and can be printed or saved as a PDF from your browser.",
-      cvButton: "Open Swedish CV ↗",
+      cvEyebrow: "06 / CV", cvTitle: "A clear view of my <em>background.</em>",
+      cvDesc: "An updated CV with the same four projects, order and technical identity as my GitHub profile. Choose the Swedish or English version.",
+      cvButton: "Open Swedish CV ↗", cvEnglishButton: "English CV ↗",
       contactEyebrow: "07 / CONTACT", contactTitle: "Let's build something <br><em>meaningful.</em>",
       location: "Stockholm, Sweden",
       contactDesc: "I am interested in connecting with teams working in AI, machine learning, cloud and MLOps. I am seeking LIA 1 from 8 February to 21 May 2027.",
@@ -218,7 +218,7 @@
 
   if (year) year.textContent = String(new Date().getFullYear());
 
-  let preferredLanguage = "en";
+  let preferredLanguage = "sv";
   try {
     const savedLanguage = localStorage.getItem("portfolio-language");
     if (savedLanguage === "en" || savedLanguage === "sv") preferredLanguage = savedLanguage;
