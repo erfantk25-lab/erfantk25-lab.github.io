@@ -262,3 +262,184 @@ footer { padding-block: 26px 34px; }
     transition-duration: .01ms !important;
   }
 }
+
+/* GitHub profile identity: navy + cyan / blue / violet */
+:root {
+  --bg: #071426;
+  --surface: #0D2036;
+  --surface-light: #102B49;
+  --text: #F2F7FC;
+  --muted: #9AB0C5;
+  --accent: #43D9F5;
+  --cyan: #43D9F5;
+  --blue: #647BFF;
+  --violet: #B36BFF;
+  --green: #43D9F5;
+  --brand-gradient: linear-gradient(112deg, #43D9F5 0%, #647BFF 56%, #B36BFF 100%);
+  --border: rgba(154, 176, 197, .16);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 88% 4%, rgba(179,107,255,.13), transparent 34rem),
+    radial-gradient(ellipse at 8% 34%, rgba(100,123,255,.13), transparent 30rem),
+    radial-gradient(ellipse at 52% 100%, rgba(67,217,245,.07), transparent 38rem),
+    #071426;
+}
+
+::selection {
+  color: #071426;
+  background: #43D9F5;
+}
+
+.site-header {
+  background: rgba(7,20,38,.9);
+  border-bottom-color: rgba(100,123,255,.2);
+}
+
+.site-header .logo img {
+  filter: drop-shadow(0 0 12px rgba(67,217,245,.27));
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="location"] {
+  color: #43D9F5;
+}
+
+.hero {
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  opacity: .38;
+  background-image:
+    linear-gradient(rgba(100,123,255,.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,123,255,.075) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse at 72% 35%, #000 0%, transparent 72%);
+}
+
+.hero-copy,
+.hero-visual {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 em,
+h2 em {
+  color: transparent;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero-visual:before {
+  background: linear-gradient(130deg, rgba(67,217,245,.2), rgba(100,123,255,.18) 52%, rgba(179,107,255,.2));
+  filter: blur(62px);
+}
+
+.availability {
+  border-color: rgba(67,217,245,.28);
+  background: linear-gradient(105deg, rgba(67,217,245,.055), rgba(100,123,255,.055), rgba(179,107,255,.04));
+}
+.availability strong,
+.pulse {
+  color: var(--cyan);
+}
+.pulse {
+  background: var(--cyan);
+  box-shadow: 0 0 0 5px rgba(67,217,245,.11), 0 0 18px rgba(67,217,245,.36);
+}
+
+.band {
+  background: linear-gradient(108deg, rgba(13,32,54,.98), rgba(16,43,73,.9) 58%, rgba(33,19,74,.45));
+  border-color: rgba(100,123,255,.22);
+}
+
+.button {
+  border-color: rgba(67,217,245,.38);
+  background: linear-gradient(110deg, rgba(67,217,245,.07), rgba(100,123,255,.075), rgba(179,107,255,.055));
+}
+.button.primary {
+  border-color: transparent;
+  background: var(--brand-gradient);
+  color: #071426;
+  box-shadow: 0 9px 28px rgba(100,123,255,.2), 0 0 24px rgba(67,217,245,.12);
+}
+.button.primary:hover {
+  color: #071426;
+  filter: brightness(1.08);
+  box-shadow: 0 12px 34px rgba(179,107,255,.2), 0 0 26px rgba(67,217,245,.18);
+}
+
+.skill-grid article,
+.project {
+  border-color: rgba(130,146,255,.17);
+  background: linear-gradient(145deg, rgba(16,43,73,.88), rgba(13,32,54,.96));
+}
+.skill-grid article:hover,
+.project:hover {
+  border-color: rgba(179,107,255,.48);
+  box-shadow: 0 16px 38px rgba(0,0,0,.22), 0 0 26px rgba(100,123,255,.09);
+}
+.project.featured {
+  background: linear-gradient(128deg, rgba(16,43,73,.98), rgba(13,32,54,.96) 64%, rgba(33,19,74,.45));
+  border-color: rgba(67,217,245,.28);
+}
+.project-index,
+.project .tag,
+.journey-date {
+  color: var(--cyan);
+}
+.metrics strong {
+  color: #89A9FF;
+  text-shadow: 0 0 24px rgba(100,123,255,.2);
+}
+
+.diagram span {
+  border-color: rgba(100,123,255,.32);
+  background: linear-gradient(120deg, rgba(67,217,245,.045), rgba(179,107,255,.045));
+}
+
+.architecture-wrap {
+  border-color: rgba(100,123,255,.2);
+  background: linear-gradient(145deg, rgba(7,20,38,.96), rgba(16,27,61,.68));
+}
+.architecture-wrap img {
+  border-color: rgba(67,217,245,.2);
+}
+
+.cv-panel {
+  border-color: rgba(100,123,255,.28);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(179,107,255,.13), transparent 48%),
+    linear-gradient(120deg, rgba(16,43,73,.96), rgba(13,32,54,.96));
+}
+
+.contact {
+  background:
+    radial-gradient(ellipse at 92% 72%, rgba(179,107,255,.13), transparent 42%),
+    radial-gradient(ellipse at 8% 92%, rgba(67,217,245,.07), transparent 38%);
+}
+.contact-grid > div:first-child a {
+  border-bottom-color: rgba(100,123,255,.3);
+}
+footer {
+  border-top-color: rgba(100,123,255,.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
