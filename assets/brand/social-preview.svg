@@ -1,1 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#08111f"/><path fill="#42a5ff" d="M85 100h230v50H215v170h-55V150H85z"/><path fill="#7de9ed" d="M233 190h82v38h-82zm0 74h82v38h-82z"/><text x="85" y="430" fill="#edf2f5" font-family="Arial" font-size="72" font-weight="700">ERFAN TAHMASEMI</text><text x="85" y="495" fill="#7de9ed" font-family="monospace" font-size="28">MLOPS ENGINEER STUDENT</text><text x="85" y="550" fill="#aebdca" font-family="Arial" font-size="28">Reliable ML systems through automation &amp; engineering.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Erfan Tahmasebi — MLOps Engineering</title>
+<desc id="desc">Portfolio social preview showing Erfan Tahmasebi, MLOps Engineering student, and a machine learning workflow from data quality to deployment.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset=".58" stop-color="#101b3d"/><stop offset="1" stop-color="#21134a"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#43d9f5"/><stop offset=".55" stop-color="#8194ff"/><stop offset="1" stop-color="#b36bff"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#647bff" stop-opacity=".3"/><stop offset="1" stop-color="#647bff" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#91a9ff" stroke-opacity=".075"/></pattern>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feGaussianBlur in="SourceAlpha" stdDeviation="12"/><feOffset dy="12"/><feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<rect width="1200" height="630" fill="url(#grid)"/>
+<ellipse cx="970" cy="270" rx="410" ry="320" fill="url(#glow)"/>
+<path d="M0 520C200 455 340 560 520 520S850 440 1030 500s300 40 400-20" fill="none" stroke="url(#accent)" stroke-width="2" opacity=".28"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <rect x="76" y="78" width="56" height="56" rx="15" fill="#071426" stroke="url(#accent)" stroke-width="2"/>
+  <text x="104" y="114" fill="#f2f7fc" font-size="22" font-weight="800" text-anchor="middle">ET</text>
+  <text x="152" y="112" fill="#8bdff5" font-family="monospace" font-size="14" font-weight="700" letter-spacing="3">PORTFOLIO / MLOPS ENGINEERING</text>
+  <text x="76" y="255" fill="#f2f7fc" font-size="68" font-weight="750" letter-spacing="-2">Erfan Tahmasebi</text>
+  <text x="80" y="318" fill="url(#accent)" font-size="34" font-weight="650">MLOps Engineering Student</text>
+  <rect x="80" y="350" width="485" height="2" rx="1" fill="url(#accent)"/>
+  <text x="80" y="398" fill="#c0cfe0" font-size="23">Building reliable machine learning systems</text>
+  <text x="80" y="432" fill="#c0cfe0" font-size="23">from validated data to deployment.</text>
+  <g transform="translate(720 170)" filter="url(#shadow)">
+    <rect width="410" height="300" rx="22" fill="#09192d" stroke="#8194ff" stroke-opacity=".42"/>
+    <text x="28" y="40" fill="#8bdff5" font-family="monospace" font-size="12" letter-spacing="2">THE ML DELIVERY PATH</text>
+    <g transform="translate(28 68)">
+      <rect width="354" height="42" rx="9" fill="#102742" stroke="#43d9f5" stroke-opacity=".35"/>
+      <circle cx="22" cy="21" r="7" fill="#43d9f5"/>
+      <text x="43" y="26" fill="#edf5fc" font-size="15" font-weight="600">Data quality</text>
+      <text x="324" y="26" fill="#62dcb1" font-size="17" text-anchor="middle">✓</text>
+      <path d="M177 43v12" stroke="url(#accent)" stroke-width="2"/>
+      <rect y="57" width="354" height="42" rx="9" fill="#102742" stroke="#8194ff" stroke-opacity=".35"/>
+      <circle cx="22" cy="78" r="7" fill="#8194ff"/>
+      <text x="43" y="83" fill="#edf5fc" font-size="15" font-weight="600">Model lifecycle</text>
+      <text x="324" y="83" fill="#62dcb1" font-size="17" text-anchor="middle">✓</text>
+      <path d="M177 100v12" stroke="url(#accent)" stroke-width="2"/>
+      <rect y="114" width="354" height="42" rx="9" fill="#102742" stroke="#8194ff" stroke-opacity=".35"/>
+      <circle cx="22" cy="135" r="7" fill="#b36bff"/>
+      <text x="43" y="140" fill="#edf5fc" font-size="15" font-weight="600">Inference API</text>
+      <text x="324" y="140" fill="#62dcb1" font-size="17" text-anchor="middle">✓</text>
+      <path d="M177 157v12" stroke="url(#accent)" stroke-width="2"/>
+      <rect y="171" width="354" height="42" rx="9" fill="#102742" stroke="#b36bff" stroke-opacity=".35"/>
+      <circle cx="22" cy="192" r="7" fill="#b36bff"/>
+      <text x="43" y="197" fill="#edf5fc" font-size="15" font-weight="600">Container delivery</text>
+      <text x="324" y="197" fill="#a9b8ff" font-size="17" text-anchor="middle">↗</text>
+    </g>
+    <text x="28" y="270" fill="#8298b2" font-family="monospace" font-size="10" letter-spacing="1.3">PYTHON · FASTAPI · DOCKER · CI/CD</text>
+  </g>
+  <text x="80" y="570" fill="#8298b2" font-family="monospace" font-size="13" letter-spacing="1.4">STOCKHOLM, SWEDEN  ·  NACKADEMIN</text>
+</g>
+</svg>
